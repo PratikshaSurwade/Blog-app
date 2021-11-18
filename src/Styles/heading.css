@@ -1,0 +1,147 @@
+.heading{
+    width:  100%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.headstyle{
+    font-family: sans-serif;
+    text-align: center; 
+}
+.headstyle1{
+    font-size: 1.2rem;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    font-weight: lighter; 
+    margin-top: 3.5rem;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.headstyle2{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+
+/*======================================================================*/
+.latestHead{
+    font-weight:"800";
+    border-bottom:double #fab534 5px ;
+    border-end-end-radius:20px;
+    margin-left: 5rem;
+    margin-right: 9rem;
+    margin-top :0px;
+    margin-bottom: 3rem;
+}
+.cardContainer{
+    display: flex;
+    margin: 1rem 5rem;
+}
+.card{
+    border:none;
+    margin-right: 1rem;
+    margin-left: 1rem;  
+    width: 50rem;
+    margin-bottom: 3rem;
+}
+.imaGe{
+    border-top-right-radius: 0.4375rem;
+    width: 100%;
+}
+.cardInfo{
+    margin: 1rem 2rem;
+}
+.Navbarstyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0 px; 
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+.sideIcon{
+    display: none;
+}
+.Linkitems{  
+    padding: 1.1rem ;
+    text-decoration: none;
+    color: black    ;  
+}
+.main-heading{
+    color: red;
+    background-color: aqua;
+}
+.main-heading-2{
+    color: aqua;
+    background-color: red;
+}
+.parastyle{
+    font-size: 2rem;
+    color: green;
+}
+
+
+/*latest page-------------------------------*/
+
+
+
+.articlePage{
+    display: flex;
+}
+.articles{
+    flex: 9;
+    margin-left: 5rem;
+    margin-right: 2rem;
+}
+.sidebar{
+    flex: 3;
+    margin-top: 2rem 4rem;
+}
+.storyInfo{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+}
+.description{
+    color: #a7a5a5;
+}
+.hrMargin{
+    margin: 1rem 5rem;
+}
+.hrSeparation{
+    transform: rotate(90deg);
+}
+
+@media only screen and (min-width :100px) and (max-width :500px){
+    .cardContainer{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1rem;
+    }
+    .card{
+        margin-top: 1rem;
+    }
+    .latestHead{
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (min-width :500px) and (max-width :750px){
+    .cardContainer{
+    margin: 1rem 1rem;
+    }
+    .card{
+        margin-top: 0.5rem;
+    }
+    .cardInfo{
+        margin: 1rem 1rem;
+    }
+}

@@ -1,0 +1,14 @@
+.home{
+    display: flex;
+    margin: 2rem 10rem;
+}
+@media only screen and (min-width :100px) and (max-width :750px){
+.home{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+}

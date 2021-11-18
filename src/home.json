@@ -1,0 +1,35 @@
+[
+    {
+        "id":1,
+        "title":"Title of Vertical Gallery",
+        "image":"https://www.hdwallpaper.nu/wp-content/uploads/2016/08/Jasper_National_Park_wallpaper_8.jpg",
+        "descripCTion":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus esse suscipit excepturi ut officiis doloribus inventore dolores assumenda reiciendis repudiandae dolore nemo quidem sit vitae soluta, aliquam deleniti nesciunt delectus.",
+        "thumbnaiL":"Travel",
+        "category":"TECH",
+        "Date":"August 21 2007",
+        "DaTe":"TODAY AT 11:54"
+    }
+    ,
+    {
+        "id":1,
+        "title":"Title of Vertical Gallery",
+        "image":"https://www.hdwallpaper.nu/wp-content/uploads/2016/08/Jasper_National_Park_wallpaper_8.jpg",
+        "descripCTion":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus esse suscipit excepturi ut officiis doloribus inventore dolores assumenda reiciendis repudiandae dolore nemo quidem sit vitae soluta, aliquam deleniti nesciunt delectus.",
+        "thumbnaiL":"Travel",
+        "category":"STYLE",
+        "Date":"August 21 2007",
+        "DaTe":"August 21 2017"
+
+    }
+    ,
+    {
+        "id":1,
+        "title":"Title of Vertical Gallery",
+        "image":"https://www.hdwallpaper.nu/wp-content/uploads/2016/08/Jasper_National_Park_wallpaper_8.jpg",
+        "descripCTion":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus esse suscipit excepturi ut officiis doloribus inventore dolores assumenda reiciendis repudiandae dolore nemo quidem sit vitae soluta, aliquam deleniti nesciunt delectus.",
+        "thumbnaiL":"Travel",
+        "category":"TECH",
+        "Date":"August 21 2007",
+        "DaTe":"August 21 2017"
+    }
+]

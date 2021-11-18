@@ -1,0 +1,32 @@
+.subpost{
+    display: flex;
+}
+.imagepart{
+    flex: 3;
+    height: 6rem;
+    margin: 5px;
+}
+.mainpostImg{
+    margin-bottom: 1rem;
+}
+
+.contentpart1{
+    flex: 6;
+
+    margin:7px 5px;
+}
+.postHeading{
+
+
+}
+.postThumbnail{
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.date{
+    color: #d3d3d3;
+    font-size: 0.9rem;
+}
+hr{
+    color: #d3d3d3;
+}

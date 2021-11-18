@@ -1,0 +1,65 @@
+.bollywood{
+    flex: 7;
+    margin-right: 8rem;
+}
+.bollyhead{
+    font-weight:"800";
+    /* border-bottom:double ;
+    border-image: linear-gradient(to right,#ffa500 50%, #FFF 50%)  100% 5; */
+    border-bottom:double #ffa500 5px ;
+    border-end-end-radius:20px;
+    margin-bottom: 2rem;
+
+
+}
+.imagepart1{
+    flex: 3;
+    height: 10rem;
+    width: 14rem;
+    margin: 5px;
+}
+.bollyhead::after{
+    border-bottom-right-radius: 10px;
+}
+.postDescrip{
+    line-height: 2rem;
+    line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+  
+}
+.contentpart{
+    height: 10rem;
+    flex: 6;
+    margin-left: 1rem;
+    margin-right: 9rem;
+
+    
+}
+.postHeading{
+    margin-bottom: 10px;
+
+
+}
+.postThumbnail{
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.date{
+    color: #808080;
+    font-size: 0.9rem;
+}
+hr{
+ 
+    color: #808080;
+    font-weight: 400;
+    margin-right: 4rem;
+    
+}
+.arrow{
+    color: #ffa500;
+}
