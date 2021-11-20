@@ -1,5 +1,6 @@
 .subpost{
     display: flex;
+
 }
 .imagepart{
     flex: 3;
@@ -15,10 +16,6 @@
 
     margin:7px 5px;
 }
-.postHeading{
-
-
-}
 .postThumbnail{
     font-weight: 500;
     font-size: 0.9rem;
@@ -29,4 +26,33 @@
 }
 hr{
     color: #d3d3d3;
+}
+@media only screen and (min-width :100px) and (max-width :300px){
+    .mainPost{
+
+        margin: 0px;
+    }
+    .subpost{
+        margin:0px;
+    }
+    .mainpostImg{
+        width: 100%;
+        margin: auto;
+    }
+    
+
+}
+@media only screen and (min-width :300px) and (max-width :1000px){
+    .mainPost{
+
+        margin: 5px;
+    }
+    .subpost{
+        margin:5px;
+    }
+    .mainpostImg{
+        width: 100%;
+        margin: auto;
+    }
+    
 }

@@ -20,7 +20,7 @@ class Bollywood extends React.Component{
                         <Bollysub bollyNews={this.state.bollyNews}/>
                     </div>
                     <div className="posts">
-                        
+                        <h1 className="posthead">Top Posts</h1>
                         <Posts conTaint={this.state.conTaint}/>
                         <div className="advertise">Advertisement</div>
                     </div>

@@ -1,27 +1,18 @@
-.heading{
-    width:  100%;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    overflow: hidden;
+/*homestory*/
+.story{
+    display: flex;
 }
-.headstyle{
-    font-family: sans-serif;
-    text-align: center; 
+
+.storyInfo{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
 }
-.headstyle1{
-    font-size: 1.2rem;
-    writing-mode: vertical-rl;
-    transform: scale(-1);
-    font-weight: lighter; 
-    margin-top: 3.5rem;
-    margin-bottom: 0px;
-    padding: 0px;
+.description{
+    color: #a7a5a5;
 }
-.headstyle2{
-    font-size: 3rem;
-    font-weight: bold;
+.hrMargin{
+    margin: 1rem 5rem;
 }
 
 
@@ -32,10 +23,10 @@
     font-weight:"800";
     border-bottom:double #fab534 5px ;
     border-end-end-radius:20px;
-    margin-left: 5rem;
+    /* margin-left: 5rem;
     margin-right: 9rem;
     margin-top :0px;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; */
 }
 .cardContainer{
     display: flex;
@@ -47,6 +38,7 @@
     margin-left: 1rem;  
     width: 50rem;
     margin-bottom: 3rem;
+    word-wrap: inherit;
 }
 .imaGe{
     border-top-right-radius: 0.4375rem;
@@ -67,11 +59,7 @@
 .sideIcon{
     display: none;
 }
-.Linkitems{  
-    padding: 1.1rem ;
-    text-decoration: none;
-    color: black    ;  
-}
+
 .main-heading{
     color: red;
     background-color: aqua;
@@ -98,26 +86,9 @@
     margin-left: 5rem;
     margin-right: 2rem;
 }
-.sidebar{
-    flex: 3;
-    margin-top: 2rem 4rem;
-}
-.storyInfo{
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
-}
-.description{
-    color: #a7a5a5;
-}
-.hrMargin{
-    margin: 1rem 5rem;
-}
-.hrSeparation{
-    transform: rotate(90deg);
-}
 
-@media only screen and (min-width :100px) and (max-width :500px){
+
+@media only screen and (min-width :100px) and (max-width :300px){
     .cardContainer{
         display: flex;
         flex-direction: row;
@@ -130,18 +101,85 @@
         margin-top: 1rem;
     }
     .latestHead{
-        margin-left: 1rem;
+        margin-left: 0px;
     }
 }
-
-@media only screen and (min-width :500px) and (max-width :750px){
+@media only screen and (min-width :300px) and (max-width :500px){
     .cardContainer{
-    margin: 1rem 1rem;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1rem;
     }
     .card{
-        margin-top: 0.5rem;
+        margin-top: 1rem;
+    }
+    .gridItem{
+        display: none;
+    }
+    .latestHead{
+        margin: 0px;
+    }
+
+}
+
+@media only screen and (min-width :500px) and (max-width :700px){
+    .cardContainer{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1rem;
+    }
+    .card{
+        margin-top: 1rem;
     }
     .cardInfo{
         margin: 1rem 1rem;
+    }
+    .latestHead{
+        margin: 0px;
+    }
+}
+@media only screen and (min-width :700px) and (max-width :900px){
+    .cardContainer{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .card{
+        margin-top: 1rem;
+    }
+    .gridItem{
+        display: none;
+    }
+    .Linkitems{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+
+        padding-bottom: 20px;
+        
+     
+    }
+    .storyInfo{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 5rem;
+
+    }
+}
+@media only screen and (min-width :900px) and (max-width :1100px){
+    .storyInfo{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-bottom: 5rem;
+
     }
 }

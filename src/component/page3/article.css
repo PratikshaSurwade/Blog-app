@@ -1,8 +1,137 @@
-.headStyle{
-    font-weight:"650";
-    border-bottom:"double";
-    border-color:"#ffa500";
-    border-end-end-radius:"10px";
-    margin:"30px 30px";
-    background-color: blue;
+.Article{
+    width: 50rem;
+    height: fit-content;
+    border: 3px solid black;
+    margin: auto;
+}
+.topBar{
+    display: flex;
+}
+.topLeft{
+    flex: 20%;
+}
+.profileImage{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.topCenter{
+    flex: 70%;
+    margin: auto;
+
+}
+.topIcon {
+    font-size: 2rem;
+    margin: 2px;
+    color: #d3d3d3;
+}
+.profileInfo{
+    color: #d3d3d3;
+    margin: 1px 2px;
+}
+.topRight{
+    flex :20%;
+    margin: auto;
+    
+}
+.articleImg1{
+    margin: 1rem 3rem;
+
+}
+.articleInfo{
+    margin: 1rem 3rem;
+}
+.tag{
+    
+    margin-left:3rem;
+}
+.Tagbtn{
+    background-color: #e2e2e2;
+    padding: 0.5rem;
+    border: none;
+    margin-right: 1rem;
+
+}
+.articleImg2{
+    color: #d3d3d3;
+    transform: scaleX(-1);
+    /* Filter: flipH; */
+    font-size: 2rem;
+    margin :1rem 3rem;
+}
+.articlePart2{
+    color: #d3d3d3;
+}
+.profileImage1{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 3rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/*====Footer=====*/
+.footer{
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.932);
+    margin :2rem 4rem;
+}
+.container{
+    display: flex;
+    
+}
+.cards{
+    margin: 1rem 2rem;
+}
+.cardImg{
+    width:18rem ;
+    height:12rem;
+}
+.profileImage2{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.topCenter1{
+    flex: 70%;
+    margin: auto;
+    font-size: 0.7rem;
+
+}
+@media only screen and (min-width :100px) and (max-width :300px){
+    .container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+}
+
+
+
+@media only screen and (min-width :300px) and (max-width :500px){
+    .container{
+        flex-direction: column;
+    }
+    
+
+}
+
+
+
+@media only screen and (min-width :500px) and (max-width :750px){
+    .container{
+        flex-direction: column;
+    }
+    
+
+}
+
+@media only screen and (min-width :700px) and (max-width :900px){
+
+    .container{
+    flex-direction: column;
+    }
+    
 }

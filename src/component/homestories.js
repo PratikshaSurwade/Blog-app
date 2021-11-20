@@ -3,9 +3,8 @@ function Homestory(props){
     console.log(props)
     return(
         <> 
-        <h1 className="latestHead">Latest Stories</h1>
-        <hr className="hrMargin"></hr>
-
+        <h1 className="latestHead1">Latest Stories</h1>
+        
         <div className="story">
                 {props.storyinfo.map((item)=>(
                     <>  
@@ -18,7 +17,6 @@ function Homestory(props){
                             <code>   </code>/<code>   </code>{item.DaTe}
                         </span>
                     </div>
-                    <hr className="hrSeparation"></hr>
                     </>    
                 ))}
             </div>

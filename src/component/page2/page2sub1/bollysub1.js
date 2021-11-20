@@ -1,15 +1,15 @@
 import React from "react";
-import image from "./../../../images/blogimg4.png"
+import image from "./../../../images/blogimg4.png";
 
-import "./bollysub1.css"
+import "./bollysub1.css";
 
 
 function Bollysub(props){
     console.log(props);
         return(
             <>     
-            <div className="bollywood">
-                <div>  
+            
+                <div className="bollyPart">  
                             {props.bollyNews.map((item)=>(
                                 <>
                                     <div className="subpost">
@@ -29,7 +29,7 @@ function Bollysub(props){
                             ))}
                     <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span>             
                 </div>
-            </div>
+            
             </>
         )
     }

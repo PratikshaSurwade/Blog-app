@@ -18,14 +18,36 @@
     font-weight:"800";
     border-bottom:double #fab534 5px ;
     border-end-end-radius:20px;
-    margin-left: 5rem;
+    margin-left: 5px;
+    margin-right:5px ;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    z-index: 8;
+    /* margin-left: 5rem;
     margin-right: 9rem;
     margin-top :0px;
+    margin-bottom: 3rem; */
+
+}
+.latestHead1{
+    font-weight:"800";
+    z-index: 8;
+    border-bottom:double #fab534 5px ;
+    border-end-end-radius:20px;
+    padding-top: 2rem;
+    margin-left: 5px;
+    margin-right:5px ;
+    margin-top: 3rem;
     margin-bottom: 3rem;
+    /* margin-left: 5rem;
+    margin-right: 9rem;
+    margin-top :0px;
+    margin-bottom: 3rem; */
 
 }
 .articlePage{
     display: flex;
+    flex-direction: row;
 
 }
 .articles{
@@ -33,23 +55,32 @@
     margin-left: 5rem;
     margin-right: 2rem;
 }
-.sidebar{
+.sidebarContainer{
     flex: 3;
-    margin-right: 6rem;
 }
+.sidebar{
+    
+    margin: 1rem;
+    /* margin-right: 6rem; */
+}
+
+.homeAdvertise{
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    margin:auto;
+    height: 35rem;
+}
+
+
 /*======homeigame==========*/
 .homeImage{
     border: 5px solid black;
     margin-bottom: 2rem;
-    width: 55rem;
+    width: 100%;
     height: 30rem;
 
 }
-/*homestory*/
-.story{
-    display: flex;
-}
-
 /* 
 .gridItem{
     width:40rem;
@@ -85,13 +116,15 @@ img{
     height: 90%;
 } 
 .homeItem{
-    width: 90%;
+    width: 80%;
 
     height: 25rem;
     object-fit: fill;
 }
 
-@media only screen and (min-width :100px) and (max-width :500px){
+
+
+@media only screen and (min-width :100px) and (max-width :300px){
     .articlePage{
         display: flex;
         flex-direction: column;
@@ -101,12 +134,12 @@ img{
         object-fit: scale-down;
         margin : 1rem 0.5rem;
     }
-    .advertise{
+    .homeAdvertise{
         display: none;
         margin : 1rem 0.5rem;
     }
     .homeImage{
-        display: none;
+        width: 90%;
     }
     .story{
         display: flex;
@@ -137,10 +170,125 @@ img{
         display: none;
     }
      
+    .sidebar{
+       
+        margin-left: 5rem;
+        margin-right: 2rem;
+    }
+    .subpost{
+
+        margin: 1rem;
+    }
+}
+@media only screen and (min-width :300px) and (max-width :500px){
+    .articlePage{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap; 
+        object-fit: fill;
+        margin : 1rem 0.5rem;
+    }
+    .homeAdvertise{
+        display: none;
+        margin : 1rem 0.5rem;
+    }
+    .story{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: scale-down;
+        margin : 1rem 0.5rem;
+
+    }
+    .homeImage{
+        width: 100%;
+    }
+    .gridItem{
+        display: none;
+    }
+    
+    .sidebar{
+        margin-left: 5rem;
+    margin-right: 2rem;
+    }
+    .subpost{
+
+        margin: 1rem;
+    }
+
+}
+@media only screen and (min-width :500px) and (max-width :700px){
+     
+    .gridItem{
+        display: none;
+    }
+    .homeAdvertise{
+        display: none;
+        margin : 1rem 0.5rem;
+    }
+    .sidebar{
+
+        margin-left: 5rem;
+    margin-right: 2rem;
+    }
+    
+    .story{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin : 1rem 0.5rem;
+
+    }
+    .articlePage{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin : 1rem 0.5rem;
+    }
+    .homeImage{
+        width: 100%;
+    }
+    .subpost{
+
+        margin: 1rem;
+    }
 }
 
-@media only screen and (min-width :500px) and (max-width :750px){
-     
+@media only screen and (min-width :700px) and (max-width :1100px){
+    .articlePage{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin : 1rem 0.5rem;
+    }
+    .sidebar{
 
+        margin-left: 5rem;
+    margin-right: 2rem;
+    }
+    .homeAdvertise{
+        display: none;
+        margin : 1rem 0.5rem;
+    }
+    .homeImage{
+        width: 100%;
+    }
+    .gridItem{
+        display: none;
+    }
+    
 
 }

@@ -15,18 +15,20 @@ class Posts extends React.Component{
        
         return(
             <>
-                <div className="posts">
-                    <div>
-                        <h1 className="posthead">Top Posts</h1>
-                        <Mainpost />
-                        {this.props.conTaint.map((item)=>(
-                            <Subpost key={item.id} postDetails={item} />
-                        ))}
-                        
-                        
+              
                    
-                    </div>
-                </div>
+                        
+                        <div className="postContainer">
+                            <Mainpost />
+                            {this.props.conTaint.map((item)=>(
+                            <Subpost key={item.id} postDetails={item} />
+                            ))}
+                        </div>
+                        
+                  
+                   
+                    
+                
                 
             </>
         )
