@@ -15,7 +15,11 @@ class Article extends React.Component{
     render(){
         return(
             <>
-                <div>
+                <div className="page">
+
+                <i class="articleImg2 fas fa-sign-language"></i><span class="articlePart2">9.3k </span>
+                <p><i class="articleImg3 fas fa-share-alt"></i><span class="articlePart2">Share this Profile</span></p>
+                </div>
                     <div className="Article">
                         <h2>5 ways to animate a React app.</h2>
                         <div className="topRight1">
@@ -74,7 +78,7 @@ class Article extends React.Component{
                     </div>
 
                     <Footer cardInfo1={this.state.infoCard1} cardInfo2={this.state.infoCard} />
-                </div>
+                
                 
 
             </>
