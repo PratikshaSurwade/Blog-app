@@ -4,11 +4,13 @@ import profile from "./../../images/profilepic.png";
 import article1 from "./../../images/articlepic1.png"
 import article2 from "./../../images/articlepic2.png"
 import Footer from "./footer";
-import CardDet from "./footer.json";
+import CardDet1 from "./footeer.json";
+import cardDet2 from "./footer.json";
 
 class Article extends React.Component{
     state={
-        CardDet:CardDet
+        infoCard1:CardDet1,
+        infoCard:cardDet2
     }
     render(){
         return(
@@ -16,6 +18,13 @@ class Article extends React.Component{
                 <div>
                     <div className="Article">
                         <h2>5 ways to animate a React app.</h2>
+                        <div className="topRight1">
+                                <i class="topIcon fab fa-facebook-square"></i>
+                                <i class="topIcon fab fa-twitter"></i>
+                                <i class="topIcon fab fa-instagram"></i>
+                                <i class="topIcon fab fa-youtube"></i>
+
+                            </div>
                         <div className="topBar">
                             <div className="topLeft">
                                 <img className="profileImage" src={profile} alt="Profile"></img>
@@ -37,8 +46,6 @@ class Article extends React.Component{
                         <img className="articleImg1" src={article1} alt="article"></img>
                         <p className="articleInfo">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
                         </p>
@@ -66,7 +73,7 @@ class Article extends React.Component{
                         <hr></hr>
                     </div>
 
-                    <Footer cardInfo={this.state.CardDet}/>
+                    <Footer cardInfo1={this.state.infoCard1} cardInfo2={this.state.infoCard} />
                 </div>
                 
 

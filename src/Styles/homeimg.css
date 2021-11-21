@@ -1,0 +1,88 @@
+.homeImage{
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 30rem;
+
+}
+.MainImg1{
+    height: 30rem;
+    border-radius: 10px;
+    margin-right: 20px;
+    position: relative;
+    object-fit: cover;
+    background-size: cover;
+}
+
+
+.MainImg{
+    width: 80%;
+    height: 30rem;
+  
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    display: flex;
+}
+.longImg{
+    flex: 8;
+
+    border-radius: 10px;
+    margin-right: 20px;
+    position: relative;
+    object-fit: cover;
+    background-size: cover;
+}
+.smallImg{
+    flex: 4;
+   
+  
+    border-radius: 10px;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: fill;
+    
+}
+.img2{
+    border-radius: 10px;
+    background-color: burlywood;
+    width: 100%;
+    height: 48%;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    object-fit: fill;
+}
+.img3{
+    border-radius: 10px;
+    width: 100%;
+    height: 48%;
+    background-color: burlywood;
+    margin-top: 10px;
+    position: relative;
+    object-fit: fill;
+
+}
+.textContaint1{
+    position: absolute;
+    bottom: 8rem;
+    left: 2rem;
+    color: white;
+}
+.textContaint2,.textContaint3{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    color: white;
+}
+
+
+@media only screen and (max-width :900px){
+    .smallImg{
+        display: none;
+    }
+    
+}

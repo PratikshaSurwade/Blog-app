@@ -6,6 +6,8 @@ import Bollywood from "./component/page2/bollywood.js";
 import React from "react";
 import Homepage from "./component/homepage.js";
 import Article from "./component/page3/article.js";
+
+import Mainimg from "./component/mainimg.js";
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 
@@ -23,6 +25,8 @@ class App extends React.Component{
                         <Route path="/article" element={<Article />} />
                       
                         <Route path="/bollywood" element={<Bollywood />} />
+                        <Route path="food" element={<Mainimg /> } />
+
                     </Routes>
             </BrowserRouter>
          );

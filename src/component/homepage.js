@@ -10,6 +10,7 @@ import "./../Styles/home.css"
 import Homeimage from "./homeimage";
 import Homestory from "./homestories";
 import "./../component/page2/page2sub2/subpost.css";
+import Mainimg from "./mainimg";
 
 class Homepage extends React.Component{
     state={
@@ -20,7 +21,7 @@ class Homepage extends React.Component{
     render(){
     return(
         <>
-            
+            <Mainimg />
             <Latest />
             <h1 className="latestHead">Latest Articles</h1>
             <div className="articlePage">
