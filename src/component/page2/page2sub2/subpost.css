@@ -30,14 +30,18 @@ hr{
 @media only screen and (min-width :100px) and (max-width :300px){
     .mainPost{
 
-        margin: 0px;
+        margin: 2.5rem;
     }
     .subpost{
         margin:0px;
     }
-    .mainpostImg{
-        width: 100%;
-        margin: auto;
+   
+    .postThumbnail{
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+    .date{
+        margin :15%;
     }
     
 
@@ -45,14 +49,10 @@ hr{
 @media only screen and (min-width :300px) and (max-width :1000px){
     .mainPost{
 
-        margin: 5px;
+        margin: 3rem;
     }
     .subpost{
         margin:5px;
-    }
-    .mainpostImg{
-        width: 100%;
-        margin: auto;
     }
     
 }

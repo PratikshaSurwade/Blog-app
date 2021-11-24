@@ -101,7 +101,7 @@ img{
         justify-content: center;
         flex-wrap: wrap;
         object-fit: scale-down;
-        margin : 1rem 0.5rem;
+        margin : 1rem 2rem;
 
     }
     .sidebar{
@@ -136,7 +136,7 @@ img{
         justify-content: center;
         flex-wrap: wrap;
         object-fit: scale-down;
-        margin : 1rem 0.5rem;
+        margin : 2rem 2rem;
 
     }
     .homeImage{
@@ -173,7 +173,7 @@ img{
         justify-content: center;
         flex-wrap: wrap;
         object-fit: fill;
-        margin : 1rem 0.5rem;
+        margin : 2rem 3rem;
 
     }
     .articlePage{
@@ -203,6 +203,16 @@ img{
         flex-wrap: wrap;
         object-fit: fill;
         margin : 1rem 0.5rem;
+    }
+    .story{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin : 2rem 5rem;
+
     }
     .sidebar{
 
