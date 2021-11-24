@@ -14,7 +14,7 @@
     border-bottom-right-radius: 10px;
 }
 .postDescrip{
-    line-height: 2rem;
+    line-height:2rem;
     line-clamp: 6;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -65,7 +65,7 @@ hr{
         
     }
     .postDescrip{
-        line-height: 1rem;
+        line-height: 1.5rem;
     }
    
 

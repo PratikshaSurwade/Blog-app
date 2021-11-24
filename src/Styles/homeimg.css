@@ -15,11 +15,11 @@
 
 
 .MainImg{
-    width: 86%;
-    height: 30rem;
+    width: 80%;
+    height: 38rem;
   
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
     border-radius: 10px;
     display: flex;
 }
