@@ -17,7 +17,10 @@ class Bollywood extends React.Component{
                 <div className="home">
                     <div className="bollywood">
                         <h1 className="bollyhead">Bollywood</h1>
-                        <Bollysub bollyNews={this.state.bollyNews}/>
+                        {this.state.bollyNews.map((item)=>(
+                        <Bollysub key={item.id2} bollyNews={item}/>
+                        ))}
+                        <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span> 
                     </div>
                     <div className="posts">
                         <h1 className="posthead">Top Posts</h1>

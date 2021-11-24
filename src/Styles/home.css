@@ -2,12 +2,6 @@
     margin-right: 5rem;
     margin-left: 5rem;
 }
-/* .grid-container{
-    display: grid;
-    width:82rem;
-    height: 30rem;
-    grid-template-columns: 50% 50%;  
-} */
 .textContaint{
     position: absolute;
     align-items: center;
@@ -23,10 +17,6 @@
     margin-top: 1rem;
     margin-bottom: 2rem;
     z-index: 8;
-    /* margin-left: 5rem;
-    margin-right: 9rem;
-    margin-top :0px;
-    margin-bottom: 3rem; */
 
 }
 .latestHead1{
@@ -39,11 +29,7 @@
     margin-right:5px ;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    /* margin-left: 5rem;
-    margin-right: 9rem;
-    margin-top :0px;
-    margin-bottom: 3rem; */
-
+  
 }
 .articlePage{
     display: flex;
@@ -70,43 +56,16 @@
     align-items: center;
     margin:auto;
     height: 35rem;
+    align-items: center;
+        justify-content: center;
 }
 
 
 /*======homeigame==========*/
 
-.gridItem{
-    width:40rem;
-    height: 30rem;
-    margin:1rem;
-    object-fit: contain;
-    position: relative;
-}
-.gridItem2{
-    
-    height: 15rem;
-    object-fit: fill;
-    margin-bottom: 0.5rem;
-    position: relative; 
-
-}
-.gridItem3{
-    object-fit: fill;
-    height: 15rem;
-    margin-top: 1rem;
-    position: relative;
-
-}
-
-.grid-item1{
-    margin:1rem;
-    width: 40rem;
-    height: 33rem;
-    
-}
 img{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 } 
 .homeItem{
     width: 80%;
@@ -130,6 +89,7 @@ img{
     .homeAdvertise{
         display: none;
         margin : 1rem 0.5rem;
+        
     }
     .homeImage{
         width: 90%;
@@ -167,6 +127,7 @@ img{
     .homeAdvertise{
         display: none;
         margin : 1rem 0.5rem;
+        
     }
     .story{
         display: flex;

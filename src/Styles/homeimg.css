@@ -15,11 +15,11 @@
 
 
 .MainImg{
-    width: 80%;
+    width: 86%;
     height: 30rem;
   
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
     border-radius: 10px;
     display: flex;
 }
@@ -39,12 +39,18 @@
     border-radius: 10px;
 
 }
-img{
+.img1{
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: fill;
     
+    
+}
+img.Img2,img.Img3{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 .img2{
     border-radius: 10px;
@@ -56,6 +62,7 @@ img{
     border-radius: 10px;
     object-fit: fill;
 }
+
 .img3{
     border-radius: 10px;
     width: 100%;

@@ -14,7 +14,7 @@ import Mainimg from "./mainimg";
 
 class Homepage extends React.Component{
     state={
-        bollyNews:postContain,
+        bollyNew:postContain,
         conTaint:postConTain,
         homeStory:HomeStory
     }
@@ -26,7 +26,10 @@ class Homepage extends React.Component{
             <h1 className="latestHead">Latest Articles</h1>
             <div className="articlePage">
                 <div className="articles">
-                    <Bollysub bollyNews={this.state.bollyNews} />
+                {this.state.bollyNew.map((item)=>(
+                        <Bollysub key={item.id2} bollyNews={item}/>
+                ))}
+                <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span> 
                     <Homeimage />
                 </div>
                 <div  className="sidebarContainer">
@@ -38,7 +41,13 @@ class Homepage extends React.Component{
                     </div>
               </div>
             </div>
-            <Homestory storyinfo={this.state.homeStory}/>   
+            <h1 className="latestHead1">Latest Stories</h1>
+        
+            <div className="story">
+                    {this.state.homeStory.map((item)=>(
+                    <Homestory key={item.id} storyinfo={item}/> 
+                    ))}  
+            </div>
         </>
     )
 }

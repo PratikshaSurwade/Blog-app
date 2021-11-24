@@ -18,10 +18,10 @@ class Heading extends React.Component{
                   <div className="Navbarstyle" id="Navbarstyle2">
                     <NavLink className="Linkitems" to="/home">Home</NavLink>
                     <NavLink className="Linkitems" to="/bollywood">Bollywood</NavLink>
-                    <NavLink className="Linkitems" to="/Latest">Technology</NavLink>
-                    <NavLink className="Linkitems" to="/article">Hollywood</NavLink>
-                    <NavLink className="Linkitems" to="/Storrry">Fitness</NavLink>
-                    <NavLink className="Linkitems" to="/food">Food</NavLink>
+                    <NavLink className="Linkitems" to="/technology/article">Technology</NavLink>
+                    <NavLink className="Linkitems" to="/hollywood/article">Hollywood</NavLink>
+                    <NavLink className="Linkitems" to="/fitness/article">Fitness</NavLink>
+                    <NavLink className="Linkitems" to="/food/article">Food</NavLink>
 
                   </div>
                   <hr style={{marginLeft:"10%",marginRight:"10%"}}></hr>
@@ -43,31 +43,27 @@ class Heading extends React.Component{
                     <div className="collapse navbar-collapse bg-bs-light" id="navbarSupportedContent">
                       <center><ul className="navbar-nav mr-auto ml-auto mb-2 ">
                       <li className="nav-item">
-                        <NavLink className="Linkitems" to="/home">Home</NavLink>
+                      <NavLink className="Linkitems" to="/home">Home</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                        <NavLink className="Linkitems" to="/bollywood">Bollywood</NavLink>
+                      <NavLink className="Linkitems" to="/bollywood">Bollywood</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                      <NavLink className="Linkitems" to="/Latest">Technology</NavLink>
+                      <NavLink className="Linkitems" to="/technology/article">Technology</NavLink>
                       <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                        <NavLink className="Linkitems" to="/Latest">Technology</NavLink>
+                      <NavLink className="Linkitems" to="/hollywood/article">Hollywood</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                        <NavLink className="Linkitems" to="/article">Hollywood</NavLink>
+                      <NavLink className="Linkitems" to="/fitness/article">Fitness</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                        <NavLink className="Linkitems" to="/Storrry">Fitness</NavLink>
-                        <hr className="navHr"></hr>
-                      </li>
-                      <li className="nav-item">
-                        <NavLink className="Linkitems" to="/food">Food</NavLink>
+                      <NavLink className="Linkitems" to="/food/article">Food</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                     </ul></center>

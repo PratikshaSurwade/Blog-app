@@ -4,9 +4,9 @@
 }
 
 .storyInfo{
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
+    margin-left: 2rem;
+
+    margin-bottom: 2rem;
 }
 .description{
     color: #a7a5a5;
@@ -99,6 +99,8 @@
     }
     .card{
         margin-top: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .latestHead{
         margin-left: 0px;
@@ -115,6 +117,8 @@
     }
     .card{
         margin-top: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .gridItem{
         display: none;
@@ -136,6 +140,8 @@
     }
     .card{
         margin-top: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .cardInfo{
         margin: 1rem 1rem;
@@ -155,6 +161,8 @@
     }
     .card{
         margin-top: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .gridItem{
         display: none;
@@ -169,17 +177,16 @@
      
     }
     .storyInfo{
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-bottom: 5rem;
+        margin-left: 0.3rem;
+        margin-bottom: 3rem;
 
     }
 }
 @media only screen and (min-width :900px) and (max-width :1100px){
     .storyInfo{
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        margin-bottom: 5rem;
+        margin-left: 1rem;
+      
+        margin-bottom: 3rem;
 
     }
 }

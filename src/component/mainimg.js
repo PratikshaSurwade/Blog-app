@@ -24,7 +24,7 @@ class Mainimg extends React.Component{
                     </div>
                     <div className="smallImg">
                         <div className="img2">
-                        <img  src={moon1} alt="Imageshow" />
+                        <img className="Img2" src={moon1} alt="Imageshow" />
                             <div className="textContaint2">
                                 <h4>The Sound cloud</h4>
                                 <h4>You loved is doomed</h4>
@@ -33,7 +33,7 @@ class Mainimg extends React.Component{
                             </div>
                         </div>
                         <div className="img3">
-                        <img src={moon1} alt="Imageshow" />
+                        <img className="Img3" src={moon1} alt="Imageshow" />
 
                             <div className="textContaint3">
                                 <h4>The Sound cloud</h4>
