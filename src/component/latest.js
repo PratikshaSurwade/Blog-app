@@ -25,7 +25,7 @@ class Latest extends React.Component{
     return(
         <>
             <h1 className="latestHead">The Latest</h1>
-            <NavLink className="cardContainer" to="/bollywood">
+            <NavLink className="cardLink" to="/bollywood">
 
             <div className="cardContainer">
                 <div className="card">

@@ -13,7 +13,7 @@ class Mainimg extends React.Component{
     render(){
         return(
             <>
-                <NavLink className="MainImg" to="/bollywood">
+                <NavLink className="MainImgLink" to="/bollywood">
 
                 <div className="MainImg" id="homeimgclick">
                     <div className="longImg">

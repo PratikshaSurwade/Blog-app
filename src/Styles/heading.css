@@ -42,7 +42,9 @@
     margin-bottom: 3rem;
     word-wrap: inherit;
 }
-a.cardContainer{
+a.cardLink{
+    text-decoration: none;
+    color: black;
     text-decoration: none;
 }
 .imaGe{
