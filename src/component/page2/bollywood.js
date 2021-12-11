@@ -3,7 +3,8 @@ import "./bollywood.css"
 import Bollysub from "./page2sub1/bollysub1";
 import Posts from "./page2sub2/posts";
 import postContain from "./bollywood.json"
-import bollyNews from "./../../page2.json"
+import bollyNews from "./../../page2.json";
+import { NavLink } from "react-router-dom";
 
 
 class Bollywood extends React.Component{
@@ -18,13 +19,19 @@ class Bollywood extends React.Component{
                     <div className="bollywood">
                         <h1 className="bollyhead">Bollywood</h1>
                         {this.state.bollyNews.map((item)=>(
-                        <Bollysub key={item.id2} bollyNews={item}/>
-                        ))}
+                            <NavLink className="bollywood" to="/article">
+                                <Bollysub key={item.id2} bollyNews={item}/>
+                            </NavLink>
+                            ))}
                         <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span> 
                     </div>
                     <div className="posts">
                         <h1 className="posthead">Top Posts</h1>
-                        <Posts conTaint={this.state.conTaint}/>
+                        <NavLink className="posts" to="/article">
+
+                            <Posts conTaint={this.state.conTaint}/>
+                        
+                        </NavLink>
                         <div className="advertise">Advertisement</div>
                     </div>
                 </div>

@@ -1,9 +1,12 @@
 import "./../Styles/homeimg.css";
+import { NavLink } from "react-router-dom";
 import moon2 from "./../images/blogimg4.png";
 function Homeimage(){
     return(
         <> 
-        <div className="homeImage">
+        <NavLink className="homeImage" to="/bollywood">
+
+        
             <div className="MainImg1">
                     
                         
@@ -17,7 +20,7 @@ function Homeimage(){
                     
                    
             </div>
-        </div>
+        </NavLink>
         </>
     )
 }

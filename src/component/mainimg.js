@@ -6,11 +6,16 @@ import moon2 from "./../images/space1.png";
 
 import React from "react";
 
+import { NavLink } from "react-router-dom";
+
+
 class Mainimg extends React.Component{
     render(){
         return(
             <>
-                <div className="MainImg">
+                <NavLink className="MainImg" to="/bollywood">
+
+                <div className="MainImg" id="homeimgclick">
                     <div className="longImg">
                         
                             <img className="img1" src={moon2} alt="Imageshow" />
@@ -45,6 +50,7 @@ class Mainimg extends React.Component{
                     </div>
 
                 </div>
+                </NavLink>
             </>
         )
     }

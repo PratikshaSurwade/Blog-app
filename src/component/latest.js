@@ -2,11 +2,12 @@
 import React from "react";
 import blogimg2 from "./../images/blogimg1.png";
 import "./../Styles/heading.css";
-// import "./../"
+
+import { NavLink } from "react-router-dom";
 
 class Latest extends React.Component{
   state={
-    // textInside:
+    
     title:"Joshua Tree Overnight Adventure",
     description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus esse suscipit excepturi ut officiis doloribus inventore dolores assumenda reiciendis repudiandae dolore nemo quidem sit vitae soluta, aliquam deleniti nesciunt delectus. "
   }
@@ -24,6 +25,7 @@ class Latest extends React.Component{
     return(
         <>
             <h1 className="latestHead">The Latest</h1>
+            <NavLink className="cardContainer" to="/bollywood">
 
             <div className="cardContainer">
                 <div className="card">
@@ -54,6 +56,7 @@ class Latest extends React.Component{
                     </div>
                 </div>
             </div>
+            </NavLink>
 
         </>
     )

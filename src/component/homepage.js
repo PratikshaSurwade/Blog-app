@@ -11,6 +11,7 @@ import Homeimage from "./homeimage";
 import Homestory from "./homestories";
 import "./../component/page2/page2sub2/subpost.css";
 import Mainimg from "./mainimg";
+import { NavLink } from "react-router-dom";
 
 class Homepage extends React.Component{
     state={
@@ -26,28 +27,34 @@ class Homepage extends React.Component{
             <h1 className="latestHead">Latest Articles</h1>
             <div className="articlePage">
                 <div className="articles">
-                {this.state.bollyNew.map((item)=>(
+                    {this.state.bollyNew.map((item)=>(
+                        <NavLink className="articles" to="/bollywood">
+
                         <Bollysub key={item.id2} bollyNews={item}/>
-                ))}
-                <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span> 
+
+                        </NavLink>
+                        
+                    ))}
+                    <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span> 
                     <Homeimage />
                 </div>
                 <div  className="sidebarContainer">
-                <div className="homeAdvertise">Advertisement</div>
+                    <div className="homeAdvertise">Advertisement</div>
                     <h1 className="posthead">Top Posts</h1>
                     <div className="sidebar">
-                    
-                    <Posts conTaint={this.state.conTaint} />
+                        <NavLink className="sidebar" to="/bollywood">
+                            <Posts conTaint={this.state.conTaint} />
+                        </NavLink>
                     </div>
-              </div>
+                </div>
             </div>
             <h1 className="latestHead1">Latest Stories</h1>
         
-            <div className="story">
+            <NavLink className="story" to="/bollywood">
                     {this.state.homeStory.map((item)=>(
                     <Homestory key={item.id} storyinfo={item}/> 
                     ))}  
-            </div>
+            </NavLink>
         </>
     )
 }

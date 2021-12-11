@@ -22,10 +22,10 @@ class App extends React.Component{
                         <Route path="/" element={<Homepage />} exact />
                         <Route path="/home" element={<Homepage />} exact />
                         <Route path="/bollywood" element={<Bollywood />} exact />
-                        <Route path="/technology/article" element={<Article />} exact />
-                        <Route path="/hollywood/article" element={<Article />} exact />
+                        <Route path="/article" element={<Article />} exact />
+                        {/* <Route path="/hollywood/article" element={<Article />} exact />
                         <Route path="/fitness/article" element={<Article />} exact />
-                        <Route path="/food/article" element={<Article />} exact />
+                        <Route path="/food/article" element={<Article />} exact /> */}
                         
 
 

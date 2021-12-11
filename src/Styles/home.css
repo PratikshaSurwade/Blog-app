@@ -41,6 +41,14 @@
     margin-left: 5rem;
     margin-right: 2rem;
 }
+a.articles{
+    color: black;
+    text-decoration: none;
+}
+a.articles:hover{
+    color: black;
+    text-decoration: none;
+}
 .sidebarContainer{
     flex: 3;
 }
@@ -48,6 +56,15 @@
     
     margin: 1rem;
     /* margin-right: 6rem; */
+}
+a.sidebar{
+    color: black;
+    text-decoration: none;
+}
+
+a.sidebar:hover{
+    color: black;
+    text-decoration: none;
 }
 
 .homeAdvertise{
@@ -60,7 +77,17 @@
         justify-content: center;
 }
 
+a.story{
+    color: black;
+    text-decoration: none;
 
+}
+
+a.story:hover{
+    color: black;
+    text-decoration: none;
+
+}
 /*======homeigame==========*/
 
 img{

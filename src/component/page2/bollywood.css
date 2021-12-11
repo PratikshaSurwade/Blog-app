@@ -7,6 +7,23 @@
     margin-right: 8rem;
     
 }
+a.bollywood{
+    color: black;
+    text-decoration: none;
+}
+a.bollywood:hover{
+    color: black;
+    text-decoration: none;
+}
+a.posts{
+    color: black;
+    text-decoration: none;
+}
+a.posts:hover{
+    color: black;
+    text-decoration: none;
+}
+
 .bollyhead{
     font-weight:"800";
     /* border-bottom:double ;
@@ -14,7 +31,6 @@
     border-bottom:double #ffa500 5px ;
     border-end-end-radius:20px;
     margin-bottom: 2rem;
-    margin-top: 3rem;
     margin-left: 5px;
 }
 .posthead{
@@ -24,6 +40,7 @@
     margin-bottom: 2rem;
     margin-left: 5px;
 }
+
 @media only screen and (min-width :100px) and (max-width :350px){
     .home{
         display: flex;
