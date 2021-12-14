@@ -17,16 +17,16 @@ class Article extends React.Component{
             <>
                 <div className="page">
 
-                <i class="articleImg2 fas fa-sign-language"></i><span class="articlePart2">9.3k </span>
-                <p><i class="articleImg3 fas fa-share-alt"></i><span class="articlePart2">Share this Profile</span></p>
+                <i className="articleImg2 fas fa-sign-language"></i><span className="articlePart2">9.3k </span>
+                <p><i className="articleImg3 fas fa-share-alt"></i><span className="articlePart2">Share this Profile</span></p>
                 </div>
                     <div className="Article">
                         <h2>5 ways to animate a React app.</h2>
                         <div className="topRight1">
-                                <i class="topIcon fab fa-facebook-square"></i>
-                                <i class="topIcon fab fa-twitter"></i>
-                                <i class="topIcon fab fa-instagram"></i>
-                                <i class="topIcon fab fa-youtube"></i>
+                                <i className="topIcon fab fa-facebook-square"></i>
+                                <i className="topIcon fab fa-twitter"></i>
+                                <i className="topIcon fab fa-instagram"></i>
+                                <i className="topIcon fab fa-youtube"></i>
 
                             </div>
                         <div className="topBar">
@@ -40,10 +40,10 @@ class Article extends React.Component{
 
                             </div>
                             <div className="topRight">
-                                <i class="topIcon fab fa-facebook-square"></i>
-                                <i class="topIcon fab fa-twitter"></i>
-                                <i class="topIcon fab fa-instagram"></i>
-                                <i class="topIcon fab fa-youtube"></i>
+                                <i className="topIcon fab fa-facebook-square"></i>
+                                <i className="topIcon fab fa-twitter"></i>
+                                <i className="topIcon fab fa-instagram"></i>
+                                <i className="topIcon fab fa-youtube"></i>
 
                             </div>
                         </div>       
@@ -60,7 +60,7 @@ class Article extends React.Component{
                             <button className="Tagbtn">Javascript</button>
                             <button className="Tagbtn">Animation</button>
                         </div>
-                        <i class="articleImg2 fas fa-sign-language"></i><span class="articlePart2">9.3k claps</span>
+                        <i className="articleImg2 fas fa-sign-language"></i><span className="articlePart2">9.3k claps</span>
                         <hr></hr>
                         <div className="topBar">
                             <div className="topLeft">
@@ -77,7 +77,7 @@ class Article extends React.Component{
                         <hr></hr>
                     </div>
 
-                    <Footer cardInfo1={this.state.infoCard1} cardInfo2={this.state.infoCard} />
+                    <Footer  cardInfo1={this.state.infoCard1} cardInfo2={this.state.infoCard} />
                 
                 
 

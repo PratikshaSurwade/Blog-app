@@ -1,5 +1,5 @@
 .Article{
-    width: 50rem;
+    width: 45rem;
     height: fit-content;
 
     margin: auto;
@@ -86,7 +86,7 @@
 .footer{
     width: 100%;
     background-color: rgba(250, 250, 250, 0.932);
-    margin :2rem 2rem;
+    padding :2rem 2rem;
     z-index: 1;
     overflow: visible;
 }
@@ -152,7 +152,7 @@
     /* overflow: auto; */
 }
 img.cardImg1{
-    margin: 5px;
+    margin: auto;
 }
 
 @media only screen and (min-width :100px) and (max-width :300px){
