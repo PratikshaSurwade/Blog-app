@@ -12,7 +12,7 @@
 }
 
 .contentpart1{
-    flex: 6;
+    flex: 5;
 
     margin:7px 5px;
 }
@@ -35,7 +35,10 @@ hr{
     .subpost{
         margin:0px;
     }
-   
+    div.imagepart{
+        width: 8rem;
+        height: 7rem;
+    }
     .postThumbnail{
         font-weight: 500;
         font-size: 0.9rem;
@@ -50,6 +53,10 @@ hr{
     .mainPost{
 
         margin: 3rem;
+    }
+    div.imagepart{
+        width: 10rem;
+        height: 10rem;
     }
     .subpost{
         margin:5px;
