@@ -19,6 +19,7 @@
     z-index: 8;
 
 }
+
 .latestHead1{
     font-weight:"800";
     z-index: 8;
@@ -88,6 +89,18 @@ a.story:hover{
     text-decoration: none;
 
 }
+
+.viewmore{
+    color: #d3d3d3;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}
+.arrow2{
+    color: #ffa500;
+    /* margin: 2.5rem; */
+    margin-left: 0.5rem; 
+}
+
 /*======homeigame==========*/
 
 img{

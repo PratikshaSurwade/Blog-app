@@ -40,6 +40,16 @@ a.posts:hover{
     margin-bottom: 2rem;
     margin-left: 5px;
 }
+.loadmore{
+    color: #d3d3d3;
+    font-size: 1.2rem;
+
+}
+.arrow{
+    color: #ffa500;
+    margin: 2.5rem;
+    margin-right: 0.5rem; 
+}
 
 @media only screen and (min-width :100px) and (max-width :350px){
     .home{

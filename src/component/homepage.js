@@ -35,7 +35,7 @@ class Homepage extends React.Component{
                         </NavLink>
                         
                     ))}
-                    <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span> 
+                    <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="loadmore"> Load More</span> 
                     <Homeimage />
                 </div>
                 <div  className="sidebarContainer">
@@ -55,6 +55,7 @@ class Homepage extends React.Component{
                     <Homestory key={item.id} storyinfo={item}/> 
                     ))}  
             </NavLink>
+            <span className="viewmore"> View More</span><span><i class="arrow2 fas fa-arrow-right"></i></span>
         </>
     )
 }

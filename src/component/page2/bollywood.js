@@ -23,7 +23,7 @@ class Bollywood extends React.Component{
                                 <Bollysub key={item.id2} bollyNews={item}/>
                             </NavLink>
                             ))}
-                        <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="date"> Load More</span> 
+                        <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="loadmore"> Load More</span> 
                     </div>
                     <div className="posts">
                         <h1 className="posthead">Top Posts</h1>
