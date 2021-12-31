@@ -1,7 +1,7 @@
 import React from "react";
 import image from "./../../../images/blogimg4.png";
 
-import "./bollysub1.css";
+import "./bollysub1.scss";
 
 
 function Bollysub(props){

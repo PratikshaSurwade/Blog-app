@@ -1,5 +1,5 @@
 import React from "react";
-import "./subpost.css";
+import "./subpost.scss";
 import subpostimage from "./../../../images/blogimg4.png"
 
 

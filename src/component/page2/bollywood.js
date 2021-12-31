@@ -1,5 +1,5 @@
 import React from "react";
-import "./bollywood.css"
+import "./bollywood.scss"
 import Bollysub from "./page2sub1/bollysub1";
 import Posts from "./page2sub2/posts";
 import postContain from "./bollywood.json"
