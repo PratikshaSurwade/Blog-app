@@ -1,8 +1,8 @@
-import "./../Styles/homeimg.scss";
+import "./../../Styles/homeimg.scss";
 
-import moon1 from "./../images/moon.png";
+import moon1 from "./../../images/moon.png";
 
-import moon2 from "./../images/space1.png";
+import moon2 from "./../../images/space1.png";
 
 import React from "react";
 

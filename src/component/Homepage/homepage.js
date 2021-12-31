@@ -1,15 +1,15 @@
 
 import Latest from "./latest";
-import Posts from "./page2/page2sub2/posts";
+import Posts from "./../page2/page2sub2/posts";
 import React from "react";
-import postContain from "./../latestart.json"
-import postConTain from "./../component/page2/bollywood.json";
-import HomeStory from "./../component/page2/bollywood.json";
-import Bollysub from "./page2/page2sub1/bollysub1";
-import "./../Styles/home.scss"
+import postContain from "../../latestart.json"
+import postConTain from "../page2/bollywood.json";
+import HomeStory from "../page2/bollywood.json";
+import Bollysub from "./../page2/page2sub1/bollysub1";
+import "./../../Styles/home.scss"
 import Homeimage from "./homeimage";
 import Homestory from "./homestories";
-import "./../component/page2/page2sub2/subpost.scss";
+import "./../../component/page2/page2sub2/subpost.scss";
 import Mainimg from "./mainimg";
 import { NavLink } from "react-router-dom";
 

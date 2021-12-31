@@ -1,5 +1,5 @@
-import "./../Styles/home.scss";
-import "./../Styles/heading.scss"
+import "./../../Styles/home.scss";
+import "./../../Styles/heading.scss"
 
 function Homestory(props){
     console.log(props)

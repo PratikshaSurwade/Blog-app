@@ -1,6 +1,6 @@
-import "./../Styles/homeimg.scss";
+import "./../../Styles/homeimg.scss";
 import { NavLink } from "react-router-dom";
-import moon2 from "./../images/blogimg4.png";
+import moon2 from "./../../images/blogimg4.png";
 function Homeimage(){
     return(
         <> 
