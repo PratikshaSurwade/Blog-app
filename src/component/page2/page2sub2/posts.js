@@ -1,7 +1,7 @@
 import React from "react";
 import "./posts.scss"
-import Subpost from "./subpost";
-import Mainpost from "./mainpost.js"
+import Subpost from "./Subpost.js";
+import Mainpost from "./Toppost.js"
 
 
 

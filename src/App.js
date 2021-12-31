@@ -1,9 +1,9 @@
 import { BrowserRouter } from "react-router-dom";
 import { Route,Routes } from "react-router-dom";
-import Heading from "./component/heading.js";
-import Bollywood from "./component/page2/bollywood.js";
+import Heading from "./component/Heading.js";
+import Bollywood from "./component/page2/Bollywood.js";
 import React from "react";
-import Homepage from "./component/Homepage/homepage.js";
+import Homepage from "./component/Homepage/Home.js";
 import Article from "./component/page3/article.js";
 import ScrollToTop from "./Scrolltop.js"
 

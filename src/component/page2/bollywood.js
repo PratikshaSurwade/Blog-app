@@ -1,9 +1,9 @@
 import React from "react";
 import "./bollywood.scss"
-import Bollysub from "./page2sub1/bollysub1";
-import Posts from "./page2sub2/posts";
+import Bollysub from "./page2sub1/Bollysub1.js";
+import Posts from "./page2sub2/Posts";
 import postContain from "./bollywood.json"
-import bollyNews from "./../../page2.json";
+import bollyNews from "../../page2.json";
 import { NavLink } from "react-router-dom";
 
 

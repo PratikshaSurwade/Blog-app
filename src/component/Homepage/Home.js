@@ -1,16 +1,16 @@
 
-import Latest from "./latest";
-import Posts from "./../page2/page2sub2/posts";
+import Latest from "./Latest";
+import Posts from "../page2/page2sub2/Posts";
 import React from "react";
 import postContain from "../../latestart.json"
 import postConTain from "../page2/bollywood.json";
 import HomeStory from "../page2/bollywood.json";
-import Bollysub from "./../page2/page2sub1/bollysub1";
+import Bollysub from "../page2/page2sub1/Bollysub1.js";
 import "./../../Styles/home.scss"
-import Homeimage from "./homeimage";
-import Homestory from "./homestories";
+import Homeimage from "./Homeimage";
+import Homestory from "./Homestories";
 import "./../../component/page2/page2sub2/subpost.scss";
-import Mainimg from "./mainimg";
+import Mainimg from "./Mainimg";
 import { NavLink } from "react-router-dom";
 
 class Homepage extends React.Component{
