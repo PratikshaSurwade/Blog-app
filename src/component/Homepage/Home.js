@@ -2,9 +2,6 @@
 import Latest from "./Latest";
 import Posts from "../page2/page2sub2/Posts";
 import React from "react";
-import postContain from "../../latestart.json"
-import postConTain from "../page2/bollywood.json";
-import HomeStory from "../page2/bollywood.json";
 import Bollysub from "../page2/page2sub1/Bollysub1.js";
 import "./../../Styles/home.scss"
 import Homeimage from "./Homeimage";
@@ -12,6 +9,12 @@ import Homestory from "./Homestories";
 import "./../../component/page2/page2sub2/subpost.scss";
 import Mainimg from "./Mainimg";
 import { NavLink } from "react-router-dom";
+
+//Import json 
+
+import postContain from "./latestart.json"
+import postConTain from "../page2/bollywood.json";
+import HomeStory from "../page2/bollywood.json";
 
 class Homepage extends React.Component{
     state={

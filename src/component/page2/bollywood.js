@@ -1,10 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import "./bollywood.scss"
+
+//Json importing
 import Bollysub from "./page2sub1/Bollysub1.js";
 import Posts from "./page2sub2/Posts";
 import postContain from "./bollywood.json"
-import bollyNews from "../../page2.json";
-import { NavLink } from "react-router-dom";
+import bollyNews from "./page2.json";
 
 
 class Bollywood extends React.Component{
