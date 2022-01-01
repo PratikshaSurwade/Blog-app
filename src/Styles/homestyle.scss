@@ -18,16 +18,9 @@
 
 
 
-/*======================================================================*/
-.latestHead{
-    font-weight:"800";
-    border-bottom:double #fab534 5px ;
-    border-end-end-radius:20px;
-    /* margin-left: 5rem;
-    margin-right: 9rem;
-    margin-top :0px;
-    margin-bottom: 3rem; */
-}
+/*latest page-------------------------------*/
+
+
 .cardContainer{
     display: flex;
     margin: 1rem 5rem;
@@ -82,18 +75,8 @@ a.cardLink{
     color: green;
 }
 
-
-/*latest page-------------------------------*/
-
-
-
-.articlePage{
-    display: flex;
-}
-.articles{
-    flex: 9;
-    margin-left: 5rem;
-    margin-right: 2rem;
+p.cardInfo{
+    color: #d3d3d3;
 }
 
 

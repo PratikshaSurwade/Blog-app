@@ -1,7 +1,7 @@
 
 import React from "react";
 import blogimg2 from "./../../images/blogimg1.png";
-import "./../../Styles/heading.scss";
+import "./../../Styles/homestyle.scss";
 
 import { NavLink } from "react-router-dom";
 

@@ -55,7 +55,7 @@ class Homepage extends React.Component{
                     <Homestory key={item.id} storyinfo={item}/> 
                     ))}  
             </NavLink>
-            <span className="viewmore"> View More</span><span><i class="arrow2 fas fa-arrow-right"></i></span>
+            <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span>
         </>
     )
 }
