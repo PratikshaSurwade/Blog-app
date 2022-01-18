@@ -14,7 +14,7 @@ function Homeimage(){
                                 <div className="textContaint1">
                                     <h1>Title of Vertical Gallery</h1>
                                     <span  className="postThumbnail1">Travel</span>
-                                    <span className="date1"><code>   </code>/<code>   </code>August 21 2007</span>
+                                    <span className="date1"><pre>   </pre>/<pre>   </pre>August 21 2007</span>
                                 </div>
                             
                     
