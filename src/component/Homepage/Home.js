@@ -16,31 +16,12 @@ import postContain from "./latestart.json"
 import postConTain from "../page2/bollywood.json";
 import HomeStoryy from "../page2/bollywood.json";
 
-//importing axios
-
-// import { Component } from "react";
-// import axioms from 'axios';
-
 class Homepage extends React.Component{
     state={
         bollyNew:postContain,
         conTaint:postConTain,
         homeStory:HomeStoryy,
     }
-    // componentDidMount(){
-    //     axioms.get("https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=55f9f9b698ee412c88a4a35a13e328e4")
-    //     .then((response)=>{
-    //         console.log(response.json());
-    //         return response.json();
-    //     }).then((data) => {
-    //         this.setState({
-    //             homeStory: data.articles,
-    //         })
-    //     })
-    //     .catch((error)=>
-    //         console.log(error))
-    //         console.log("fetching data")
-    // }
     render(){
     return(
         <>
@@ -85,47 +66,3 @@ class Homepage extends React.Component{
 }
 export default Homepage;
 
-/*******
-import { Component } from "react";
-import axioms from 'axios';
-
-class App extends Component{
-    state={
-        postList:[],
-    }
-    componentDidMount(){
-        axioms.get("https://jsonplaceholder.typicode.com/todos")
-        .then((response)=>{
-            console.log(response.data);
-            this.setState({
-                postList: response.data,
-            })
-
-        })
-        .catch((error)=>
-            console.log(error))
-            console.log("fetching data")
-    }
-    render(){
-        return(
-            <>
-                <h1>App</h1>
-                {this.state.postList.map(
-                    (item)=>(
-                        <div key={item.id}>
-                            <h3>{item.userId}</h3>
-                            <h4>{item.id}</h4>
-                            <p>{item.title}</p>
-                            <h6>{item.completed}</h6>
-
-                        </div>
-                    )
-                )}
-            </>
-        )
-    }
-} 
-
-
-
- */
