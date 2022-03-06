@@ -1,22 +1,15 @@
 
 import React from "react";
-import blogimg2 from "./../../images/blogimg1.png";
+// import blogimg2 from "./../../images/blogimg1.png";
 import "./../../Styles/homestyle.scss";
-
-import { NavLink } from "react-router-dom";
+import { latestdata } from "./latestdata";
+// import { NavLink } from "react-router-dom";
 
 class Latest extends React.Component{
   state={
-    
-    title:"Joshua Tree Overnight Adventure",
-    description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus esse suscipit excepturi ut officiis doloribus inventore dolores assumenda reiciendis repudiandae dolore nemo quidem sit vitae soluta, aliquam deleniti nesciunt delectus. "
+    latestdata : latestdata
+
   }
-  jsOn=[
-    {
-      "title":"Joshua Tree Overnight Adventure",
-      "decription":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus esse suscipit excepturi ut officiis doloribus inventore dolores assumenda reiciendis repudiandae dolore nemo quidem sit vitae soluta, aliquam deleniti nesciunt delectus."
-    }
-  ]
   constructor(props){
     super(props);
     console.log(props);
@@ -24,7 +17,8 @@ class Latest extends React.Component{
   render(){
     return(
         <>
-            <h1 className="latestHead">The Latest</h1>
+          
+            {/* <h1 className="latestHead">The Latest</h1>
             <NavLink className="cardLink" to="/bollywood">
 
             <div className="cardContainer">
@@ -56,7 +50,7 @@ class Latest extends React.Component{
                     </div>
                 </div>
             </div>
-            </NavLink>
+            </NavLink> */}
 
         </>
     )
