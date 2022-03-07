@@ -1,5 +1,5 @@
 import mainpostimage from "./../../../images/blogimg5.png"
-import  "./subpost.scss";
+import  "./subpost.css";
 
 
 function Mainpost(props){

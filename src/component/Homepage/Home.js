@@ -3,10 +3,10 @@ import Latest from "./latest";
 import Posts from "../page2/page2sub2/posts";
 import React from "react";
 import Bollysub from "../page2/page2sub1/bollysub1.js";
-import "./../../Styles/home.scss"
+import "./../../Styles/home.css"
 import Homeimage from "./homeimage";
 import Homestory from "./homestories";
-import "./../../component/page2/page2sub2/subpost.scss";
+import "./../../component/page2/page2sub2/subpost.css";
 import Mainimg from "./mainimg";
 import { NavLink } from "react-router-dom";
 

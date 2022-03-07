@@ -1,8 +1,8 @@
 import React from "react";
-import './../Styles/homestyle.scss';
+import './../Styles/homestyle.css';
 import { NavLink } from "react-router-dom";
 
-import "./../Styles/header.scss"
+import "./../Styles/header.css"
 
 class Heading extends React.Component{
 

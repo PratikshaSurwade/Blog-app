@@ -1,4 +1,4 @@
-import "./../../Styles/homeimg.scss";
+import "./../../Styles/homeimg.css";
 
 import moon1 from "./../../images/moon.png";
 

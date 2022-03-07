@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import "./bollywood.scss"
+import "./bollywood.css"
 
 //Json importing
 import Bollysub from "./page2sub1/bollysub1.js";

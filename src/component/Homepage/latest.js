@@ -1,7 +1,7 @@
 
 import React from "react";
 // import blogimg2 from "./../../images/blogimg1.png";
-import "./../../Styles/homestyle.scss";
+import "./../../Styles/homestyle.css";
 import { latestdata } from "./latestdata";
 // import { NavLink } from "react-router-dom";
 

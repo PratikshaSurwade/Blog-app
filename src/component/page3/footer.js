@@ -1,5 +1,5 @@
 import React from "react";
-import "./article.scss";
+import "./article.css";
 import imaGe from "./../../images/blogimg1.png";
 import profile from "./../../images/profilepic.png";
 class Footer extends React.Component{
