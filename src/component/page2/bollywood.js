@@ -6,8 +6,8 @@ import "./bollywood.css"
 //Json importing
 import Bollysub from "./page2sub1/bollysub1.js";
 import Posts from "./page2sub2/posts";
-import postContain from "./bollywood.json"
-import bollyNews from "./page2.json";
+import postContain from "./bollydata1"
+import bollyNews from "./bollydata2";
 
 
 class Bollywood extends React.Component{

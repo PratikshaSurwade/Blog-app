@@ -6,7 +6,7 @@ import subpostimage from "./../../../images/blogimg4.png"
 class Subpost extends React.Component{
     constructor(props){
         super(props);
-        console.log(props);
+        // console.log(props);
     }
     render(){
         return(

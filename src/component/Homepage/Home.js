@@ -12,9 +12,9 @@ import { NavLink } from "react-router-dom";
 
 //Import json 
 
-import postContain from "./latestart.json"
-import postConTain from "../page2/bollywood.json";
-import {HomeStoryy} from "./storydata.js";
+import postContain from "./latestdata1"
+import postConTain from "../page2/bollydata1.js";
+import HomeStoryy from "./storydata.js";
 
 class Homepage extends React.Component{
     state={

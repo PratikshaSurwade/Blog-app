@@ -4,8 +4,8 @@ import profile from "./../../images/profilepic.png";
 import article1 from "./../../images/articlepic1.png"
 import article2 from "./../../images/articlepic2.png"
 import Footer from "./footer";
-import CardDet1 from "./footeer.json";
-import cardDet2 from "./footer.json";
+import CardDet1 from "./footerdata1";
+import cardDet2 from "./footerdata2";
 
 class Article extends React.Component{
     state={

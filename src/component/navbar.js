@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import "./../Styles/header.css"
 
-class Heading extends React.Component{
+class Navbar extends React.Component{
 
     render(){
         return(
@@ -26,10 +26,7 @@ class Heading extends React.Component{
                   </div>
                   <hr style={{marginLeft:"10%",marginRight:"10%"}}></hr>
                 </div>
-                
-
-
-
+             
                 <div className="headingTwo">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex aligns-items-center">
                   <div className="container-fluid">
@@ -66,22 +63,15 @@ class Heading extends React.Component{
                       <NavLink className="Linkitems" to="/food/article">Food</NavLink>
                         <hr className="navHr"></hr>
                       </li>
-                    </ul></center>
-                    
-      
+                      </ul></center>
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
               </div>
-
-
-                
-
-                </div>
-
-            </>
+            </div>
+          </>
         )
     }
 }
 
-export default Heading;
+export default Navbar;

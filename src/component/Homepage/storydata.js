@@ -1,6 +1,5 @@
-// import img from "./space1.png";
+module.exports = 
 
-export const HomeStoryy =
 [
     {
         "id":1,

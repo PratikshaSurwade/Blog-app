@@ -2,7 +2,7 @@
 import React from "react";
 // import blogimg2 from "./../../images/blogimg1.png";
 import "./../../Styles/homestyle.css";
-import { latestdata } from "./latestdata";
+import latestdata from "./latestdata1";
 // import { NavLink } from "react-router-dom";
 
 class Latest extends React.Component{
