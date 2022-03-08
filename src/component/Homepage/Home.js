@@ -52,7 +52,7 @@ class Homepage extends React.Component{
 	   
     }
     latestdata() {
-		axios.get("http://localhost:3001/thelatest")
+		axios.get("https://blog-app-be.herokuapp.com/thelatest")
 			.then(response => {
 				this.setState({
 					latestdata: response.data
@@ -63,7 +63,7 @@ class Homepage extends React.Component{
             console.log("Fetching dataa bollydata 1/homedata 1");
 	}
     latestart() {
-		axios.get("http://localhost:3001/latestart")
+		axios.get("https://blog-app-be.herokuapp.com/latestart")
 			.then(response => {
 				this.setState({
 					latestart: response.data
@@ -74,7 +74,7 @@ class Homepage extends React.Component{
             console.log("Fetching dataa bollydata 1/homedata 1");
 	}
     conTaint() {
-		axios.get("http://localhost:3001/bollydata1")
+		axios.get("https://blog-app-be.herokuapp.com/bollydata1")
 			.then(response => {
 				this.setState({
 					conTaint: response.data
@@ -85,7 +85,7 @@ class Homepage extends React.Component{
             console.log("Fetching dataa homedata2");
 	}
     homeStory() {
-		axios.get("http://localhost:3001/homestory")
+		axios.get("https://blog-app-be.herokuapp.com/homestory")
 			.then(response => {
 				this.setState({		
 					homeStory: response.data

@@ -28,7 +28,7 @@ class Article extends React.Component{
 	   
     }
     infoCard1() {
-		axios.get("http://localhost:3001/footer1")
+		axios.get("https://blog-app-be.herokuapp.com/footer1")
 			.then(response => {
 				this.setState({
 					
@@ -39,7 +39,7 @@ class Article extends React.Component{
             console.log("Fetching dataa footer 1");
 	}
     infoCard() {
-		axios.get("http://localhost:3001/footer2")
+		axios.get("https://blog-app-be.herokuapp.com/footer2")
 			.then(response => {
 				this.setState({
 					

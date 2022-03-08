@@ -31,7 +31,7 @@ class Bollywood extends React.Component{
 	   
     }
     conTaint() {
-		axios.get("http://localhost:3001/bollydata1")
+		axios.get("https://blog-app-be.herokuapp.com/bollydata1")
 			.then(response => {
 				this.setState({
 					conTaint: response.data
@@ -42,7 +42,7 @@ class Bollywood extends React.Component{
             console.log("Fetching dataa bollydata 1");
 	}
     bollyNews() {
-		axios.get("http://localhost:3001/bollydata2")
+		axios.get("https://blog-app-be.herokuapp.com/bollydata2")
 			.then(response => {
 				this.setState({
 					
