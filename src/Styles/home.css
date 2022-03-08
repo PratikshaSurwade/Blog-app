@@ -32,6 +32,11 @@
     margin-bottom: 3rem;
   
 }
+.cardContainer{
+    display: flex;
+    margin: 1rem 5rem;
+}
+
 .articlePage{
     display: flex;
     flex-direction: row;

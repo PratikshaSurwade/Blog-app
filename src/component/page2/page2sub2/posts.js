@@ -6,30 +6,15 @@ import Mainpost from "./Toppost.js"
 
 
 class Posts extends React.Component{
-    constructor(props){
-        super(props);
-        console.log(props);
-    }
-    
-    render(){
-       
+    render(){  
         return(
             <>
-              
-                   
-                        
-                        <div className="postContainer">
-                            <Mainpost />
-                            {this.props.conTaint.map((item)=>(
-                            <Subpost key={item.id} postDetails={item} />
-                            ))}
-                        </div>
-                        
-                  
-                   
-                    
-                
-                
+            <div className="postContainer">
+                <Mainpost />
+                {this.props.conTaint.map((item)=>(
+                    <Subpost key={item.id} postDetails={item} />
+                ))}
+                </div>    
             </>
         )
     }

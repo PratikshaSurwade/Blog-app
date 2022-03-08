@@ -4,14 +4,52 @@ import profile from "./../../images/profilepic.png";
 import article1 from "./../../images/articlepic1.png"
 import article2 from "./../../images/articlepic2.png"
 import Footer from "./footer";
-import CardDet1 from "./footerdata1";
-import cardDet2 from "./footerdata2";
+// import CardDet1 from "./footerdata1";
+// import cardDet2 from "./footerdata2";
+
+import axios from 'axios';
 
 class Article extends React.Component{
-    state={
-        infoCard1:CardDet1,
-        infoCard:cardDet2
+    constructor(props){
+        super(props);
+        this.state={
+            infoCard1:[],
+            infoCard:[]
+        };
+        this.infoCard1 = this.infoCard1.bind(this);
+        this.infoCard = this.infoCard.bind(this);
     }
+    
+	componentDidMount() {
+		// this.setState(() => {
+			this.infoCard1();
+            this.infoCard();
+		// });
+	   
+    }
+    infoCard1() {
+		axios.get("http://localhost:3001/footer1")
+			.then(response => {
+				this.setState({
+					
+					infoCard1: response.data
+				});
+			})
+			.catch(err => console.error(err));
+            console.log("Fetching dataa footer 1");
+	}
+    infoCard() {
+		axios.get("http://localhost:3001/footer2")
+			.then(response => {
+				this.setState({
+					
+					infoCard: response.data
+				});
+			})
+			.catch(err => console.error(err));
+            console.log("Fetching dataa footer 2");
+	}
+    
     render(){
         return(
             <>
