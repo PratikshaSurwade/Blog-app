@@ -5,7 +5,7 @@ import profile from "./../../images/profilepic.png";
 class Footer extends React.Component{
     constructor(props){
         super(props);
-        console.log(props);
+        // console.log(props);
     
     }
     render(){

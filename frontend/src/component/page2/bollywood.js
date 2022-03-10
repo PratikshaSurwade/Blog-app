@@ -36,7 +36,7 @@ class Bollywood extends React.Component{
 				this.setState({
 					conTaint: response.data
 				});
-                console.log((response.data));
+                // console.log((response.data));
 			})
 			.catch(err => console.error(err));
             console.log("Fetching dataa bollydata 1");
@@ -48,13 +48,11 @@ class Bollywood extends React.Component{
 					
 					bollyNews: response.data
 				});
-                console.log((response.data));
+                // console.log((response.data));
 			})
 			.catch(err => console.error(err));
             console.log("Fetching dataa bollydata 2");
 	}
-
-
 
     render(){
         return(

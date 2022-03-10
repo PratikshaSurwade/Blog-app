@@ -2,14 +2,11 @@ import React from "react";
 import "./subpost.css";
 import subpostimage from "./../../../images/blogimg4.png"
 
-
 class Subpost extends React.Component{
-    
     render(){
         return(
             <>
-                <div className="subpost">
-                    
+                <div className="subpost">                   
                     <div className="imagepart"><img src={subpostimage} alt="Imageshow"/></div>
                     <div className="contentpart1">
                             <>
@@ -18,14 +15,11 @@ class Subpost extends React.Component{
                                 <span className="date">
                                     <code>   </code>/
                                     <code>   </code>{this.props.postDetails.Date}
-                                </span>
-                                
+                                </span>                                
                             </>
-                    </div>
-                    
+                    </div>                   
                 </div>
-                <hr></hr>
-        
+                <hr></hr>     
             </>
         )
     }

@@ -57,7 +57,7 @@ class Homepage extends React.Component{
 				this.setState({
 					latestdata: response.data
 				});
-                console.log((response.data));
+                // console.log((response.data));
 			})
 			.catch(err => console.error(err));
             console.log("Fetching dataa bollydata 1/homedata 1");
@@ -68,7 +68,7 @@ class Homepage extends React.Component{
 				this.setState({
 					latestart: response.data
 				});
-                console.log((response.data));
+                // console.log((response.data));
 			})
 			.catch(err => console.error(err));
             console.log("Fetching dataa bollydata 1/homedata 1");
@@ -79,7 +79,7 @@ class Homepage extends React.Component{
 				this.setState({
 					conTaint: response.data
 				});
-                console.log((response.data));
+                // console.log((response.data));
 			})
 			.catch(err => console.error(err));
             console.log("Fetching dataa homedata2");
@@ -90,7 +90,7 @@ class Homepage extends React.Component{
 				this.setState({		
 					homeStory: response.data
 				});
-                console.log((response.data));
+                // console.log((response.data));
 			})
 			.catch(err => console.error(err));
             console.log("Fetching dataa hoemstorydata 3");

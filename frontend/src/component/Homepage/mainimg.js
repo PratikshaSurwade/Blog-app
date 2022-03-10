@@ -24,12 +24,10 @@ class Mainimg extends React.Component{
                                     <span  className="postThumbnail1">Travel</span>
                                     <span className="date1"><code>   </code>/<code>   </code>August 21 2007</span>
                                 </div>
-                            
-                    
                     </div>
                     <div className="smallImg">
                         <div className="img2">
-                        <img className="Img2" src={moon1} alt="Imageshow" />
+                            <img className="Img2" src={moon1} alt="Imageshow" />
                             <div className="textContaint2">
                                 <h4>The Sound cloud</h4>
                                 <h4>You loved is doomed</h4>
@@ -38,8 +36,7 @@ class Mainimg extends React.Component{
                             </div>
                         </div>
                         <div className="img3">
-                        <img className="Img3" src={moon1} alt="Imageshow" />
-
+                            <img className="Img3" src={moon1} alt="Imageshow" />
                             <div className="textContaint3">
                                 <h4>The Sound cloud</h4>
                                 <h4>You loved is doomed</h4>
@@ -48,7 +45,6 @@ class Mainimg extends React.Component{
                             </div>
                         </div>
                     </div>
-
                 </div>
                 </NavLink>
             </>

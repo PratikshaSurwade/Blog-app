@@ -2,13 +2,12 @@ import "./../../Styles/home.css";
 import "./../../Styles/homestyle.css"
 
 function Homestory(props){
-    console.log(props);
+    // console.log(props);
     return(
         <> 
             <div className="storyInfo">
                 <h3>{props.storyinfo.title}</h3>
                 <p className="description">{props.storyinfo.descripCTion}</p>
-
                 <span className="postThumbnail">{props.storyinfo.category}</span>
                 <span className="date">
                     <code>   </code>/<code>   </code>{props.storyinfo.DaTe}
