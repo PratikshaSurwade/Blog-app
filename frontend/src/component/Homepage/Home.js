@@ -42,6 +42,7 @@ class Homepage extends React.Component{
     
 
 	componentDidMount() {
+        
 		this.setState(() => {
             this.latestdata();
             this.latestart();
@@ -52,7 +53,9 @@ class Homepage extends React.Component{
 	   
     }
     latestdata() {
-		axios.get("https://blog-app-be.herokuapp.com/thelatest")
+		// axios.get("https://blog-app-be.herokuapp.com/thelatest")
+        axios.get("http://localhost:3001/thelatest")
+
 			.then(response => {
 				this.setState({
 					latestdata: response.data
@@ -63,8 +66,10 @@ class Homepage extends React.Component{
             console.log("Fetching dataa bollydata 1/homedata 1");
 	}
     latestart() {
-		axios.get("https://blog-app-be.herokuapp.com/latestart")
-			.then(response => {
+		// axios.get("https://blog-app-be.herokuapp.com/latestart")
+
+		axios.get("http://localhost:3001/latestart")
+        .then(response => {
 				this.setState({
 					latestart: response.data
 				});
@@ -74,8 +79,9 @@ class Homepage extends React.Component{
             console.log("Fetching dataa bollydata 1/homedata 1");
 	}
     conTaint() {
-		axios.get("https://blog-app-be.herokuapp.com/bollydata1")
-			.then(response => {
+		// axios.get("https://blog-app-be.herokuapp.com/bollydata1")
+		axios.get("http://localhost:3001/bollydata1")
+        .then(response => {
 				this.setState({
 					conTaint: response.data
 				});
@@ -85,7 +91,8 @@ class Homepage extends React.Component{
             console.log("Fetching dataa homedata2");
 	}
     homeStory() {
-		axios.get("https://blog-app-be.herokuapp.com/homestory")
+		// axios.get("https://blog-app-be.herokuapp.com/homestory")
+		axios.get("http://localhost:3001/homestory")
 			.then(response => {
 				this.setState({		
 					homeStory: response.data
@@ -103,7 +110,8 @@ class Homepage extends React.Component{
             <h1 className="latestHead">The Latest</h1>
             <div className="cardContainer">
                 {this.state.latestdata.map((item)=>(
-                    <Latest key={item.id2} latestdata={item}/>
+                            <Latest key={item.id2} latestdata={item}/>
+
                 ))}
             </div>
             <h1 className="latestHead">Latest Articles</h1>

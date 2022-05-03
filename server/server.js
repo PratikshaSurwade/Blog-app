@@ -14,6 +14,7 @@ const bollydata2 = require('./jsonData/bollydata2');
 const thelatest = require('./jsonData/latestdata');
 const latestartdata1 = require('./jsonData/latestartdata');
 const homestory = require('./jsonData/storydata');
+const totalarticles = require('./jsonData/totalarticles');
 
 
 
@@ -46,6 +47,10 @@ app.get('/latestart', bodyParser.json(), (req, res) => {
 
 app.get('/homestory', bodyParser.json(), (req, res) => {
 	res.json(homestory);
+});
+
+app.get('/totalarticles', bodyParser.json(), (req, res) => {
+	res.json(totalarticles);
 });
 
 app.listen(PORT, () => {
