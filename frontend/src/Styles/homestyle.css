@@ -10,6 +10,12 @@
 }
 .description{
     color: #a7a5a5;
+    line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 .hrMargin{
     margin: 1rem 5rem;
@@ -20,7 +26,14 @@
 
 /*latest page-------------------------------*/
 
-
+.postDescription{
+    line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 
 .card{
     color: black;

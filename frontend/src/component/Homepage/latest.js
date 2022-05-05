@@ -11,18 +11,20 @@ function Latest(props){
     return (
       <>
           {/* <NavLink className="cardLink" to={{pathname:`/article/${this.props.latestdata.id}`,state:{stateParam:true}}}> */}
-          <NavLink className="cardLink" to={{pathname:`/article/${props.latestdata.id}`}} state={{...props}}>
+          
 
           <div className="card">
-            <img className="imaGe" src={blogimg2} alt="Imageshow" />
+            <img className="imaGe" src={props.latestdata.photo1} alt="Imageshow" />
             <div className="cardInfo">
+            <NavLink className="cardLink" to={`/article/${props.latestdata._id}`}>
               <h5>{props.latestdata.title}</h5>
-              <p style={{ color: "#d3d3d3" }}>{props.latestdata.decription}</p>
-              <span className="postThumbnail">Travel</span>
-              <span className="date"><code>   </code>/<code>   </code>August 21 2007</span>
+              </NavLink>
+
+              <p style={{ color: "#d3d3d3" }} className="postDescription">{props.latestdata.decription}</p>
+              <span className="postThumbnail">{props.latestdata.categories}</span>
+              <span className="date"><code>   </code>/<code>   </code>{props.latestdata.date}</span>
             </div>
           </div>
-        </NavLink>
 
       </>
     )

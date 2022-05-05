@@ -54,7 +54,7 @@ class Homepage extends React.Component{
     }
     latestdata() {
 		// axios.get("https://blog-app-be.herokuapp.com/thelatest")
-        axios.get("http://localhost:3001/thelatest")
+        axios.get("http://localhost:7001/thelatest")
 
 			.then(response => {
 				this.setState({
@@ -68,7 +68,7 @@ class Homepage extends React.Component{
     latestart() {
 		// axios.get("https://blog-app-be.herokuapp.com/latestart")
 
-		axios.get("http://localhost:3001/latestart")
+		axios.get("http://localhost:7001/latestart")
         .then(response => {
 				this.setState({
 					latestart: response.data
@@ -80,7 +80,7 @@ class Homepage extends React.Component{
 	}
     conTaint() {
 		// axios.get("https://blog-app-be.herokuapp.com/bollydata1")
-		axios.get("http://localhost:3001/bollydata1")
+		axios.get("http://localhost:7001/bollydata1")
         .then(response => {
 				this.setState({
 					conTaint: response.data
@@ -92,7 +92,7 @@ class Homepage extends React.Component{
 	}
     homeStory() {
 		// axios.get("https://blog-app-be.herokuapp.com/homestory")
-		axios.get("http://localhost:3001/homestory")
+		axios.get("http://localhost:7001/homestory")
 			.then(response => {
 				this.setState({		
 					homeStory: response.data
@@ -140,12 +140,10 @@ class Homepage extends React.Component{
             </div>
             <h1 className="latestHead1">Latest Stories</h1>
         
-            <NavLink className="story" to="/bollywood">
                     {this.state.homeStory.map((item)=>(
                         // {this.state.postList.map((item)=>(<div key={item.id}>
                     <Homestory key={item.id} storyinfo={item}/> 
                     ))}  
-            </NavLink>
             <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span>
         </>
     )

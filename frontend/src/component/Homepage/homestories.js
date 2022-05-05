@@ -1,16 +1,22 @@
 import "./../../Styles/home.css";
-import "./../../Styles/homestyle.css"
+import "./../../Styles/homestyle.css";
+import { NavLink } from "react-router-dom";
+
 
 function Homestory(props){
     // console.log(props);
     return(
         <> 
             <div className="storyInfo">
+            <NavLink className="cardLink" to={`/article/${props.storyinfo._id}`}>
+
                 <h3>{props.storyinfo.title}</h3>
-                <p className="description">{props.storyinfo.descripCTion}</p>
-                <span className="postThumbnail">{props.storyinfo.category}</span>
+                </NavLink>
+
+                <p className="description">{props.storyinfo.decription}</p>
+                <span className="postThumbnail">{props.storyinfo.categories}</span>
                 <span className="date">
-                    <code>   </code>/<code>   </code>{props.storyinfo.DaTe}
+                    <code>   </code>/<code>   </code>{props.storyinfo.date}
                 </span>
             </div>
          

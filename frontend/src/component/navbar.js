@@ -18,8 +18,8 @@ class Navbar extends React.Component{
                   <div className="Navbarstyle" id="Navbarstyle2">
                     <NavLink className="Linkitems" to="/home">Home</NavLink>
                     <NavLink className="Linkitems" to="/bollywood">Bollywood</NavLink>
-                    <NavLink className="Linkitems" to="/article">Technology</NavLink>
-                    <NavLink className="Linkitems" to="/hollywood/article">Hollywood</NavLink>
+                    <NavLink className="Linkitems" to="/technology">Technology</NavLink>
+                    <NavLink className="Linkitems" to="/hollywood">Hollywood</NavLink>
                     <NavLink className="Linkitems" to="/fitness/article">Fitness</NavLink>
                     <NavLink className="Linkitems" to="/food/article">Food</NavLink>
 

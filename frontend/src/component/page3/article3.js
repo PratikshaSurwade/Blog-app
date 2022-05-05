@@ -13,55 +13,45 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 
 
-    function Articlefun (){
+    function Articlefun (props){
         
+        console.log(props);
         const location = useLocation()
-        const [post, setPost] = useState({});
-
-    // console.log(location.pathname.split("/")[2]);
-    const path = location.pathname.split("/")[2];    
-    
+    console.log(location);
         const [category , setCategory] = useState([]);
 
         const [categoryArticles , setcategoryArticles] = useState([]);
         const[categoryArticlesFetched , setcategoryArticlesFetched] = useState(false);
         const[infoCard1 , setinfoCard1] = useState([]);
         const[infoCard , setinfoCard] = useState([]);
+        
     useEffect(() => {
-        const getPost = async () => {
-          const res = await axios.get("http://localhost:7001/article/" + path);
-          console.log(res)
-          setPost(res.data);
-        //   setTitle(res.data.title);
-        //   setDesc(res.data.desc);
-        };
-        getPost();
-      }, [path]);  
-    useEffect(() => {
-
         const fetchfooter1 = async () => {
-          const res = await axios.get("http://localhost:7001/footer1")
+          const res = await axios.get("http://localhost:3001/footer1")
           setinfoCard1(res.data);
         };
         const fetchfooter2 = async () => {
-            const res = await axios.get("http://localhost:7001/footer2")
+            const res = await axios.get("http://localhost:3001/footer2")
             setinfoCard(res.data);
           };
           fetchfooter1();
         
           fetchfooter2();
-    },[]);
+      }
+    
+      
+      ,[]);
 
     
         return(
             <>
                 <div className="page">
 
-                <i className="articleImg2 fas fa-sign-language"></i><span className="articlePart2">{post.claps} claps</span>
+                <i className="articleImg2 fas fa-sign-language"></i><span className="articlePart2">9.3k </span>
                 <p><i className="articleImg3 fas fa-share-alt"></i><span className="articlePart2">Share this Profile</span></p>
                 </div>
                     <div className="Article">
-                        <h2>{post.title}</h2>
+                        <h2>5 ways to animate a React app.</h2>
                         <div className="topRight1">
                                 <i className="topIcon fab fa-facebook-square"></i>
                                 <i className="topIcon fab fa-twitter"></i>
@@ -71,12 +61,12 @@ import { useLocation } from 'react-router-dom';
                             </div>
                         <div className="topBar">
                             <div className="topLeft">
-                                <img className="profileImage" src={post.authorphoto} alt="Profile"></img>
+                                <img className="profileImage" src={profile} alt="Profile"></img>
                                 
                             </div>
                             <div className="topCenter">
-                                <h6>{post.username}</h6>
-                                <p className="profileInfo">{post.date}</p>
+                                <h6>Dmitry Nazhenko</h6>
+                                <p className="profileInfo"> Jan 28, 2019 - 10 min read</p>
 
                             </div>
                             <div className="topRight">
@@ -87,26 +77,30 @@ import { useLocation } from 'react-router-dom';
 
                             </div>
                         </div>       
-                        <img className="articleImg1" src={post.photo1} alt="article"></img>
-                        <p className="articleInfo">{post.decription}</p>
+                        <img className="articleImg1" src={article1} alt="article"></img>
+                        <p className="articleInfo">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+                        </p>
 
-                        <img className="articleImg1" src={post.photo2} alt="article"></img>
+                        <img className="articleImg1" src={article2} alt="article"></img>
                         <div className="tag">
-                            <button className="Tagbtn">{post.tag1}</button>
-                            <button className="Tagbtn">{post.tag2}</button>
-                            <button className="Tagbtn">{post.tag3}</button>
+                            <button className="Tagbtn">React</button>
+                            <button className="Tagbtn">Javascript</button>
+                            <button className="Tagbtn">Animation</button>
                         </div>
-                        <i className="articleImg2 fas fa-sign-language"></i><span className="articlePart2">{post.claps} claps</span>
+                        <i className="articleImg2 fas fa-sign-language"></i><span className="articlePart2">9.3k claps</span>
                         <hr></hr>
                         <div className="topBar">
                             <div className="topLeft">
-                                <img className="profileImage1" src={post.authorphoto} alt="Profile"></img>
+                                <img className="profileImage1" src={profile} alt="Profile"></img>
                                 
                             </div>
                             <div className="topCenter">
                                 <p className="profileInfo"> WRITTEN BY</p>
-                                <h6>{post.username}</h6>
-                                <p className="profileInfo">{post.date} - {post.time}</p>
+                                <h6>Dmitry Nazhenko</h6>
+                                <p className="profileInfo"> Jan 28, 2019 - 10 min read</p>
 
                             </div>
                         </div>
