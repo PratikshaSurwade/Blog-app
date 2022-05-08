@@ -10,15 +10,19 @@ require("./db/connections");
 const footer1 = require('./jsonData/footerdata1');
 const footer2 = require('./jsonData/footerdata2');
 //bollywood page
-const bollydata1 = require('./jsonData/bollydata1');
-const bollydata2 = require('./jsonData/bollydata2');
+const topposts = require('./jsonData/topposts');
+const bollywood = require('./jsonData/bollywood');
+
+const technology = require('./jsonData/technology');
+const hollywood = require('./jsonData/hollywood');
+const food = require('./jsonData/food');
+const fitness = require('./jsonData/fitness');
+
 //homepage
+const homepage = require('./jsonData/homepage')
 const thelatest = require('./jsonData/latestdata');
 const latestartdata1 = require('./jsonData/latestartdata');
 const homestory = require('./jsonData/storydata');
-
-const totalarticles = require('./jsonData/totalarticles');
-const postRoute = require('./routes/posts');
 
 const Post = require("./models/Post");
 
@@ -68,24 +72,34 @@ app.get("/article/:id", async (req, res) => {
       res.status(500).json(err);
     }
 });
-
+app.get('/homepage', bodyParser.json(), (req, res) => {
+	res.json(homepage);
+});
 app.get('/footer1', bodyParser.json(), (req, res) => {
 	res.json(footer1);
 });
-
 app.get('/footer2', bodyParser.json(), (req, res) => {
 	res.json(footer2);
 });
 
-app.get('/bollydata1', bodyParser.json(), (req, res) => {
-	res.json(bollydata1);
+app.get('/topposts', bodyParser.json(), (req, res) => {
+	res.json(topposts);
 });
-
-app.get('/bollydata2', bodyParser.json(), (req, res) => {
-	res.json(bollydata2);
+app.get('/bollywood', bodyParser.json(), (req, res) => {
+	res.json(bollywood);
 });
-
-
+app.get('/technology', bodyParser.json(), (req, res) => {
+	res.json(technology);
+});
+app.get('/hollywood', bodyParser.json(), (req, res) => {
+	res.json(hollywood);
+});
+app.get('/food', bodyParser.json(), (req, res) => {
+	res.json(food);
+});
+app.get('/fitness', bodyParser.json(), (req, res) => {
+	res.json(fitness);
+});
 app.get('/thelatest', bodyParser.json(), (req, res) => {
 	res.json(thelatest);
 });

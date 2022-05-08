@@ -1,12 +1,21 @@
 import React from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import './../Styles/homestyle.css';
 import { NavLink } from "react-router-dom";
 
 import "./../Styles/header.css"
 
-class Navbar extends React.Component{
-
-    render(){
+function Navbar (){
+  const [cats, setCats] = useState([]);
+  useEffect(() => {
+    const getCats = async () => {
+      const res = await axios.get("http://localhost:7001/article");
+      console.log(res.data)
+      setCats(res.data);
+    };
+    getCats();
+  }, []);
         return(
             <>
                 <div className="heading">
@@ -20,8 +29,8 @@ class Navbar extends React.Component{
                     <NavLink className="Linkitems" to="/bollywood">Bollywood</NavLink>
                     <NavLink className="Linkitems" to="/technology">Technology</NavLink>
                     <NavLink className="Linkitems" to="/hollywood">Hollywood</NavLink>
-                    <NavLink className="Linkitems" to="/fitness/article">Fitness</NavLink>
-                    <NavLink className="Linkitems" to="/food/article">Food</NavLink>
+                    <NavLink className="Linkitems" to="/fitness">Fitness</NavLink>
+                    <NavLink className="Linkitems" to="/food">Food</NavLink>
 
                   </div>
                   <hr style={{marginLeft:"10%",marginRight:"10%"}}></hr>
@@ -48,19 +57,19 @@ class Navbar extends React.Component{
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                      <NavLink className="Linkitems" to="/technology/article">Technology</NavLink>
+                      <NavLink className="Linkitems" to="/technology">Technology</NavLink>
                       <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                      <NavLink className="Linkitems" to="/hollywood/article">Hollywood</NavLink>
+                      <NavLink className="Linkitems" to="/hollywood">Hollywood</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                      <NavLink className="Linkitems" to="/fitness/article">Fitness</NavLink>
+                      <NavLink className="Linkitems" to="/fitness">Fitness</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">
-                      <NavLink className="Linkitems" to="/food/article">Food</NavLink>
+                      <NavLink className="Linkitems" to="/food">Food</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       </ul></center>
@@ -71,7 +80,7 @@ class Navbar extends React.Component{
             </div>
           </>
         )
-    }
+    
 }
 
 export default Navbar;

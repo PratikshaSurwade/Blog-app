@@ -10,12 +10,6 @@ import "./../../component/page2/page2sub2/subpost.css";
 import Mainimg from "./mainimg";
 import { NavLink } from "react-router-dom";
 
-//Import json 
-// import latestdata from "./latestdata";
-// import postContain from "./latestartdata"
-// import postConTain from "../page2/bollydata1.js";
-// import HomeStoryy from "./storydata.js";
-
 class Homepage extends React.Component{
     /*
     state={
@@ -28,11 +22,13 @@ class Homepage extends React.Component{
     constructor(props){
         super(props);
         this.state={
+            mainImg:[],
             latestdata :[],
             latestart:[],
             conTaint:[],
             homeStory:[]
         };
+        this.mainImg = this.mainImg.bind(this);
         this.latestdata = this.latestdata.bind(this);
         this.latestart = this.latestart.bind(this);
         this.conTaint = this.conTaint.bind(this);
@@ -44,6 +40,7 @@ class Homepage extends React.Component{
 	componentDidMount() {
         
 		this.setState(() => {
+            this.mainImg();
             this.latestdata();
             this.latestart();
 			this.conTaint();
@@ -51,6 +48,17 @@ class Homepage extends React.Component{
             
 		});
 	   
+    }
+    mainImg(){
+        axios.get("http://localhost:7001/homepage")
+
+			.then(response => {
+				this.setState({
+					mainImg: response.data
+				});
+                // console.log((response.data));
+			})
+			.catch(err => console.error(err));
     }
     latestdata() {
 		// axios.get("https://blog-app-be.herokuapp.com/thelatest")
@@ -80,7 +88,7 @@ class Homepage extends React.Component{
 	}
     conTaint() {
 		// axios.get("https://blog-app-be.herokuapp.com/bollydata1")
-		axios.get("http://localhost:7001/bollydata1")
+		axios.get("http://localhost:7001/topposts")
         .then(response => {
 				this.setState({
 					conTaint: response.data
@@ -106,7 +114,13 @@ class Homepage extends React.Component{
     render(){
     return(
         <>
-            <Mainimg />
+            
+            {/* {this.state.mainImg.map((item)=>(
+                            <Mainimg key={item._id} mainimg={item}/>
+
+
+                ))} */}
+                <Mainimg />
             <h1 className="latestHead">The Latest</h1>
             <div className="cardContainer">
                 {this.state.latestdata.map((item)=>(

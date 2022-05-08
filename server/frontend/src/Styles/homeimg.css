@@ -12,7 +12,11 @@
     object-fit: cover;
     background-size: cover;
 }
-
+.MainImgLink{
+    color: white;
+    text-decoration: none;
+    
+}
 
 .MainImg{
     width: 80%;

@@ -11,8 +11,8 @@
     flex: 20%;
 }
 .profileImage{
-    width: 8rem;
-    height: 8rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     object-fit: contain;
 }
@@ -103,6 +103,11 @@
 }
 .cards{
     margin: auto;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
 }
 .cardImg{
     width:18rem ;

@@ -7,14 +7,14 @@ class Subpost extends React.Component{
         return(
             <>
                 <div className="subpost">                   
-                    <div className="imagepart"><img src={subpostimage} alt="Imageshow"/></div>
+                    <div className="imagepart"><img src={this.props.postDetails.photo1} alt="Imageshow"/></div>
                     <div className="contentpart1">
                             <>
                                 <h5 className="postHeading">{this.props.postDetails.title}</h5>
-                                <span className="postThumbnail">{this.props.postDetails.thumbnaiL}</span>
+                                <span className="postThumbnail">{this.props.postDetails.categories}</span>
                                 <span className="date">
                                     <code>   </code>/
-                                    <code>   </code>{this.props.postDetails.Date}
+                                    <code>   </code>{this.props.postDetails.date}
                                 </span>                                
                             </>
                     </div>                   
