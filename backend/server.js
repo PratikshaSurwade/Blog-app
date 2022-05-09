@@ -29,7 +29,6 @@ const latestartdata1 = require('./jsonData/latestartdata');
 const homestory = require('./jsonData/storydata');
 
 const Post = require("./models/Post");
-const path = require('path');
 mongoose.connect(process.env.MONGO_URL,{
   useNewUrlParser:true,
   // useCreateIndex:true, 
@@ -126,9 +125,8 @@ app.get('/homestory', bodyParser.json(), (req, res) => {
 
 // ------------------------Deployment------------------------
 
-__dirname =path.resolve();
 if(process.env.NODE_ENV==='production'){
-  app.use(express.static(path.join(__dirname,'/frontend/build')));
+  app.use(express.static('frontend/build'));
 }
 // else{
 //   app.get('/', (req, res) => {
