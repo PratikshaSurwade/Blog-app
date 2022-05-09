@@ -25,7 +25,7 @@ function Categorypage (){
 
     useEffect(() => {
         const getPost = async () => {
-          const res = await axios.get("https://blog-my-mern-app.herokuapp.com//" + path);
+          const res = await axios.get("https://blog-my-mern-app.herokuapp.com/" + path);
           console.log(res)
           setmainItem(res.data);
         //   setTitle(res.data.title);
@@ -37,7 +37,7 @@ function Categorypage (){
 
     useEffect(() => {
         const fetchContaint = async () => {
-          const res = await axios.get("https://blog-my-mern-app.herokuapp.com//topposts")
+          const res = await axios.get("https://blog-my-mern-app.herokuapp.com/topposts")
           setconTaint(res.data);
         };
           fetchContaint();

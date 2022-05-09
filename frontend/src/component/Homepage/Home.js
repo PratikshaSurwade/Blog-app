@@ -62,7 +62,7 @@ class Homepage extends React.Component{
     }
     latestdata() {
 		// axios.get("https://blog-app-be.herokuapp.com/thelatest")
-        axios.get("https://blog-my-mern-app.herokuapp.com//thelatest")
+        axios.get("https://blog-my-mern-app.herokuapp.com/thelatest")
 
 			.then(response => {
 				this.setState({
@@ -76,7 +76,7 @@ class Homepage extends React.Component{
     latestart() {
 		// axios.get("https://blog-app-be.herokuapp.com/latestart")
 
-		axios.get("https://blog-my-mern-app.herokuapp.com//latestart")
+		axios.get("https://blog-my-mern-app.herokuapp.com/latestart")
         .then(response => {
 				this.setState({
 					latestart: response.data
@@ -88,7 +88,7 @@ class Homepage extends React.Component{
 	}
     conTaint() {
 		// axios.get("https://blog-app-be.herokuapp.com/bollydata1")
-		axios.get("https://blog-my-mern-app.herokuapp.com//topposts")
+		axios.get("https://blog-my-mern-app.herokuapp.com/topposts")
         .then(response => {
 				this.setState({
 					conTaint: response.data
@@ -100,7 +100,7 @@ class Homepage extends React.Component{
 	}
     homeStory() {
 		// axios.get("https://blog-app-be.herokuapp.com/homestory")
-		axios.get("https://blog-my-mern-app.herokuapp.com//homestory")
+		axios.get("https://blog-my-mern-app.herokuapp.com/homestory")
 			.then(response => {
 				this.setState({		
 					homeStory: response.data
