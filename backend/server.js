@@ -2,8 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = process.env.PORT || 7001;
 const dotenv = require("dotenv");
+const PORT = process.env.PORT || 7001;
+
 dotenv.config();
 const mongoose = require('mongoose');
 
@@ -125,9 +126,9 @@ app.get('/homestory', bodyParser.json(), (req, res) => {
 
 // ------------------------Deployment------------------------
 
-if(process.env.NODE_ENV==='production'){
-  app.use(express.static('frontend/build'));
-}
+// if(process.env.NODE_ENV ==='production'){
+//   app.use(express.static('/frontend/build'));
+// }
 // else{
 //   app.get('/', (req, res) => {
 //     res.send("API is running");
