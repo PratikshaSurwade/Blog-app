@@ -24,7 +24,7 @@ function Articlefun (){
         const[infoCard , setinfoCard] = useState([]);
     useEffect(() => {
         const getPost = async () => {
-          const res = await axios.get("http://localhost:7001/article/" + path);
+          const res = await axios.get("/article/" + path);
           console.log(res)
           setPost(res.data);
         //   setTitle(res.data.title);
@@ -35,11 +35,11 @@ function Articlefun (){
     useEffect(() => {
 
         const fetchfooter1 = async () => {
-          const res = await axios.get("http://localhost:7001/footer1")
+          const res = await axios.get("/footer1")
           setinfoCard1(res.data);
         };
         const fetchfooter2 = async () => {
-            const res = await axios.get("http://localhost:7001/footer2")
+            const res = await axios.get("/footer2")
             setinfoCard(res.data);
           };
           fetchfooter1();
