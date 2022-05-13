@@ -22,7 +22,7 @@ class Footer extends React.Component {
                                 <div className="cards">
                                     <p className="profileInfo"> {item.about}</p>
                                     <img className="cardImg" src={item.photo1} alt="imaGEPlay"></img>
-                                    <NavLink className="bollywood" to={`/article/${item._id}`}>
+                                    <NavLink className="MainImgLink2" to={`/article/${item._id}`}>
 
                                         <h5>{item.title}</h5>
                                     </NavLink>

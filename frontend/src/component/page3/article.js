@@ -27,21 +27,34 @@ function Articlefun (){
           const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article/" + path);
           console.log(res)
           setPost(res.data);
-        //   setTitle(res.data.title);
-        //   setDesc(res.data.desc);
         };
         getPost();
       }, [path]);  
     useEffect(() => {
 
         const fetchfooter1 = async () => {
-          const res = await axios.get("https://blog-my-mern-app.herokuapp.com/footer1")
-          setinfoCard1(res.data);
+          const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article");
+          var data1 = [];
+
+          for (let index = 0; index < 3; index++) {
+            var xArray = res.data;
+            var xArrayLength = xArray.length;
+            var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
+            data1.push(xRandomValue);
+          }
+          setinfoCard1(data1);
         };
         const fetchfooter2 = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/footer2")
-            setinfoCard(res.data);
-          };
+            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/footer2");
+            var data2 = [];
+
+            for (let index = 0; index < 5; index++) {
+                var xArray = res.data;
+                var xArrayLength = xArray.length;
+                var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
+                data2.push(xRandomValue);
+              }
+              setinfoCard(data2);          };
           fetchfooter1();
           fetchfooter2();
     },[]);
