@@ -8,9 +8,6 @@ const PORT = process.env.PORT || 7001;
 dotenv.config();
 const mongoose = require('mongoose');
 
-
-// require("./db/connections");
-
 //article page
 const footer1 = require('./jsonData/footerdata1');
 const footer2 = require('./jsonData/footerdata2');
@@ -42,8 +39,6 @@ mongoose.connect(process.env.MONGO_URL,{
 
 app.use(cors());
 app.use(express.json());
-
-// app.use(express.json());
 
 app.post("/article", async(req,res) =>{
     try{
@@ -135,7 +130,6 @@ app.get('/homestory', bodyParser.json(), (req, res) => {
 //   });
 // }
 // ------------------------Deployment------------------------
-
 
 app.listen(PORT, () => { 
   console.log(`Server started at ${PORT}`);

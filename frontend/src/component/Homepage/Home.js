@@ -87,7 +87,6 @@ function Home() {
                                     <Bollysub key={item.id2} bollyNews={item} />
 
                                 </NavLink>
-
                             ))}
                         </>
                     )}
