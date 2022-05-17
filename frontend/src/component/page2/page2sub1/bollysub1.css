@@ -34,9 +34,7 @@
     height: 10rem;
     flex: 6;
     margin-left: 1rem;
-    margin-right: 9rem;
-
-    
+    margin-right: 9rem;  
 }
 .postHeading{
     margin-bottom: 10px;
@@ -62,53 +60,42 @@ hr{
 
 @media only screen and (min-width :100px) and (max-width :400px){
     
-    .contentpart1,.hr{
-        
-        margin-right: 0px;
-    
-        
+    .contentpart1,.hr{    
+        margin-right: 0px;  
     }
     .postDescrip{
         line-height: 1.5rem;
     }
-   
-
+    .contentpart{
+        margin-right: 0px;
+    }
 }
 
 @media only screen and (min-width :400px) and (max-width :900px){
     
-    .contentpart1,.hr{
-        
-        margin-right: 0px;
-    
-        
+    .contentpart1,.hr{     
+        margin-right: 0px;      
     }
-
-
+    .contentpart{
+        margin-right: 0.5rem;
+    }
 }
-@media only screen and (min-width :900px) and (max-width :1100px){
+@media only screen and (min-width :900px) and (max-width :1150px){
     .bollywood{
         margin-right: 0px;
+    }
+    .contentpart{
+        margin-right: 1rem;
     }
     .contentpart1,hr{
-     
         margin-right: 0px;
-   
     }
-
-
 }
-@media only screen and (min-width :1100px) and (max-width :1450px){
+@media only screen and (min-width :1150px) and (max-width :1450px){
     .bollywood{
         margin-right: 0px;
     }
-    .contentpart1{
-      
-        margin-right: 0px;
-    
-        
+    .contentpart1{     
+        margin-right: 0px;   
     }
-
-    
-
 }

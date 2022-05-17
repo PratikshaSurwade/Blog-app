@@ -1,12 +1,10 @@
 /*homestory*/
 .story{
     display: flex;
+    
 }
-
 .storyInfo{
-    margin-left: 2rem;
-
-    margin-bottom: 2rem;
+    margin : 2rem;
 }
 .description{
     color: #a7a5a5;
@@ -21,9 +19,6 @@
     margin: 1rem 5rem;
 }
 
-
-
-
 /*latest page-------------------------------*/
 
 .postDescription{
@@ -34,7 +29,6 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-
 .card{
     color: black;
     text-decoration: none;
@@ -48,17 +42,20 @@
 a.cardLink{
     text-decoration: none;
     color: black;
-    text-decoration: none;
+}
+a.cardLink:hover{
+    text-decoration: underline black;
+    color: black;
 }
 .imaGe{
     border-top-right-radius: 0.4375rem;
     border-top-left-radius: 0.4375rem;
     width: 100%;
+    height: 16rem;
 }
 .cardInfo{
     margin: 1rem 2rem;
     text-decoration: none;
-
 }
 .Navbarstyle{
     display: flex;
@@ -108,6 +105,9 @@ p.cardInfo{
     .latestHead{
         margin-left: 0px;
     }
+    .imaGe{
+        height: 20rem;
+    }
 }
 @media only screen and (min-width :300px) and (max-width :500px){
     .cardContainer{
@@ -128,6 +128,9 @@ p.cardInfo{
     }
     .latestHead{
         margin: 0px;
+    }
+    .imaGe{
+        height: 20rem;
     }
 
 }
@@ -152,6 +155,9 @@ p.cardInfo{
     .latestHead{
         margin: 0px;
     }
+    .imaGe{
+        height: 20rem;
+    }
 }
 @media only screen and (min-width :700px) and (max-width :900px){
     .cardContainer{
@@ -174,22 +180,15 @@ p.cardInfo{
         width: 100%;
         text-align: center;
         align-items: center;
-
         padding-bottom: 20px;
-        
-     
     }
     .storyInfo{
-        margin:0px;
         margin-bottom: 3rem;
-
     }
 }
 @media only screen and (min-width :900px) and (max-width :1100px){
     .storyInfo{
         margin-left: 1rem;
-      
         margin-bottom: 3rem;
-
     }
 }

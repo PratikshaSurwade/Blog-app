@@ -4,24 +4,23 @@
 }
 .bollywood{
     flex: 7;
-    margin-right: 8rem;
-    
+    margin-right: 8rem;   
 }
 a.bollywood{
     color: black;
     text-decoration: none;
 }
 a.bollywood:hover{
+    text-decoration: underline black;
     color: black;
-    text-decoration: none;
 }
 a.posts{
     color: black;
     text-decoration: none;
 }
 a.posts:hover{
+    text-decoration: underline black;
     color: black;
-    text-decoration: none;
 }
 
 .bollyhead{

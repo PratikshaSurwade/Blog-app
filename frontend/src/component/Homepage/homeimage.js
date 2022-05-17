@@ -1,7 +1,7 @@
 import "./../../Styles/homeimg.css";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import moon2 from "./../../images/blogimg4.png";
+
 class Homeimage extends React.Component{
     state=[
         {
@@ -24,25 +24,23 @@ class Homeimage extends React.Component{
             "createdAt": "2022-05-06T10:18:29.814Z",
             "updatedAt": "2022-05-06T10:18:29.814Z",
             "__v": 0
-            }
+        }
     ]
     render(){
-    return(
-        <> 
-        
-            <div className="MainImg1">
-                <img className="img1" src={this.state[0].photo1} alt="Imageshow" />
-                <div className="textContaint1">
-                <NavLink className="MainImgLink" to={`/article/${this.state[0]._id}`}>
-                    <h1>{this.state[0].title}</h1>
-                    </NavLink>
-
-                    <span  className="postThumbnail1">{this.state[0].categories}</span>
-                    <span className="date1"><code>   </code>/<code>   </code>{this.state[0].date} </span>
+        return(
+            <> 
+                <div className="MainImg1">
+                    <img className="img1" src={this.state[0].photo1} alt="Imageshow" />
+                    <div className="textContaint1">
+                    <NavLink className="MainImgLink" to={`/article/${this.state[0]._id}`}>
+                        <h1>{this.state[0].title}</h1>
+                        </NavLink>
+                        <span  className="postThumbnail1">{this.state[0].categories}</span>
+                        <span className="date1"><code>   </code>/<code>   </code>{this.state[0].date} </span>
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
     }
 }
 export default Homeimage;

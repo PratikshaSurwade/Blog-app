@@ -25,7 +25,7 @@ function Navbar (){
                     <span className="headstyle2"> Siren</span>
                   </h1>
                   <div className="Navbarstyle" id="Navbarstyle2">
-                    <NavLink className="Linkitems" to="/home">Home</NavLink>
+                    <NavLink className="Linkitems" to="/">Home</NavLink>
                     <NavLink className="Linkitems" to="/bollywood">Bollywood</NavLink>
                     <NavLink className="Linkitems" to="/technology">Technology</NavLink>
                     <NavLink className="Linkitems" to="/hollywood">Hollywood</NavLink>
@@ -49,7 +49,7 @@ function Navbar (){
                     <div className="collapse navbar-collapse bg-bs-light" id="navbarSupportedContent">
                       <center><ul className="navbar-nav mr-auto ml-auto mb-2 ">
                       <li className="nav-item">
-                      <NavLink className="Linkitems" to="/home">Home</NavLink>
+                      <NavLink className="Linkitems" to="/">Home</NavLink>
                         <hr className="navHr"></hr>
                       </li>
                       <li className="nav-item">

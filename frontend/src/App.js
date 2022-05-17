@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Route,Routes } from "react-router-dom";
 import Navbar from "./component/navbar.js";
-import Homepage from "./component/Homepage/Home.js";
+import Home from "./component/Homepage/Home.js";
 import ScrollToTop from "./Scrolltop.js"
 import Articlebyid from "./component/page3/article.js";
 import Categorypage from "./component/page2/page2.js";
@@ -15,8 +15,7 @@ function App (){
                 <Navbar />
                 <ScrollToTop />
                     <Routes>
-                            <Route path="/" element={<Homepage />} exact />
-                            <Route path="/home" element={<Homepage />} exact />
+                            <Route path="/" element={<Home />} exact />
                             <Route path="/bollywood" element={<Categorypage />} exact />
                             <Route path="/technology" element={<Categorypage />} exact />
                             <Route path="/hollywood" element={<Categorypage />} exact />

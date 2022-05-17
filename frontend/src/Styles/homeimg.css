@@ -15,9 +15,12 @@
 .MainImgLink{
     color: white;
     text-decoration: none;
-    
 }
 
+.MainImgLink:hover{
+    color: white;
+    text-decoration: underline white;
+}
 .MainImg{
     width: 80%;
     height: 30rem;

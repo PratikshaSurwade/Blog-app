@@ -11,9 +11,12 @@
     padding: 1.5rem ;
     text-decoration: none;
     color: black    ; 
-    
+    font-weight: 700;
 }
-
+.Linkitems:hover{  
+    transform: scale(1.1);
+    color: #006CFF;
+}
 .headstyle{
     font-family: sans-serif;
     text-align: center; 
@@ -32,10 +35,8 @@
 }
 
 .navHr{
-    
     opacity: 0.1;
 }
-
 
 .navbar-nav{
     text-align: center;
@@ -44,17 +45,13 @@
     font-size: 18px;
 }
 
-
-
 @media only screen and (min-width :100px) and (max-width :1000px){
     .headingOne{
         display: none;
     }
-
 }
 @media only screen and (min-width :1000px){
     .headingTwo{
         display: none;
-
     }
 }

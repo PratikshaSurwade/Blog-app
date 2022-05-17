@@ -1,7 +1,7 @@
 import axios from "axios";
 import Latest from "./latest";
 import Posts from "../page2/page2sub2/posts";
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import Bollysub from "../page2/page2sub1/bollysub1.js";
 import "./../../Styles/home.css"
 import Homeimage from "./homeimage";
@@ -9,159 +9,127 @@ import Homestory from "./homestories";
 import "./../../component/page2/page2sub2/subpost.css";
 import Mainimg from "./mainimg";
 import { NavLink } from "react-router-dom";
+import Loader from '../Loader/Loader';
 
-class Homepage extends React.Component{
-    /*
-    state={
-        latestdata : latestdata,
-        latestart:postContain,
-        conTaint:postConTain,
-        homeStory:HomeStoryy,
-    }
-    */
-    constructor(props){
-        super(props);
-        this.state={
-            mainImg:[],
-            latestdata :[],
-            latestart:[],
-            conTaint:[],
-            homeStory:[]
+function Home() {
+    const [latestdata, setLatestdata] = useState([]);
+    const [latestart, setLatestart] = useState([]);
+    const [topposts, setTopposts] = useState([]);
+    const [homestory, setHomestory] = useState([]);
+
+    //loading effect
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true)
+
+        const getlatestdata = async () => {
+            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/thelatest");
+            setLatestdata(res.data);
+            setLoading(false);
         };
-        this.mainImg = this.mainImg.bind(this);
-        this.latestdata = this.latestdata.bind(this);
-        this.latestart = this.latestart.bind(this);
-        this.conTaint = this.conTaint.bind(this);
-        this.homeStory = this.homeStory.bind(this);
-        
-    }
-    
+        getlatestdata();
 
-	componentDidMount() {
-        
-		this.setState(() => {
-            this.mainImg();
-            this.latestdata();
-            this.latestart();
-			this.conTaint();
-            this.homeStory();
-            
-		});
-	   
-    }
-    mainImg(){
-        axios.get("https://blog-my-mern-app.herokuapp.com/homepage")
+        const getlatestart = async () => {
+            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/latestart");
+            setLatestart(res.data);
+            setLoading(false);
+        };
+        getlatestart();
 
-			.then(response => {
-				this.setState({
-					mainImg: response.data
-				});
-                // console.log((response.data));
-			})
-			.catch(err => console.error(err));
-    }
-    latestdata() {
-		// axios.get("https://blog-app-be.herokuapp.com/thelatest")
-        axios.get("https://blog-my-mern-app.herokuapp.com/thelatest")
+        const gettopposts = async () => {
+            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/topposts");
+            setTopposts(res.data);
+            setLoading(false);
+        };
+        gettopposts();
 
-			.then(response => {
-				this.setState({
-					latestdata: response.data
-				});
-                // console.log((response.data));
-			})
-			.catch(err => console.error(err));
-            console.log("Fetching dataa bollydata 1/homedata 1");
-	}
-    latestart() {
-		// axios.get("https://blog-app-be.herokuapp.com/latestart")
+        const gethomestory = async () => {
+            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/thelatest");
+            setHomestory(res.data);
+            setLoading(false);
+        };
+        gethomestory();
+    }, []);
 
-		axios.get("https://blog-my-mern-app.herokuapp.com/latestart")
-        .then(response => {
-				this.setState({
-					latestart: response.data
-				});
-                // console.log((response.data));
-			})
-			.catch(err => console.error(err));
-            console.log("Fetching dataa bollydata 1/homedata 1");
-	}
-    conTaint() {
-		// axios.get("https://blog-app-be.herokuapp.com/bollydata1")
-		axios.get("https://blog-my-mern-app.herokuapp.com/topposts")
-        .then(response => {
-				this.setState({
-					conTaint: response.data
-				});
-                // console.log((response.data));
-			})
-			.catch(err => console.error(err));
-            console.log("Fetching dataa homedata2");
-	}
-    homeStory() {
-		// axios.get("https://blog-app-be.herokuapp.com/homestory")
-		axios.get("https://blog-my-mern-app.herokuapp.com/homestory")
-			.then(response => {
-				this.setState({		
-					homeStory: response.data
-				});
-                // console.log((response.data));
-			})
-			.catch(err => console.error(err));
-            console.log("Fetching dataa hoemstorydata 3");
-	}
 
-    render(){
-    return(
+    return (
         <>
-            
-            {/* {this.state.mainImg.map((item)=>(
-                            <Mainimg key={item._id} mainimg={item}/>
 
-
-                ))} */}
-                <Mainimg />
+            <Mainimg />
             <h1 className="latestHead">The Latest</h1>
             <div className="cardContainer">
-                {this.state.latestdata.map((item)=>(
-                            <Latest key={item.id2} latestdata={item}/>
-
-                ))}
+                {loading ? (
+                    <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                        <h2 style={{ textAlign: "center" }}>Loading...</h2>
+                        <Loader />
+                    </div>
+                ) : (
+                    <>
+                        {latestdata.map((item) => (
+                            <Latest key={item.id2} latestdata={item} />
+                        ))}
+                    </>)}
             </div>
             <h1 className="latestHead">Latest Articles</h1>
             <div className="articlePage">
                 <div className="articles">
-                    {this.state.latestart.map((item)=>(
-                        <NavLink className="articles" to="/bollywood">
+                    {loading ? (
+                        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                            <h2 style={{ textAlign: "center" }}>Loading...</h2>
+                            <Loader />
+                        </div>
+                    ) : (
+                        <>
+                            {latestart.map((item) => (
+                                <NavLink className="articles" to="/bollywood">
 
-                        <Bollysub key={item.id2} bollyNews={item}/>
+                                    <Bollysub key={item.id2} bollyNews={item} />
 
-                        </NavLink>
-                        
-                    ))}
-                    <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="loadmore"> Load More</span> 
+                                </NavLink>
+
+                            ))}
+                        </>
+                    )}
+                    {/* <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="loadmore"> Load More</span> */}
                     <Homeimage />
                 </div>
-                <div  className="sidebarContainer">
+                <div className="sidebarContainer">
                     <div className="homeAdvertise">Advertisement</div>
                     <h1 className="posthead">Top Posts</h1>
                     <div className="sidebar">
                         <NavLink className="sidebar" to="/bollywood">
-                            <Posts conTaint={this.state.conTaint} />
+                            {loading ? (
+                                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                                    <h2 style={{ textAlign: "center" }}>Loading...</h2>
+                                    <Loader />
+                                </div>
+                            ) : (
+                                <>
+                                    <Posts conTaint={topposts} />
+                                </>
+                            )}
                         </NavLink>
                     </div>
                 </div>
             </div>
             <h1 className="latestHead1">Latest Stories</h1>
-        
-                    {this.state.homeStory.map((item)=>(
-                        // {this.state.postList.map((item)=>(<div key={item.id}>
-                    <Homestory key={item.id} storyinfo={item}/> 
-                    ))}  
-            <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span>
+            {loading ? (
+                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                    <h2 style={{ textAlign: "center" }}>Loading...</h2>
+                    <Loader />
+                </div>
+            ) : (
+                <>
+                    {homestory.map((item) => (
+                        <Homestory key={item.id} storyinfo={item} />
+                    ))}
+                </>
+            )}
+            {/* <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span> */}
+
         </>
     )
-}
-}
-export default Homepage;
 
+}
+export default Home
