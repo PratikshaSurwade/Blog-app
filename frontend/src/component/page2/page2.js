@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
 
-import "./bollywood.css"
+import "./bollywood.css";
+import "./page2sub1/bollysub1.css"
 
 //Json importing
 import Bollysub from "./page2sub1/bollysub1.js";
@@ -23,6 +24,16 @@ function Categorypage() {
 
     //loading effect
     const [loading, setLoading] = useState(false);
+    //pagination
+    // const [allPets, setAllPets] = useState([]);
+    const [postcount, setPostcount] = useState(4);
+  
+    const loadmorePosts = (e) => {
+        setPostcount(mainItem.length);
+        // const val = (e.target.innerHTML)
+        // console.log(val.innerHTML)
+        
+      };
 
     useEffect(() => {
         setLoading(true)
@@ -32,6 +43,7 @@ function Categorypage() {
             console.log(res)
             setmainItem(res.data);
             setLoading(false);
+            setPostcount(4)
         };
         getPost();
     }, [path]);
@@ -62,10 +74,10 @@ function Categorypage() {
                         <div className="bollywood">
                             {/* <h1 className="bollyhead">{path}</h1>str.charAt(0).toUpperCase() + str.slice(1); */}
                             <h1 className="bollyhead">{path.charAt(0).toUpperCase() + path.slice(1)}</h1>
-                            {mainItem.map((item) => (
+                            {mainItem.slice(0,postcount).map((item) => (
                                 <Bollysub key={item.id2} bollyNews={item} />
                             ))}
-                            {/* <i className="arrow fas fa-arrow-down"><blockquote>      </blockquote></i><span className="loadmore"> Load More</span> */}
+                            <span className="loadmore" onClick={loadmorePosts} style={{display:"flex",alignItems:"center"}}>Load More<blockquote>      </blockquote><i className="arrow fas fa-arrow-down"></i></span>
                         </div>
                         <div className="posts">
                             <h1 className="posthead">Top Posts</h1>

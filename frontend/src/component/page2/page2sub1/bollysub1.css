@@ -98,4 +98,7 @@ hr{
     .contentpart1{     
         margin-right: 0px;   
     }
+    .contentpart{
+        margin-right: 1rem;
+    }
 }
