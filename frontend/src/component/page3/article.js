@@ -31,7 +31,7 @@ function Articlefun() {
 
         const getPost = async () => {
             const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article/" + path);
-            console.log(res)
+            // console.log(res)
             setPost(res.data);
             setLoading(false);
 
@@ -57,7 +57,7 @@ function Articlefun() {
 
             for (let index = 0; index < 5; index++) {
                 var xArray = res.data;
-                console.log(xArray)
+                // console.log(xArray)
                 var xArrayLength = xArray.length;
                 var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
                 data2.push(xRandomValue);

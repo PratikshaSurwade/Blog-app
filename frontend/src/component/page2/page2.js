@@ -15,8 +15,9 @@ import Loader from '../Loader/Loader';
 
 function Categorypage() {
     const location = useLocation();
-    console.log(location.pathname.split("/")[1]);
+    // console.log(location.pathname.split("/")[1]);
     const path = location.pathname.split("/")[1];
+    console.log(path.toLowerCase());
 
     const [conTaint, setconTaint] = useState([]);
     const [bollyNews, setbollyNews] = useState([]);
@@ -32,15 +33,15 @@ function Categorypage() {
         setPostcount(mainItem.length);
         // const val = (e.target.innerHTML)
         // console.log(val.innerHTML)
-        
       };
 
     useEffect(() => {
         setLoading(true)
 
         const getPost = async () => {
+            // const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article?cat=" + path);
             const res = await axios.get("https://blog-my-mern-app.herokuapp.com/" + path);
-            console.log(res)
+            // console.log(res)
             setmainItem(res.data);
             setLoading(false);
             setPostcount(4)

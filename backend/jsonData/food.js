@@ -127,7 +127,7 @@ module.exports=
     "__v": 0
     },
     {
-    "_id": "6274fccdd3b29e98a0568d19",
+    "_id": "6274fcdbd3b29e98a0568d1b",
     "title": "Drinks to take in heat wave",
     "decription": "Aam Pana - Two glasses of aam pana can help with digestion, constipation and chronic stomach problems like Irritable bowel syndrome (IBS). Make it at home to ensure the use of recommended quantities of sugar and salt.Mint water with lemon: One glass of strained mint water with two drops of lemon works wonders. It acts as a liver cleanser, boosts your metabolism and helps those with a low appetite.Barley Water: Have two glasses a day and in case you find it bland, add a drop of lemon or honey for taste. Since barley water is rich in fiber, it prevents constipation and also helps in controlling your appetite.",
     "authorphoto": "https://indianexpress.com/wp-content/themes/indianexpress/images/indian-express-logo-n.svg",
