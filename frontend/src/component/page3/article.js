@@ -52,11 +52,12 @@ function Articlefun() {
 
         };
         const fetchfooter2 = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/footer2");
+            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article");
             var data2 = [];
 
             for (let index = 0; index < 5; index++) {
                 var xArray = res.data;
+                console.log(xArray)
                 var xArrayLength = xArray.length;
                 var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
                 data2.push(xRandomValue);

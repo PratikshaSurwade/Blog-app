@@ -22,4 +22,22 @@ router.get("/:id", async (req, res) => {
     }
   });
 
+//GET ALL PRODUCTS
+router.get("/", async (req, res) => {
+  const qCategory = req.query.category;
+  try {
+    let posts;
+    if (qCategory) {
+      posts = await Post.find({
+        categories: {
+          $in: [qCategory],
+        },
+      });
+    }  
+    res.status(200).json(posts);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
