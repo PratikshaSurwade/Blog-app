@@ -27,6 +27,10 @@
 hr{
     color: #d3d3d3;
 }
+.postHeading:hover{
+    color:#000000;
+    text-decoration: underline;
+}
 .MainImgLink2{
     text-decoration: none;
     color: black;

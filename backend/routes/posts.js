@@ -22,7 +22,7 @@ router.get("/:id", async (req, res) => {
     }
   });
 
-//GET ALL PRODUCTS
+//GET ALL Posts
 router.get("/", async (req, res) => {
   const qCategory = req.query.category;
   try {

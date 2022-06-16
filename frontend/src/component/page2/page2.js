@@ -11,6 +11,7 @@ import "./page2sub1/bollysub1.css"
 import Bollysub from "./page2sub1/bollysub1.js";
 import Posts from "./page2sub2/posts";
 import Loader from '../Loader/Loader';
+import baseUrl from '../../utils/baseUrl';
 
 
 function Categorypage() {
@@ -20,17 +21,24 @@ function Categorypage() {
     console.log(path.toLowerCase());
 
     const [conTaint, setconTaint] = useState([]);
-    const [bollyNews, setbollyNews] = useState([]);
     const [mainItem, setmainItem] = useState([]);
 
     //loading effect
     const [loading, setLoading] = useState(false);
     //pagination
     // const [allPets, setAllPets] = useState([]);
-    const [postcount, setPostcount] = useState(4);
+    const [postcount, setPostcount]  = useState(8);
+    const [ expanded , setExpanded ] = useState(false);
   
     const loadmorePosts = (e) => {
-        setPostcount(mainItem.length);
+        if(postcount === 4 ){
+            setPostcount(mainItem.length);
+            setExpanded(true);
+        }
+        else{ 
+            setPostcount(4);
+            setExpanded(false);
+        }
         // const val = (e.target.innerHTML)
         // console.log(val.innerHTML)
       };
@@ -40,7 +48,7 @@ function Categorypage() {
 
         const getPost = async () => {
             // const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article?cat=" + path);
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/" + path);
+            const res = await axios.get(`${baseUrl}/` + path);
             // console.log(res)
             setmainItem(res.data);
             setLoading(false);
@@ -53,7 +61,7 @@ function Categorypage() {
         setLoading(true)
 
         const fetchContaint = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/topposts")
+            const res = await axios.get(`${baseUrl}/topposts`)
             setconTaint(res.data);
             setLoading(false);
 
@@ -78,15 +86,25 @@ function Categorypage() {
                             {mainItem.slice(0,postcount).map((item) => (
                                 <Bollysub key={item.id2} bollyNews={item} />
                             ))}
-                            <span className="loadmore" onClick={loadmorePosts} style={{display:"flex",alignItems:"center"}}>Load More<blockquote>      </blockquote><i className="arrow fas fa-arrow-down"></i></span>
+                            <span className="loadmore" onClick={loadmorePosts} style={{display:"flex",alignItems:"center"}}>
+                                
+                                {expanded ? ( 
+                                    <>Show Less<i className="arrow fas fa-arrow-up"></i>
+                                </>
+                                 ) :
+                                ( <>Show More<i className="arrow fas fa-arrow-down"></i>
+                                </>
+                                 )}
+                                
+                            </span>
                         </div>
                         <div className="posts">
                             <h1 className="posthead">Top Posts</h1>
-                            <NavLink className="posts" to="/article">
+                            <div className="posts">
 
                                 <Posts conTaint={conTaint} />
 
-                            </NavLink>
+                            </div>
                             <div className="advertise">Advertisement</div>
                         </div>
                     </div>

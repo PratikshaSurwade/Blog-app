@@ -1,10 +1,13 @@
-import React from "react";
+import React ,{ useEffect, useState ,useTimeout } from "react";
 import "./../../Styles/homeimg.css";
+import axios from "axios";
 
 import { NavLink } from "react-router-dom";
+import Loader from "../Loader/Loader";
+import baseUrl from "../../utils/baseUrl";
 
-class Mainimg extends React.Component {
-    state = [
+function Mainimggg() {
+    const data = [
         {
             "_id": "6274ed120669802a0fb19392",
             "title": "'The Venus mission' of ISRO",
@@ -69,45 +72,49 @@ class Mainimg extends React.Component {
             "__v": 0
         }
     ]
-    render() {
+    
         return (
             <>
+        
                 <div className="MainImg" id="homeimgclick">
                     <div className="longImg">
-                        <img className="img1" src={this.state[0].photo1} alt="Imageshow" />
+                        <img className="img1" src={data[0].photo1} alt="Imageshow" />
                         <div className="textContaint1">
-                            <NavLink className="MainImgLink" to={`/article/${this.state[0]._id}`}>
-                                <h1>{this.state[0].title}</h1>
+                            <NavLink className="MainImgLink" to={`/article/${data[0]._id}`}>
+                                <h1>{data[0].title}</h1>
                             </NavLink>
-                            <span className="postThumbnail1">{this.state[0].categories}</span>
-                            <span className="date1"><code>   </code>/<code>   </code>{this.state[0].date}</span>
+                            <span className="postThumbnail1">{data[0].categories}</span>
+                            <span className="date1"><code>   </code>/<code>   </code>{data[0].date}</span>
                         </div>
                     </div>
                     <div className="smallImg">
                         <div className="img2">
-                            <img className="Img2" src={this.state[1].photo1} alt="Imageshow" />
+                            <img className="Img2" src={data[1].photo1} alt="Imageshow" />
                             <div className="textContaint2">
-                                <NavLink className="MainImgLink" to={`/article/${this.state[1]._id}`}>
-                                    <h4>{this.state[1].title} </h4>
+                                <NavLink className="MainImgLink" to={`/article/${data[1]._id}`}>
+                                    <h4>{data[1].title} </h4>
                                 </NavLink>
-                                <span className="postThumbnail1">{this.state[1].categories} </span>
-                                <span className="date1"><code>   </code>/<code>   </code>{this.state[1].date} </span>
+                                <span className="postThumbnail1">{data[1].categories} </span>
+                                <span className="date1"><code>   </code>/<code>   </code>{data[1].date} </span>
                             </div>
                         </div>
                         <div className="img3">
-                            <img className="Img3" src={this.state[2].photo1} alt="Imageshow" />
+                            <img className="Img3" src={data[2].photo1} alt="Imageshow" />
                             <div className="textContaint3">
-                                <NavLink className="MainImgLink" to={`/article/${this.state[2]._id}`}>
-                                    <h4>{this.state[2].title} </h4>
+                                <NavLink className="MainImgLink" to={`/article/${data[2]._id}`}>
+                                    <h4>{data[2].title} </h4>
                                 </NavLink>
-                                <span className="postThumbnail1">{this.state[2].categories} </span>
-                                <span className="date1"><code>   </code>/<code>   </code>{this.state[2].date} </span>
+                                <span className="postThumbnail1">{data[2].categories} </span>
+                                <span className="date1"><code>   </code>/<code>   </code>{data[2].date} </span>
                             </div>
                         </div>
                     </div>
                 </div>
+            
+               
             </>
         )
-    }
+    
 }
-export default Mainimg;
+
+export default Mainimggg

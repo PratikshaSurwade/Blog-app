@@ -6,6 +6,7 @@ import Home from "./component/Homepage/Home.js";
 import ScrollToTop from "./Scrolltop.js"
 import Articlebyid from "./component/page3/article.js";
 import Categorypage from "./component/page2/page2.js";
+import Mainimggg from "./component/Homepage/mainimg2.js";
 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -16,6 +17,8 @@ function App (){
                 <ScrollToTop />
                     <Routes>
                             <Route path="/" element={<Home />} exact />
+                            <Route path="/main" element={<Mainimggg />} exact />mainimgg
+
                             <Route path="/bollywood" element={<Categorypage />} exact />
                             <Route path="/technology" element={<Categorypage />} exact />
                             <Route path="/hollywood" element={<Categorypage />} exact />

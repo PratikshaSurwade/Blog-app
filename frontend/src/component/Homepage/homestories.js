@@ -18,7 +18,7 @@ function Homestory(props){
                 </span>
             </div>
          
-            <hr className="hrMargin"></hr>
+            {/* <hr className="hrMargin"></hr> */}
         </>
     )
 }

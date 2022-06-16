@@ -12,6 +12,7 @@ import Footer from "./footer";
 import axios from 'axios';
 import Loader from '../Loader/Loader';
 import { useLocation } from 'react-router-dom';
+import baseUrl from '../../utils/baseUrl';
 
 
 function Articlefun() {
@@ -25,12 +26,14 @@ function Articlefun() {
 
     //loading effect
     const [loading, setLoading] = useState(false);
+    const [loading1, setLoading1] = useState(false);
+
 
     useEffect(() => {
         setLoading(true)
 
         const getPost = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article/" + path);
+            const res = await axios.get(`${baseUrl}/article/`+ path);
             // console.log(res)
             setPost(res.data);
             setLoading(false);
@@ -38,7 +41,7 @@ function Articlefun() {
         };
         getPost();
         const fetchfooter1 = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article");
+            const res = await axios.get(`${baseUrl}/article`);
             var data1 = [];
 
             for (let index = 0; index < 3; index++) {
@@ -48,11 +51,11 @@ function Articlefun() {
                 data1.push(xRandomValue);
             }
             setinfoCard1(data1);
-            setLoading(false);
+            setLoading1(false);
 
         };
         const fetchfooter2 = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article");
+            const res = await axios.get(`${baseUrl}/article`);
             var data2 = [];
 
             for (let index = 0; index < 5; index++) {
@@ -63,7 +66,7 @@ function Articlefun() {
                 data2.push(xRandomValue);
             }
             setinfoCard(data2);
-            setLoading(false);
+            setLoading1(false);
 
         };
         fetchfooter1();
@@ -137,8 +140,14 @@ function Articlefun() {
                         </div>
                         <hr></hr>
                     </div>
-
+                    {loading1 ? (
+                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                    <h2 style={{ textAlign: "center" }}>Loading...</h2>
+                    <Loader />
+                </div>
+            ) : (
                     <Footer cardInfo1={infoCard1} cardInfo2={infoCard} />
+            )}
 
                 </>
             )}

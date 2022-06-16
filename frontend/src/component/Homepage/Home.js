@@ -10,6 +10,7 @@ import "./../../component/page2/page2sub2/subpost.css";
 import Mainimg from "./mainimg";
 import { NavLink } from "react-router-dom";
 import Loader from '../Loader/Loader';
+import baseUrl from "../../utils/baseUrl";
 
 function Home() {
     const [latestdata, setLatestdata] = useState([]);
@@ -24,28 +25,28 @@ function Home() {
         setLoading(true)
 
         const getlatestdata = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/thelatest");
+            const res = await axios.get(`${baseUrl}/thelatest`);
             setLatestdata(res.data);
             setLoading(false);
         };
         getlatestdata();
 
         const getlatestart = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/latestart");
+            const res = await axios.get(`${baseUrl}/latestart`);
             setLatestart(res.data);
             setLoading(false);
         };
         getlatestart();
 
         const gettopposts = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/topposts");
+            const res = await axios.get(`${baseUrl}/topposts`);
             setTopposts(res.data);
             setLoading(false);
         };
         gettopposts();
 
         const gethomestory = async () => {
-            const res = await axios.get("https://blog-my-mern-app.herokuapp.com/thelatest");
+            const res = await axios.get(`${baseUrl}/thelatest`);
             setHomestory(res.data);
             setLoading(false);
         };
@@ -82,11 +83,11 @@ function Home() {
                     ) : (
                         <>
                             {latestart.map((item) => (
-                                <NavLink className="articles" to="/bollywood">
+                                <div className="articles" >
 
                                     <Bollysub key={item.id2} bollyNews={item} />
 
-                                </NavLink>
+                                </div>
                             ))}
                         </>
                     )}
@@ -97,7 +98,7 @@ function Home() {
                     <div className="homeAdvertise">Advertisement</div>
                     <h1 className="posthead">Top Posts</h1>
                     <div className="sidebar">
-                        <NavLink className="sidebar" to="/bollywood">
+                        <div className="sidebar">
                             {loading ? (
                                 <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                                     <h2 style={{ textAlign: "center" }}>Loading...</h2>
@@ -108,7 +109,7 @@ function Home() {
                                     <Posts conTaint={topposts} />
                                 </>
                             )}
-                        </NavLink>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,9 +121,13 @@ function Home() {
                 </div>
             ) : (
                 <>
-                    {homestory.map((item) => (
-                        <Homestory key={item.id} storyinfo={item} />
-                    ))}
+                    <div className="storyshow">
+
+                        {homestory.map((item) => (
+                            <Homestory key={item.id} storyinfo={item} />
+                        ))}
+                    </div>
+
                 </>
             )}
             {/* <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span> */}
