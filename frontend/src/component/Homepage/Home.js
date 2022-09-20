@@ -131,6 +131,10 @@ function Home() {
                 </>
             )}
             {/* <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span> */}
+            
+            <div>
+                <h6>iShop an E-commerce website developed by © Pratiksha Surwade</h6>
+            </div>
 
         </>
     )
