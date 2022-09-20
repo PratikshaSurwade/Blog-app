@@ -151,6 +151,7 @@ function Articlefun() {
 
                 </>
             )}
+            <h5 className="copyrightfooter">iShop an E-commerce website developed by © Pratiksha Surwade</h5>
 
         </>
     )

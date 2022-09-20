@@ -123,9 +123,10 @@ img{
     object-fit: fill;
 }
 /* Footer */
-.footer{
+.copyrightfooter{
     bottom: 0px;
     background-color: white;
+    padding: 10px;
     text-align: center;
     border-top: double #f9da9f 5px;
     border-bottom: double #f9da9f 5px;
