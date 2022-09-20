@@ -132,7 +132,7 @@ function Home() {
             )}
             {/* <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span> */}
             
-            <h5 className="copyrightfooter">iShop an E-commerce website developed by © Pratiksha Surwade</h5>
+            <h5 className="copyrightfooter">Blog Website Developed by © Pratiksha Surwade</h5>
 
         </>
     )
