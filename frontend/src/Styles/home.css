@@ -128,8 +128,8 @@ img{
     background-color: white;
     padding: 10px;
     text-align: center;
-    border-top: double #f9da9f 5px;
-    border-bottom: double #f9da9f 5px;
+    border-top: solid #f9da9f 2.5px;
+    border-bottom: solid #f9da9f 2.5px;
 }
 
 @media only screen and (min-width :100px) and (max-width :300px){
