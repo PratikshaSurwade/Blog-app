@@ -122,8 +122,12 @@ img{
     height: 25rem;
     object-fit: fill;
 }
-
-
+/* Footer */
+.footer{
+    text-align: center;
+    border-top: double #fab534 5px;
+    border-bottom: double #fab534 5px;
+}
 
 @media only screen and (min-width :100px) and (max-width :300px){
     .articlePage{
