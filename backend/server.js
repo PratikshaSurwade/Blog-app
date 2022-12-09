@@ -37,6 +37,7 @@ mongoose.connect(process.env.MONGO_URL,{
   console.log("No Connection");
 })
 
+//Connecting frontend and backend
 app.use(cors());
 app.use(express.json());
 
