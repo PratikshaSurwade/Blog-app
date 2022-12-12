@@ -8,10 +8,11 @@ const PORT = process.env.PORT || 7001;
 dotenv.config();
 const mongoose = require('mongoose');
 
-//article page
+//Article page
 const footer1 = require('./jsonData/footerdata1');
 const footer2 = require('./jsonData/footerdata2');
-//bollywood page
+
+//Categories page
 const topposts = require('./jsonData/topposts');
 const bollywood = require('./jsonData/bollywood');
 
@@ -20,7 +21,7 @@ const hollywood = require('./jsonData/hollywood');
 const food = require('./jsonData/food');
 const fitness = require('./jsonData/fitness');
 
-//homepage
+//homepage posts
 const homepage = require('./jsonData/homepage')
 const thelatest = require('./jsonData/latestdata');
 const latestartdata1 = require('./jsonData/latestartdata');
