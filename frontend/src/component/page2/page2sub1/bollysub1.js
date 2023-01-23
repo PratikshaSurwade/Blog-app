@@ -20,7 +20,7 @@ function Bollysub(props){
                                 <h4 className="postHeading">{props.bollyNews.title}</h4>
                             </NavLink>
                             <p className="postDescrip2">{props.bollyNews.decription}</p>
-                            <span className="postThumbnail">{props.bollyNews.categories}</span>
+                            <span className="postThumbnail">{props.bollyNews.categories[0].charAt(0).toUpperCase()+props.bollyNews.categories[0].slice(1)}</span>
                             <span className="date" >
                                 <code>   </code>/<code>   </code>{props.bollyNews.date}
                             </span>

@@ -13,7 +13,6 @@ import Posts from "./page2sub2/posts";
 import Loader from '../Loader/Loader';
 import baseUrl from '../../utils/baseUrl';
 
-
 function Categorypage() {
     const location = useLocation();
     // console.log(location.pathname.split("/")[1]);
@@ -29,6 +28,10 @@ function Categorypage() {
     // const [allPets, setAllPets] = useState([]);
     const [postcount, setPostcount]  = useState(8);
     const [ expanded , setExpanded ] = useState(false);
+
+    //
+    const [topmainpost, setTopmainpost] = useState([]);
+    const [topsubpost, setTopsubpost] = useState([]);
   
     const loadmorePosts = (e) => {
         if(postcount === 4 ){
@@ -47,27 +50,49 @@ function Categorypage() {
         setLoading(true)
 
         const getPost = async () => {
-            // const res = await axios.get("https://blog-my-mern-app.herokuapp.com/article?cat=" + path);
-            const res = await axios.get(`${baseUrl}/` + path);
-            // console.log(res)
+
+            const res = await axios.get(`${baseUrl}/api/` + path);
             setmainItem(res.data);
             setLoading(false);
             setPostcount(4)
         };
         getPost();
-    }, [path]);
 
-    useEffect(() => {
-        setLoading(true)
-
+        
         const fetchContaint = async () => {
-            const res = await axios.get(`${baseUrl}/topposts`)
+            const res = await axios.get(`${baseUrl}/article`)
             setconTaint(res.data);
             setLoading(false);
-
         };
         fetchContaint();
-    }, []);
+
+        const getalltopposts = async () => {
+            const res = await axios.get(`${baseUrl}/article`);
+
+            var data1 = [];
+            var data2 = [];
+
+            for (let index = 0; index < 1; index++) {
+                var xArray = res.data;
+                var xArrayLength = xArray.length;
+                var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
+                data1.push(xRandomValue);
+            }
+            for (let index = 0; index < 3; index++) {
+                var xArray = res.data;
+                var xArrayLength = xArray.length;
+                var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
+                data2.push(xRandomValue);
+            }
+            
+            setTopmainpost(data1);
+            setTopsubpost(data2)
+            setLoading(false);
+        };
+        getalltopposts();
+
+    }, [path]);
+
 
 
     return (
@@ -81,7 +106,7 @@ function Categorypage() {
                 <>
                     <div className="home">
                         <div className="bollywood">
-                            {/* <h1 className="bollyhead">{path}</h1>str.charAt(0).toUpperCase() + str.slice(1); */}
+
                             <h1 className="bollyhead">{path.charAt(0).toUpperCase() + path.slice(1)}</h1>
                             {mainItem.slice(0,postcount).map((item) => (
                                 <Bollysub key={item.id2} bollyNews={item} />
@@ -102,8 +127,9 @@ function Categorypage() {
                             <h1 className="posthead">Top Posts</h1>
                             <div className="posts">
 
-                                <Posts conTaint={conTaint} />
-
+                            <>
+                                    <Posts conTaint={topsubpost} topmainpost={topmainpost}/>
+                                </>
                             </div>
                             <div className="advertise">Advertisement</div>
                         </div>
@@ -111,9 +137,7 @@ function Categorypage() {
                 </>
             )}
             <h5 className="copyrightfooter">Blog Website Developed by © Pratiksha Surwade</h5>
-
         </>
     )
-
 }
 export default Categorypage;

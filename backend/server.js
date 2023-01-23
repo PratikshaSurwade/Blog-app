@@ -8,23 +8,26 @@ const PORT = process.env.PORT || 7001;
 dotenv.config();
 const mongoose = require('mongoose');
 
+mongoose.set('strictQuery', false);
+
+
 //Article page
-const footer1 = require('./jsonData/footerdata1');
-const footer2 = require('./jsonData/footerdata2');
+// const footer1 = require('./jsonData/footerdata1');
+// const footer2 = require('./jsonData/footerdata2');
 
 //Categories page
 const topposts = require('./jsonData/topposts');
-const bollywood = require('./jsonData/bollywood');
+// const bollywood = require('./jsonData/bollywood');
 
-const technology = require('./jsonData/technology');
-const hollywood = require('./jsonData/hollywood');
-const food = require('./jsonData/food');
-const fitness = require('./jsonData/fitness');
+// const technology = require('./jsonData/technology');
+// const hollywood = require('./jsonData/hollywood');
+// const food = require('./jsonData/food');
+// const fitness = require('./jsonData/fitness');
 
 //homepage posts
 const homepage = require('./jsonData/homepage')
 const thelatest = require('./jsonData/latestdata');
-const latestartdata1 = require('./jsonData/latestartdata');
+// const latestartdata1 = require('./jsonData/latestartdata');
 const homestory = require('./jsonData/storydata');
 
 const Post = require("./models/Post");
@@ -73,6 +76,7 @@ app.get("/article", async (req, res) => {
       res.status(500).json(err);
     }
   });
+  
 
 app.get("/article/:id", async (req, res) => {
     try {
@@ -82,34 +86,31 @@ app.get("/article/:id", async (req, res) => {
       res.status(500).json(err);
     }
 });
+
+
+app.get("/api/:cat" , async (req,res) => {
+  const cat =  req.params.cat;
+  console.log(cat);
+  try {
+    const post = await Post.find({
+            categories: {
+              $in : [cat],
+            },
+          });
+    res.status(200).json(post);
+  } catch (error) {
+    res.status(500).json(error)
+  }
+})
+
 app.get('/homepage', bodyParser.json(), (req, res) => {
 	res.json(homepage);
-});
-app.get('/footer1', bodyParser.json(), (req, res) => {
-	res.json(footer1);
-});
-app.get('/footer2', bodyParser.json(), (req, res) => {
-	res.json(footer2);
 });
 
 app.get('/topposts', bodyParser.json(), (req, res) => {
 	res.json(topposts);
 });
-app.get('/bollywood', bodyParser.json(), (req, res) => {
-	res.json(bollywood);
-});
-app.get('/technology', bodyParser.json(), (req, res) => {
-	res.json(technology);
-});
-app.get('/hollywood', bodyParser.json(), (req, res) => {
-	res.json(hollywood);
-});
-app.get('/food', bodyParser.json(), (req, res) => {
-	res.json(food);
-});
-app.get('/fitness', bodyParser.json(), (req, res) => {
-	res.json(fitness);
-});
+
 app.get('/thelatest', bodyParser.json(), (req, res) => {
 	res.json(thelatest);
 });
