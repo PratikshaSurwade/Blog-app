@@ -2,12 +2,8 @@ import React, { Component, useEffect, useState } from 'react';
 
 import "./article.css";
 import profile from "./../../images/profilepic.png";
-import article1 from "./../../images/articlepic1.png";
-import article2 from "./../../images/articlepic2.png";
-import Footer from "./footer";
-// import {useLocation} from 'react-router-dom'
-// import CardDet1 from "./footerdata1";
-// import cardDet2 from "./footerdata2";
+
+import Footer from "./Footer.js";
 
 import axios from 'axios';
 import Loader from '../Loader/Loader';
@@ -34,7 +30,6 @@ function Articlefun() {
 
         const getPost = async () => {
             const res = await axios.get(`${baseUrl}/article/`+ path);
-            // console.log(res)
             setPost(res.data);
             setLoading(false);
 
@@ -60,7 +55,6 @@ function Articlefun() {
 
             for (let index = 0; index < 5; index++) {
                 var xArray = res.data;
-                // console.log(xArray)
                 var xArrayLength = xArray.length;
                 var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
                 data2.push(xRandomValue);

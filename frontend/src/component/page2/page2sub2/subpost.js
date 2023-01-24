@@ -15,7 +15,7 @@ class Subpost extends React.Component{
 
                                 <h5 className="postHeading">{this.props.postDetails.title}</h5>
                                 </NavLink>
-                                <span className="postThumbnail">{this.props.postDetails.categories}</span>
+                                <span className="postThumbnail">{this.props.postDetails.categories[0].charAt(0).toUpperCase() + this.props.postDetails.categories[0].slice(1)}</span>
                                 <span className="date">
                                     <code>   </code>/
                                     <code>   </code>{this.props.postDetails.date}

@@ -9,15 +9,13 @@ import "./page2sub1/bollysub1.css"
 
 //Json importing
 import Bollysub from "./page2sub1/bollysub1.js";
-import Posts from "./page2sub2/posts";
+import Posts from "./page2sub2/Posts.js";
 import Loader from '../Loader/Loader';
 import baseUrl from '../../utils/baseUrl';
 
 function Categorypage() {
     const location = useLocation();
-    // console.log(location.pathname.split("/")[1]);
     const path = location.pathname.split("/")[1];
-    console.log(path.toLowerCase());
 
     const [conTaint, setconTaint] = useState([]);
     const [mainItem, setmainItem] = useState([]);
@@ -25,7 +23,6 @@ function Categorypage() {
     //loading effect
     const [loading, setLoading] = useState(false);
     //pagination
-    // const [allPets, setAllPets] = useState([]);
     const [postcount, setPostcount]  = useState(8);
     const [ expanded , setExpanded ] = useState(false);
 
@@ -42,8 +39,6 @@ function Categorypage() {
             setPostcount(4);
             setExpanded(false);
         }
-        // const val = (e.target.innerHTML)
-        // console.log(val.innerHTML)
       };
 
     useEffect(() => {
@@ -73,16 +68,16 @@ function Categorypage() {
             var data2 = [];
 
             for (let index = 0; index < 1; index++) {
-                var xArray = res.data;
-                var xArrayLength = xArray.length;
-                var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
-                data1.push(xRandomValue);
+                var xArray1 = res.data;
+                var xArray1Length = xArray1.length;
+                var xRandomValue1 = xArray1[Math.floor(Math.random() * xArray1Length)];
+                data1.push(xRandomValue1);
             }
             for (let index = 0; index < 3; index++) {
-                var xArray = res.data;
-                var xArrayLength = xArray.length;
-                var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
-                data2.push(xRandomValue);
+                var xArray2 = res.data;
+                var xArray2Length = xArray2.length;
+                var xRandomValue2 = xArray2[Math.floor(Math.random() * xArray2Length)];
+                data2.push(xRandomValue2);
             }
             
             setTopmainpost(data1);

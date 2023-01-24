@@ -1,15 +1,13 @@
 import React from "react";
 import "./posts.css"
-import Subpost from "./subpost.js";
+import Subpost from "./Subpost.js";
 import Mainpost from "./Toppost.js"
 
 
 function Posts(props) {
-    console.log("props from home",props)
     return(
         <>
         <div className="postContainer">
-            {/* <Mainpost /> */}
             
             {props.topmainpost.map((item)=>(
                 <Mainpost key={item.id} postDetails={item} />

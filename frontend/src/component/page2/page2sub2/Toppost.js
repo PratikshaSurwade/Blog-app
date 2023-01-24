@@ -55,8 +55,6 @@ function Mainpost(props) {
     ]
     return (
         <>
-            {console.log("mainpost :", mainpost, loading)}
-            {console.log("props from home to main:", props.postDetails, loading)}
 
             {loading ? (
                 <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
@@ -66,14 +64,13 @@ function Mainpost(props) {
             ) : (
                 <>
                     <div className="mainPost">
-                        {console.log("mainpost :",mainpost,mainpost.title)}
                         <div className="mainpostImg"><img src={props.postDetails.photo1} alt="Imageshow" /></div>
                         <NavLink className="MainImgLink2" to={`/article/{mainpost[0]._id}}`}>
 
                             <h5 className="postHeading">{props.postDetails.title }</h5>
                         </NavLink>
-                        <span className="postThumbnail">{ }</span>
-                        <span className="date"><code>   </code>/<code>   </code>{ }</span>
+                        <span className="postThumbnail">{ props.postDetails.categories[0].charAt(0).toUpperCase() + props.postDetails.categories[0].slice(1)}</span>
+                        <span className="date"><code>   </code>/<code>   </code>{props.postDetails.date }</span>
                         <hr></hr>
                     </div></>
             )}

@@ -1,17 +1,17 @@
 import axios from "axios";
-import Latest from "./Latest.js";
-import Posts from "../page2/page2sub2/posts";
 import React, { useEffect, useState } from "react";
+
 import Bollysub from "../page2/page2sub1/bollysub1.js";
-import "./../../Styles/home.css";
-import "./../../Styles/homeimg.css";
 import Homeimage from "./Homeimage";
 import Homestory from "./Homestories";
-import "./../../component/page2/page2sub2/subpost.css";
-import Mainimg from "./mainimg";
 import Loader from "../Loader/Loader";
 import baseUrl from "../../utils/baseUrl";
-import Mainimggg from "./mainimg2";
+import Mainimage from "./Mainimage.js";
+import Latest from "./Latest.js";
+import Posts from "../page2/page2sub2/Posts";
+
+import "./../../component/page2/page2sub2/subpost.css";
+import "./../../Styles/home.css";
 import "./../../Styles/homepageimg.css";
 
 function Home() {
@@ -34,7 +34,6 @@ function Home() {
         const getmainimaga = async () => {
             const res = await axios.get(`${baseUrl}/api/main`);
             setMainheadings(res.data);
-
             setLoading(false);
         };
         getmainimaga();
@@ -69,21 +68,20 @@ function Home() {
 
         const getalltopposts = async () => {
             const res = await axios.get(`${baseUrl}/article`);
-
             var data1 = [];
             var data2 = [];
 
             for (let index = 0; index < 1; index++) {
-                var xArray = res.data;
-                var xArrayLength = xArray.length;
-                var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
-                data1.push(xRandomValue);
+                var xArray1 = res.data;
+                var xArray1Length = xArray1.length;
+                var xRandomValue1 = xArray1[Math.floor(Math.random() * xArray1Length)];
+                data1.push(xRandomValue1);
             }
             for (let index = 0; index < 3; index++) {
-                var xArray = res.data;
-                var xArrayLength = xArray.length;
-                var xRandomValue = xArray[Math.floor(Math.random() * xArrayLength)];
-                data2.push(xRandomValue);
+                var xArray2 = res.data;
+                var xArray2Length = xArray2.length;
+                var xRandomValue2 = xArray2[Math.floor(Math.random() * xArray2Length)];
+                data2.push(xRandomValue2);
             }
             
             setTopmainpost(data1);
@@ -91,21 +89,12 @@ function Home() {
             setLoading(false);
         };
         getalltopposts();
+
     }, []);
 
     return (
         <>
-            {loading ? (
-                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
-                    <h2 style={{ textAlign: "center" }}>Loading...</h2>
-                    <Loader />
-                </div>
-            ) : (
-                <>
-                    <Mainimg data />
-                </>
-            )}
-            <div class="grid-container">
+            <div className="grid-container">
                 {loading ? (
                     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
                         <h2 style={{ textAlign: "center" }}>Loading...</h2>
@@ -114,7 +103,7 @@ function Home() {
                 ) : (
                     <>
                         {mainheadings.map((item) => (
-                            <Mainimggg key={item.id2} mainheadings={item} />
+                            <Mainimage key={item.id2} mainheadings={item} />
                         ))}
                     </>
                 )}

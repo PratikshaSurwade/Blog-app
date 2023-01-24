@@ -6,7 +6,6 @@ import "./bollysub1.css";
 
 
 function Bollysub(props){
-    // console.log(props.bollyNews.title);
     return(
             <>     
             

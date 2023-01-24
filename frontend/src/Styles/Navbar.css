@@ -7,16 +7,19 @@
     z-index: 10;
     overflow: hidden;
 }
-.Linkitems{  
-    padding: 1.5rem ;
-    text-decoration: none;
-    color: black    ; 
-    font-weight: 700;
+
+.headstyle1{
+    font-size: 1.2rem;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    font-weight: lighter; 
+    padding: 0px;
 }
-.Linkitems:hover{  
-    transform: scale(1.1);
-    color: #006CFF;
+.headstyle2{
+    font-size: 3rem;
+    font-weight: bold;
 }
+
 .headstyle{
     font-family: sans-serif;
     text-align: center; 
@@ -34,6 +37,27 @@
     font-weight: bold;
 }
 
+.Navbarstyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0 px; 
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.Linkitems{  
+    padding: 1.5rem ;
+    text-decoration: none;
+    color: black    ; 
+    font-weight: 700;
+}
+.Linkitems:hover{  
+    transform: scale(1.1);
+    color: #006CFF;
+}
+
 .navHr{
     opacity: 0.1;
 }
@@ -45,12 +69,12 @@
     font-size: 18px;
 }
 
-@media only screen and (min-width :100px) and (max-width :1000px){
+@media only screen and (max-width :900px) {
     .headingOne{
         display: none;
     }
 }
-@media only screen and (min-width :1000px){
+@media only screen and (min-width :900px){
     .headingTwo{
         display: none;
     }

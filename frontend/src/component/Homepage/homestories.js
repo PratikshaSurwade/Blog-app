@@ -12,7 +12,7 @@ function Homestory(props){
                 </NavLink>
 
                 <p className="description">{props.storyinfo.decription}</p>
-                <span className="postThumbnail">{props.storyinfo.categories}</span>
+                <span className="postThumbnail">{props.storyinfo.categories[0].charAt(0).toUpperCase() + props.storyinfo.categories[0].slice(1)}</span>
                 <span className="date">
                     <code>   </code>/<code>   </code>{props.storyinfo.date}
                 </span>
