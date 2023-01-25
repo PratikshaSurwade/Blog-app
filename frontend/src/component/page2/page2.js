@@ -5,7 +5,7 @@ import axios from "axios";
 import { useLocation } from 'react-router-dom';
 
 import "./bollywood.css";
-import "./page2sub1/bollysub1.css"
+import "./page2sub1/bollysub1style.css"
 
 //Json importing
 import Bollysub from "./page2sub1/bollysub1.js";

@@ -2,7 +2,7 @@ import React from "react";
 import image from "./../../../images/blogimg4.png";
 import { NavLink } from "react-router-dom";
 
-import "./bollysub1.css";
+import "./bollysub1style.css";
 
 
 function Bollysub(props){

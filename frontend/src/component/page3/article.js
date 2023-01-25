@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 
-import "./article.css";
+import "./articlestyle.css";
 import profile from "./../../images/profilepic.png";
 
 import Footer from "./Footer.js";

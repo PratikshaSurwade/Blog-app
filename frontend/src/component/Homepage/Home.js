@@ -10,8 +10,8 @@ import Mainimage from "./Mainimage.js";
 import Latest from "./Latest.js";
 import Posts from "../page2/page2sub2/Posts";
 
-import "./../../component/page2/page2sub2/subpost.css";
-import "./../../Styles/home.css";
+import "./../../component/page2/page2sub2/subpoststyle.css";
+import "./../../Styles/mainhomestyle.css";
 import "./../../Styles/homepageimg.css";
 
 function Home() {

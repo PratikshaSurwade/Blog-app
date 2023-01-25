@@ -1,5 +1,5 @@
 import React from "react";
-import "./article.css";
+import "./articlestyle.css";
 import { NavLink } from "react-router-dom";
 
 import imaGe from "./../../images/blogimg1.png";
