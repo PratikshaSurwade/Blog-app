@@ -65,7 +65,7 @@ function Mainpost(props) {
                 <>
                     <div className="mainPost">
                         <div className="mainpostImg"><img src={props.postDetails.photo1} alt="Imageshow" /></div>
-                        <NavLink className="MainImgLink2" to={`/article/{mainpost[0]._id}}`}>
+                        <NavLink className="MainImgLink2" to={`/article/${props.postDetails._id}`}>
 
                             <h5 className="postHeading">{props.postDetails.title }</h5>
                         </NavLink>
