@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Route,Routes } from "react-router-dom";
-import Navbar from "./component/Navbar.js";
+import Navbar from "./component/NavbarPage.js";
 import Home from "./component/Homepage/Home.js";
 import ScrollToTop from "./Scrolltop.js"
 import Articlebyid from "./component/page3/Article.js";
