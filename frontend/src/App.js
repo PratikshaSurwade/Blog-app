@@ -5,7 +5,7 @@ import Navbar from "./component/NavbarPage.js";
 import Home from "./component/Homepage/Home.js";
 import ScrollToTop from "./Scrolltop.js"
 import Articlebyid from "./component/page3/ArticlePage.js";
-import Categorypage from "./component/page2/Page2.js";
+import Categorypage from "./component/page2/page2.js";
 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
