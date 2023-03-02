@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import baseUrl from "../../../utils/baseUrl";
+import baseUrl from "../../../utils/baseUrl.js";
 import mainpostimage from "./../../../images/blogimg5.png";
 import "./subpoststyle.css";
 import { NavLink } from "react-router-dom";
-import Loader from "../../Loader/Loader";
+import Loader from "../../Loader/Loader.js";
 
 function Mainpost(props) {
     const [mainpost, setMainpost] = useState([]);

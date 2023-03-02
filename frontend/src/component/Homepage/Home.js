@@ -2,13 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import Bollysub from "../page2/page2sub1/bollysub1.js";
-import Homeimage from "./Homeimage";
-import Homestory from "./Homestories";
-import Loader from "../Loader/Loader";
-import baseUrl from "../../utils/baseUrl";
+import Homeimage from "./Homeimage.js";
+import Homestory from "./Homestories.js";
+import Loader from "../Loader/Loader.js";
+import baseUrl from "../../utils/baseUrl.js";
 import Mainimage from "./Mainimage.js";
 import Latest from "./Latest.js";
-import Posts from "../page2/page2sub2/Posts";
+import Posts from "../page2/page2sub2/Posts.js";
 
 import "./../../component/page2/page2sub2/subpoststyle.css";
 import "./../../Styles/mainhomestyle.css";

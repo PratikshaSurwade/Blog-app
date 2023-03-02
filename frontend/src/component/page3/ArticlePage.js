@@ -6,9 +6,9 @@ import profile from "./../../images/profilepic.png";
 import Footer from "./Footer.js";
 
 import axios from 'axios';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader/Loader.js';
 import { useLocation } from 'react-router-dom';
-import baseUrl from '../../utils/baseUrl';
+import baseUrl from '../../utils/baseUrl.js';
 
 
 function Articlefun() {

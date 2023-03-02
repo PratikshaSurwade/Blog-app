@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import baseUrl from "../utils/baseUrl";
+import baseUrl from "../utils/baseUrl.js";
 
 import "./../Styles/Navbar.css"
 
