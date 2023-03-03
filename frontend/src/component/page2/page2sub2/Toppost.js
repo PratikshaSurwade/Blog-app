@@ -4,7 +4,7 @@ import baseUrl from "../../../utils/baseUrl.js";
 import mainpostimage from "./../../../images/blogimg5.png";
 import "./subpoststyle.css";
 import { NavLink } from "react-router-dom";
-import Loader from "../../Loader/Loader.js";
+import Loader from "../../Loader/Loading";
 
 function Mainpost(props) {
     const [mainpost, setMainpost] = useState([]);

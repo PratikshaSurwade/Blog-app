@@ -10,7 +10,7 @@ import "./page2sub1/bollysub1style.css"
 //Json importing
 import Bollysub from "./page2sub1/Sidebarfirst.js";
 import Posts from "./page2sub2/Posts.js";
-import Loader from '../Loader/Loader.js';
+import Loader from '../Loader/Loading';
 import baseUrl from '../../utils/baseUrl.js';
 
 function Categorypage() {

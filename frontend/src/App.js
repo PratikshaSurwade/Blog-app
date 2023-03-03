@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Route,Routes } from "react-router-dom";
 import Navbar from "./component/NavbarPage.js";
-import Home from "./component/Homepage/Home.js";
+import Home from "./component/Homepage/Mainhomepage.js";
 import ScrollToTop from "./Scrolltop.js"
 import Articlebyid from "./component/page3/ArticlePage.js";
 import Categorypage from "./component/page2/Categoriespage.js";

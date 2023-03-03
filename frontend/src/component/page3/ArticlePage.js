@@ -6,7 +6,7 @@ import profile from "./../../images/profilepic.png";
 import Footer from "./Footer.js";
 
 import axios from 'axios';
-import Loader from '../Loader/Loader.js';
+import Loader from '../Loader/Loading';
 import { useLocation } from 'react-router-dom';
 import baseUrl from '../../utils/baseUrl.js';
 
