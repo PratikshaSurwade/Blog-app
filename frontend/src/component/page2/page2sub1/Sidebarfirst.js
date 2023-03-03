@@ -1,5 +1,4 @@
 import React from "react";
-import image from "./../../../images/blogimg4.png";
 import { NavLink } from "react-router-dom";
 
 import "./bollysub1style.css";

@@ -8,10 +8,10 @@ import "./bollywood.css";
 import "./page2sub1/bollysub1style.css"
 
 //Json importing
-import Bollysub from "./page2sub1/bollysub1.js";
+import Bollysub from "./page2sub1/Sidebarfirst.js";
 import Posts from "./page2sub2/Posts.js";
-import Loader from '../Loader/Loader';
-import baseUrl from '../../utils/baseUrl';
+import Loader from '../Loader/Loader.js';
+import baseUrl from '../../utils/baseUrl.js';
 
 function Categorypage() {
     const location = useLocation();

@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import Bollysub from "../page2/page2sub1/bollysub1.js";
-import Homeimage from "./Homeimage.js";
+import Bollysub from "../page2/page2sub1/Sidebarfirst.js";
+import Homeimage from "./Singleimghome.js";
 import Homestory from "./Homestories.js";
 import Loader from "../Loader/Loader.js";
 import baseUrl from "../../utils/baseUrl.js";
