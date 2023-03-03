@@ -3,7 +3,7 @@ import React, { Component, useEffect, useState } from 'react';
 import "./articlestyle.css";
 import profile from "./../../images/profilepic.png";
 
-import Footer from "./Footer.js";
+import Footer from "./Footerside.js";
 
 import axios from 'axios';
 import Loader from '../Loader/Loading';
