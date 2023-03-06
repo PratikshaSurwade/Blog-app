@@ -6,8 +6,11 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 
-const Post = require("./models/Post");
-const userRoute = require("./routes/post");
+const postRoute = require("./routes/post");
+
+const authRoute = require("./routes/auth");
+
+const userRoute = require("./routes/user");
 
 
 const PORT = process.env.PORT || 7001;
@@ -22,13 +25,17 @@ mongoose.connect(process.env.MONGO_URL,{
   console.log("Conection is successful");
 }).catch( (e) => {
   console.log("No Connection");
-})
+});
 
 //Connecting frontend and backend
 app.use(cors());
 app.use(express.json());
 
-app.use("/", userRoute);
+app.use("/", postRoute);
+app.use("/auth", authRoute);
+app.use("/user", userRoute);
+
+
 
 // ------------------------Deployment------------------------
 

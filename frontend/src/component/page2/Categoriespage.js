@@ -41,7 +41,24 @@ function Categorypage() {
         }
       };
 
-    useEffect(() => {
+      const [getUser , setGetUser ] = useState({});
+
+
+      useEffect(() => {
+          const user = JSON.parse(localStorage.getItem("blogUser"));
+  
+          const getcurrentUserDetails = async () => {
+            const res = await axios.get(`${baseUrl}/api/` + path);
+
+          }
+          if(user){
+
+              setGetUser(user)
+                        //   jwt.verify(user.accessToken, 'pratiksha', function(err, decode) {
+                        //           console.log(decode) // bar
+                        //   });
+          }
+      
         setLoading(true)
 
         const getPost = async () => {
@@ -92,6 +109,19 @@ function Categorypage() {
 
     return (
         <>
+        
+        <div className="TopBar">
+						{/* {console.log("get",!getUser)} */}
+						{(!getUser)? 
+						<>
+							<button><NavLink className="Linkitems" to="/login">Login</NavLink></button>
+							<button><NavLink className="Linkitems" to="/register">Register</NavLink></button>
+						</>: 
+						<>
+							<button><NavLink className="Linkitems" to="/login">Wel-Come</NavLink></button>
+
+						</>}
+					</div>
             {loading ? (
                 <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                     <h2 style={{ textAlign: "center" }}>Loading...</h2>

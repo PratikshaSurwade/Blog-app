@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useLocation ,NavLink } from 'react-router-dom';
+
 
 import Bollysub from "../page2/page2sub1/Sidebarfirst.js";
 import Homeimage from "./Singlead";
@@ -9,6 +11,9 @@ import baseUrl from "../../utils/baseUrl.js";
 import Mainimage from "./Collageimgone";
 import Latest from "./Latestnews";
 import Posts from "../page2/page2sub2/Posts.js";
+
+import authHeader from "../../utils/Authheader.js";
+import profile from "../../images/profile_icon.svg";
 
 import "./../../component/page2/page2sub2/subpoststyle.css";
 import "./../../Styles/mainhomestyle.css";
@@ -27,10 +32,31 @@ function Home() {
 
     //loading effect
     const [loading, setLoading] = useState(false);
+    const [getUser , setGetUser ] = useState(null);
+
+    const logoutHandler=() => {
+        localStorage.removeItem("blogUser")
+        setGetUser(null);
+    }
 
     useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("blogUser"));
         setLoading(true);
-
+            const getprofileDetails = async () => {
+                if(user){
+                    const {data} = await axios.get(`${baseUrl}/user/${user._id}`, { headers: authHeader() })
+                    if(data.success===false){
+                        localStorage.removeItem("blogUser")
+                        setGetUser(null);
+                    }
+                    else{
+                        // console.log({...data,accessToken:authHeader().token})
+                        setGetUser(data);
+                    }
+                } 
+            };
+	
+        getprofileDetails();
         const getmainimaga = async () => {
             const res = await axios.get(`${baseUrl}/api/main`);
             setMainheadings(res.data);
@@ -94,6 +120,21 @@ function Home() {
 
     return (
         <>
+        <div className="TopBar">
+            {console.log(!getUser,"getuser",getUser)}
+						{(!getUser)? 
+						<>
+							<button><NavLink className="Linkitems" to="/login">Login</NavLink></button>
+							<button><NavLink className="Linkitems" to="/register">Register</NavLink></button>
+						</>: 
+						<>
+                            <div className='profile'>
+								<NavLink to="/profile"><img className="profilePhoto" src={getUser.profilepic} alt="" /><span style={{ textDecoration: "none" }}>{getUser.username.split(" ")[0]}</span></NavLink>
+								{/* {userInfo?`${profile}`:`${userInfo.profile}`} */}
+								<button className="logout" onClick={logoutHandler}>LOGOUT</button>
+							</div>
+						</>}
+					</div>
             <div className="grid-container">
                 {loading ? (
                     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
