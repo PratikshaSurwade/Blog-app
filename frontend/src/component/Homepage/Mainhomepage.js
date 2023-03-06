@@ -10,7 +10,7 @@ import Loader from "../Loader/Loading";
 import baseUrl from "../../utils/baseUrl.js";
 import Mainimage from "./Collageimgone";
 import Latest from "./Latestnews";
-import Posts from "../page2/page2sub2/Posts.js";
+import Posts from "../page2/page2sub2/Postscomponent.js";
 
 import authHeader from "../../utils/Authheader.js";
 import profile from "../../images/profile_icon.svg";
