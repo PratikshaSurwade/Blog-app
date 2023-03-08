@@ -40,7 +40,7 @@ function Home() {
     }
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("blogUser"));
+        const user = JSON.parse(localStorage.getItem("blogUser"))? JSON.parse(localStorage.getItem("blogUser")) : null;
         setLoading(true);
             const getprofileDetails = async () => {
                 if(user){
