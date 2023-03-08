@@ -1,6 +1,6 @@
 import React from "react";
 import "./postsstyle.css"
-import Subpost from "./Subposts.js";
+import Subpost from "./Subpost.js";
 import Mainpost from "./Toppost.js"
 
 
