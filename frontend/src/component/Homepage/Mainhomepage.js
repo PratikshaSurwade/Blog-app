@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation ,NavLink } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 
 
 import Bollysub from "../page2/page2sub1/Sidebarfirst.js";
@@ -32,30 +32,59 @@ function Home() {
 
     //loading effect
     const [loading, setLoading] = useState(false);
-    const [getUser , setGetUser ] = useState(null);
+    const [checkprofile, setCheckProfile] = useState(false)
 
-    const logoutHandler=() => {
+    //Getting user datails for profile
+    const [getUser, setGetUser] = useState(null);
+
+    //Extend profile div
+    const [isOpened, setIsOpened] = useState(false);
+    function toggle() {
+        setIsOpened(wasOpened => !wasOpened);
+      }
+
+    const logoutHandler = () => {
         localStorage.removeItem("blogUser")
         setGetUser(null);
     }
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("blogUser"))? JSON.parse(localStorage.getItem("blogUser")) : null;
+        const user = JSON.parse(localStorage.getItem("blogUser")) ? JSON.parse(localStorage.getItem("blogUser")) : null;
         setLoading(true);
-            const getprofileDetails = async () => {
-                if(user){
-                    const {data} = await axios.get(`${baseUrl}/user/${user._id}`, { headers: authHeader() })
-                    if(data.success===false){
-                        localStorage.removeItem("blogUser")
-                        setGetUser(null);
-                    }
-                    else{
-                        // console.log({...data,accessToken:authHeader().token})
-                        setGetUser(data);
-                    }
-                } 
-            };
-	
+        setCheckProfile(true)
+        const getprofileDetails = async () => {
+            if (user) {
+                try {
+                    const res = await axios.get(`${baseUrl}/user/${user._id}`, { headers: authHeader() })
+                    setGetUser(res.data);
+                    setCheckProfile(false);
+                } catch (error) {
+                    console.log(error.response.data.message)
+                    // alert(error.response.data.message)
+                    setGetUser(null);
+                    setCheckProfile(false);
+                    localStorage.removeItem("blogUser")
+
+                }
+            }
+            else {
+                setGetUser(null);
+                setCheckProfile(false)
+            }
+            // try {
+            //     const res = await axios.get(`${baseUrl}/user/${user._id}`, { headers: authHeader() })
+            //     setGetUser(res.data);
+            //     setCheckProfile(false);
+            // } catch (error) {
+            //     console.log(error.response.data.message)
+            // alert(error.response.data.message)
+            //     setGetUser(null);
+            //     setCheckProfile(false);
+            // localStorage.removeItem("blogUser")
+
+            // }
+        };
+
         getprofileDetails();
         const getmainimaga = async () => {
             const res = await axios.get(`${baseUrl}/api/main`);
@@ -109,7 +138,7 @@ function Home() {
                 var xRandomValue2 = xArray2[Math.floor(Math.random() * xArray2Length)];
                 data2.push(xRandomValue2);
             }
-            
+
             setTopmainpost(data1);
             setTopsubpost(data2)
             setLoading(false);
@@ -120,21 +149,34 @@ function Home() {
 
     return (
         <>
-        <div className="TopBar">
-            {console.log(!getUser,"getuser",getUser)}
-						{(!getUser)? 
-						<>
-							<button><NavLink className="Linkitems" to="/login">Login</NavLink></button>
-							<button><NavLink className="Linkitems" to="/register">Register</NavLink></button>
-						</>: 
-						<>
-                            <div className='profile'>
-								<NavLink to="/profile"><img className="profilePhoto" src={getUser.profilepic} alt="" /><span style={{ textDecoration: "none" }}>{getUser.username.split(" ")[0]}</span></NavLink>
-								{/* {userInfo?`${profile}`:`${userInfo.profile}`} */}
-								<button className="logout" onClick={logoutHandler}>LOGOUT</button>
-							</div>
-						</>}
-					</div>
+            <div className="TopBar">
+                {checkprofile ?
+                    <>
+                        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
+                            <div className="profileloaderhomepage"></div>
+                        </div>
+                    </> :
+                    <>{(!getUser) ?
+                        <>
+                            <NavLink className="mainPageButtons" to="/login">Login</NavLink>|
+                            <NavLink className="mainPageButtons" to="/register">Register</NavLink>
+                        </> :
+                        <>
+                            <div className='topbarProfile'>
+                                <span onClick={toggle} style={{cursor:"pointer"}}><img className="profilePic" src={getUser.profilepic} alt="" /><span style={{marginLeft:"3px"}}>{getUser.username}<i class="fa fa-caret-down" style={{marginLeft:"3px"}}></i></span></span>
+                                
+                                {/* {userInfo?`${profile}`:`${userInfo.profile}`} */}
+                                {isOpened && (
+                                <span className="extendProfile">
+                                    <NavLink to={`/profile/${getUser._id}`} style={{ textDecoration: "none", color: "black", border: "none" }}><button className="viewprofile">View Profile</button></NavLink>
+                                    <button className="logout" onClick={logoutHandler}>LOGOUT</button>
+                                </span>
+                                )}
+                            </div>
+                        </>}
+                    </>
+                }
+            </div>
             <div className="grid-container">
                 {loading ? (
                     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
@@ -199,17 +241,17 @@ function Home() {
                 <div className="sidebarContainer">
                     <div className="homeAdvertise">Advertisement</div>
                     <h1 className="posthead">Top Posts</h1>
-                        <div className="sidebar">
-                            {loading ? (
-                                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
-                                    <h2 style={{ textAlign: "center" }}>Loading...</h2>
-                                    <Loader />
-                                </div>
-                            ) : (
-                                <>
-                                    <Posts conTaint={topsubpost} topmainpost={topmainpost}/>
-                                </>
-                            )}
+                    <div className="sidebar">
+                        {loading ? (
+                            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
+                                <h2 style={{ textAlign: "center" }}>Loading...</h2>
+                                <Loader />
+                            </div>
+                        ) : (
+                            <>
+                                <Posts conTaint={topsubpost} topmainpost={topmainpost} />
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
@@ -230,9 +272,6 @@ function Home() {
             )}
             {/* <span className="viewmore"> View More</span><span><i className="arrow2 fas fa-arrow-right"></i></span> */}
 
-            <h5 className="copyrightfooter">
-                Blog Website Developed by © Pratiksha Surwade
-            </h5>
         </>
     );
 }

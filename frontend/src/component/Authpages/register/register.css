@@ -3,6 +3,8 @@
 } */
 .register{
     width: 100%;
+    background-color: rgb(225, 250, 250);
+
     height: calc(75vh - 50px);
     display: flex;
     align-items: center;

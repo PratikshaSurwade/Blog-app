@@ -23,7 +23,7 @@ const verifyToken = (req ,res,next ) => {
 //verify if login by same account
 const verifyTokenAndAuthorization = (req, res, next) => {
     verifyToken(req, res, () => {
-      if (req.user.id === req.params.id || req.user.isAdmin) {
+      if (req.user.id === req.params.id) {
         next();
       } else {
         res.status(403).json("You are not alowed to do that!");
@@ -47,16 +47,19 @@ router.get("/:id" , verifyToken , async (req,res)=> {
     }
 })
 
+
 //Delete User
 
-router.delete("/:id" , verifyTokenAndAuthorization , async (req,res)=> {
-    try {
-        const userDetails = await User.findByIdAndDelete(req.params.id);
-        res.status(200).json("User has been deleted...");
-    } catch (error) {
-        res.status(500).json(error);
-    }
-})
+// router.delete("/:id" , verifyTokenAndAuthorization , async (req,res)=> {
+//     try {
+//         const userDetails = await User.findByIdAndDelete(req.params.id);
+//         res.status(200).json("User has been deleted...");
+//     } catch (error) {
+//         res.status(500).json(error);
+//     }
+// })
+
+
 
 //Update User
 module.exports = router;

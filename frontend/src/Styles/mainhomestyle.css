@@ -124,7 +124,8 @@ img{
 }
 /* Footer */
 .copyrightfooter{
-    bottom: 0px;
+  left: 0;
+  bottom: 0;
     background-color: white;
     padding: 10px;
     text-align: center;
@@ -132,17 +133,57 @@ img{
     border-bottom: solid #f9da9f 2.5px;
 }
 
-/* ========= */
+/* ========= Login Button Top Bar styling ======== */
 .TopBar{
     position: absolute;
     top: 1rem;
     right: 3.5rem;
     z-index: 20;
+    font-size: smaller;
 }
-.profilePhoto{
+
+.topbarProfile{
+    display: flex;
+    flex-direction: column;
+}
+.profilePic{
     height: 2rem;
     width: 2rem;
 }
+
+.profileloaderhomepage {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid ;
+    border-radius: 50%;
+    margin-top: 25%;
+    margin: auto;
+    width: 1rem;
+    height: 1rem;
+    animation: spin 1s linear infinite;
+  }
+
+  .logout{
+    border: none;
+    color: red;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .viewprofile{
+    border: none;
+    color: green;
+    margin-right: 5px;
+    margin-top: 5px;
+
+  }
+
+  .mainPageButtons{
+    text-decoration: none;
+    border: none;
+    color: #006CFF;
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 5px;
+  }
 @media only screen and (min-width :100px) and (max-width :300px){
     .articlePage{
         display: flex;

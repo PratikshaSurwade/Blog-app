@@ -37,6 +37,7 @@ const PostSchema = new mongoose.Schema({
     claps:{
         type:String,
         required: false,
+        default:10,
     },
     date:{
         type: String, 
@@ -45,10 +46,12 @@ const PostSchema = new mongoose.Schema({
     time:{
         type:String,
         required: false,
+        default:"2 min read",
     },
     tag1:{
         type:String,
         required: false,
+        // default:categories[1],
     },
     tag2:{
         type:String,

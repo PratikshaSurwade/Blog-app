@@ -163,7 +163,6 @@ function Articlefun() {
 
                 </>
             )}
-            <h5 className="copyrightfooter">Blog Website Developed by © Pratiksha Surwade</h5>
 
         </>
     )

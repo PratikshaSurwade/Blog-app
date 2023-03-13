@@ -2,6 +2,8 @@
     background-color: rgb(236, 236, 236);
 } */
 .login{
+    background-color: rgb(236, 236, 236);
+
     width: 100%;
     height: calc(75vh - 50px);
     display: flex;

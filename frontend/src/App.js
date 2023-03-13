@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState  } from "react";
 import { BrowserRouter ,NavLink} from "react-router-dom";
 import { Route,Routes } from "react-router-dom";
+import axios from "axios";
+import baseUrl from "./utils/baseUrl.js";
+import authHeader from "./utils/Authheader.js";
 import Navbar from "./component/NavbarPage.js";
 import Home from "./component/Homepage/Mainhomepage.js";
 import ScrollToTop from "./Scrolltop.js"
@@ -8,6 +11,10 @@ import Articlebyid from "./component/page3/ArticlePage.js";
 import Categorypage from "./component/page2/Categoriespage.js";
 import Login from "./component/Authpages/login/Login.js";
 import Register from "./component/Authpages/register/Register.js";
+import Profile from "./component/Profile/Profile.js";
+import Editprofile from "./component/Profile/Editprofile.js";
+import Footer from "./component/Footer.js";
+
 // import { Jwt } from "jsonwebtoken";
 // import jwt from "jsonwebtoken";
 
@@ -15,6 +22,38 @@ import Register from "./component/Authpages/register/Register.js";
 
 function App (){  
         
+            //loading effect
+    const [loading, setLoading] = useState(false);
+    const [checkprofile, setCheckProfile] = useState(false)
+
+    //Getting user datails for profile
+    const [getUser, setGetUser] = useState(null);
+
+    useEffect(() => {
+        setLoading(true);
+        console.log("unse")
+
+        const user = JSON.parse(localStorage.getItem("blogUser")) ? JSON.parse(localStorage.getItem("blogUser")) : null;
+        const getprofileDetails = async () => {
+            if (user) {
+                const { data } = await axios.get(`${baseUrl}/user/${user._id}`, { headers: authHeader() })
+                if (data.success === false) {
+                    localStorage.removeItem("blogUser");
+                    console.log("false")
+                }
+                else {
+                    console.log("trur")
+                    // console.log({...data,accessToken:authHeader().token})
+                    setGetUser(data);
+                    console.log(getUser,"inuseee")
+                    setLoading(false)
+                }
+            }
+        };
+
+        getprofileDetails();
+        
+    }, [])
         return(
                 <>
             <BrowserRouter>
@@ -23,21 +62,24 @@ function App (){
                     <Routes>
                             <Route path="/" element={<Home />} exact />
 
-                            <Route path="/bollywood" element={<Categorypage />} exact />
-                            <Route path="/technology" element={<Categorypage />} exact />
-                            <Route path="/hollywood" element={<Categorypage />} exact />
-                            <Route path="/fitness" element={<Categorypage />} exact />
-                            <Route path="/food" element={<Categorypage />} exact />
+
 
                             <Route path="/article/:id" element={<Articlebyid />} exact />
                             <Route path="/login" element={<Login />} exact />
                             <Route path="/register" element={<Register />} exact />
-                            
-                            
+{console.log(getUser)}
+
+<Route path="/:category" element={<Categorypage />} exact />
+ 
+                            <Route path="/profile/:id" element={<Profile getUser={getUser} />} exact /> 
+                            <Route path="/addpost" element={<Editprofile />} exact />   
+  
+                            <Route path="/editpost/:postid" element={<Editprofile getUser={getUser}/>} exact />   
 
                     </Routes>
                     
             </BrowserRouter>
+            <Footer />
             
             </>
             

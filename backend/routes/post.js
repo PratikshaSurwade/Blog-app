@@ -21,13 +21,30 @@ const verifyToken = (req ,res,next ) => {
   }
 }
 
+//verify if login by same account
+const verifyTokenAndAuthorization = (req, res, next) => {
+  console.log(req.body)
+
+  verifyToken(req, res, () => {
+    if (req.user.id === req.params.id) {
+      next();
+    } else {
+      res.status(403).json("You are not alowed to do that!");
+    }
+  });
+};
+
 router.post("/article", verifyToken ,async(req,res) =>{
+  console.log("inside post")
     try{
+      console.log("inside try")
+
         const user = new Post(req.body);
         const createUser = await user.save();
         res.status(201).send(createUser);
     }catch(e){
         res.status(400).send(e);
+        console.log(e);
     }
 })
 //Get all Posts
@@ -73,15 +90,45 @@ router.get("/article/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-  
+// update post
 router.put("/article/:id", async (req, res) => {
   try {
-    const updatedPost = await Post.findByIdAndUpdate(req.params.id);
+    const updatedPost = await Post.findByIdAndUpdate(req.params.id ,{
+      $set :req.body
+    },{new:true});
     console.log(updatedPost)
     res.status(200).json(updatedPost);
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+//Get users's Posts
+
+router.get("/user/:id/posts" , verifyToken , async (req,res)=> {
+  try {
+      const userDetails = await Post.find({userId:req.params.id});
+      res.status(200).json(userDetails);
+  } catch (error) {
+    console.log(error)
+      res.status(500).json(error);
+  }
+})
+
+
+//Delete Post
+
+router.delete("/post/:id" , verifyToken , async (req,res)=> {
+  console.log(req.params.id)
+  try {
+      const userDetails = await Post.findByIdAndDelete(req.params.id);
+      console.log(userDetails)
+      res.status(200).json("Post has been deleted...");
+  } catch (error) {
+    console.log(error)
+
+      res.status(500).json(error);
+  }
+})
 
 module.exports = router;

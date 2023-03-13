@@ -161,7 +161,6 @@ function Categorypage() {
                     </div>
                 </>
             )}
-            <h5 className="copyrightfooter">Blog Website Developed by © Pratiksha Surwade</h5>
         </>
     )
 }

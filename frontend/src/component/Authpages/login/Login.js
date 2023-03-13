@@ -49,8 +49,8 @@ export default function Login() {
             </div>
         }
             <form className="loginForm">
-                <label >Email</label>
-                <input type="text" className="loginInput" placeholder="Enter your email..." onChange={(e) => setAuthorname(e.target.value)}></input>
+                <label >Username</label>
+                <input type="text" className="loginInput" placeholder="Enter your username..." onChange={(e) => setAuthorname(e.target.value)}></input>
                 <label >Password</label>
                 <input type="password" className="loginInput" placeholder="Enter your password..." onChange={(e) => setPassword(e.target.value)}></input>
                 <button className="loginButton" onClick={submitHandler}>Login</button>
