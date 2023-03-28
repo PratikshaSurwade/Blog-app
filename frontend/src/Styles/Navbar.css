@@ -2,7 +2,7 @@
     width:  100%;
     /* background-color: #f8f9fa; */
     background-color: white;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 10;
     overflow: hidden;
@@ -49,13 +49,16 @@
 
 .Linkitems{  
     padding: 1.5rem ;
+    /* padding: 0.8rem 1.5rem 0.8rem 1.5rem; */
     text-decoration: none;
     color: black    ; 
     font-weight: 700;
 }
 .Linkitems:hover{  
     transform: scale(1.1);
-    color: #006CFF;
+    /* color: #006CFF; */
+    background-color: black;
+    color: white;
 }
 
 .navHr{

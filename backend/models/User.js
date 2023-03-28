@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
     },
     profilepic:{
         type:String,
-        default:"https://images.indianexpress.com/2013/12/untitled-3.jpg",
+        default:"https://res.cloudinary.com/dn9hxyxud/image/upload/v1678788881/profile_icon_wxpreu.svg",
     },
     password:{
         type:String,

@@ -32,7 +32,8 @@
 
 .inPutTab {
   box-sizing: border-box;
-  background-color: rgb(225, 250, 250);
+  /* background-color: rgb(225, 250, 250); */
+  border: 1px solid black;
   height: fit-content;
 
 }

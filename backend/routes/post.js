@@ -14,6 +14,8 @@ const verifyToken = (req ,res,next ) => {
         if (err && err.name ==="TokenExpiredError") return res.status(403).json({success:false ,message:"Your Token is Expired !"});
         if (err && err.name !=="TokenExpiredError") return res.status(403).json({success:false ,message:"Your Token is Not valid !"});
         req.user = user;
+        console.log(user,"user")
+
           next();
       });
   } else {
@@ -23,28 +25,46 @@ const verifyToken = (req ,res,next ) => {
 
 //verify if login by same account
 const verifyTokenAndAuthorization = (req, res, next) => {
-  console.log(req.body)
+  console.log(req.body,"body")
 
   verifyToken(req, res, () => {
-    if (req.user.id === req.params.id) {
+    console.log(req.user.id,"nammeemme")
+    console.log(req.body.userId)
+    if (req.user.id === req.body.userId) {
       next();
     } else {
-      res.status(403).json("You are not alowed to do that!");
+      res.status(403).json({success:false ,message:"You are not alowed to do that!"});
     }
   });
 };
-
+//handle field formatting, empty fields, and mismatched passwords
+const handleValidationError = (e, res) => {
+  let errors = Object.values(e.errors).map(el => el.message);
+  var fields = Object.values(e.errors).map(el => el.path);
+  var code = 400;
+  if(errors.length > 1) {
+    const formattedErrors = errors.join('')
+    res.status(code)
+        .send({message: formattedErrors, fields: fields});
+    } else {
+         res
+           .status(code)
+           .send({message: errors, fields: fields})
+    }
+}
 router.post("/article", verifyToken ,async(req,res) =>{
   console.log("inside post")
     try{
       console.log("inside try")
 
-        const user = new Post(req.body);
-        const createUser = await user.save();
-        res.status(201).send(createUser);
+        const post = new Post(req.body);
+        const newPost = await post.save();
+        res.status(201).send(newPost);
     }catch(e){
-        res.status(400).send(e);
         console.log(e);
+        if(e.name === 'ValidationError') return err = handleValidationError(e, res);
+        // res.status(400).send(e);
+
     }
 })
 //Get all Posts
@@ -90,9 +110,12 @@ router.get("/article/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // update post
-router.put("/article/:id", async (req, res) => {
+router.put("/article/:id", verifyTokenAndAuthorization, async (req, res) => {
   try {
+    console.log("inside ud")
+    console.log(req.body)
     const updatedPost = await Post.findByIdAndUpdate(req.params.id ,{
       $set :req.body
     },{new:true});
@@ -100,6 +123,7 @@ router.put("/article/:id", async (req, res) => {
     res.status(200).json(updatedPost);
   } catch (err) {
     res.status(500).json(err);
+    console.log(err)
   }
 });
 

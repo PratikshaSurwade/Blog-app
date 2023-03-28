@@ -21,11 +21,11 @@ const Editprofile = () => {
 	const [postId, setPostId] = useState(path ? path : null)
 	const [title, setTitle] = useState("")
 	const [description, setDescription] = useState("");
-	const [photo1, setPhoto1] = useState("");
-	const [userName, setUserName] = useState(Getuser().username);
-	const [profilepic, setProfilepic] = useState(Getuser().profilepic);
+	const [photo1, setPhoto1] = useState(null);
+	const [userName, setUserName] = useState(path ? Getuser().username : null);
+	const [profilepic, setProfilepic] = useState(path ? Getuser().profilepic : null);
 
-	const [userId, setUserId] = useState(Getuser()._id);
+	const [userId, setUserId] = useState(path ? Getuser()._id : null);
 	const [categories, setCategories] = useState();
 	const [tag1, setTag1] = useState("");
 	const [tag2, setTag2] = useState("");
@@ -42,25 +42,39 @@ const Editprofile = () => {
 
 	const addPostHandler = async (e) => {
 		e.preventDefault();
-		const post = { "title": title, "decription": description, "username": userName, "userId": userId, "categories": categories, "authorphoto": profilepic, "photo1": photo1, "photo1": photo1 };
+		console.log(photo1,categories,"cate , phtoo1111")
+		const post = { "title": title, "decription": description, "username": userName, "userId": userId, "categories": categories, "authorphoto": profilepic,"tag1": tag1, "tag2": "India", "tag3": categories, "photo1": photo1, "photo2": photo1 };
 		console.log(post, "add post to server")
 		try {
 			const { data } = await axios.post(`${baseUrl}/article`, post, { headers: authHeader() });
 			navigate(`/profile/${userId}`)
 		} catch (error) {
-			alert(error)
+			console.log(error.response.data.message)
+
+			alert(error.response.data.message)
 		}
 	}
 
 	const editPostHandler = async (e) => {
 		e.preventDefault();
-		const post = { "title": title, "decription": description, "username": userName, "userId": userId, "categories": categories, "tag1": tag1, "tag2": "India", "tag3": categories[0] };
+		console.log(photo1,categories,"cate , phtoo1111")
+		const post = 
+		{ "title": title, 
+		"decription": description, 
+		"username": userName, 
+		"userId": userId, 
+		"categories": categories, 
+		"tag1": tag1, 
+		"tag2": "India", 
+		"tag3": categories[0],
+		"photo1": photo1, 
+		"photo2": photo1 };
 		console.log(post, "edit post to server")
 		try {
 			const { data } = await axios.put(`${baseUrl}/article/${path}`, post, { headers: authHeader() });
 			navigate(`/profile/${userId}`)
 		} catch (error) {
-			alert(error)
+			alert(error.response.data.message)
 		}
 	}
 
@@ -69,7 +83,6 @@ const Editprofile = () => {
 		// setloader(true)
 		const files = e.target.files[0]
 		const data = new FormData()
-		console.log(files)
 		data.append('file', files)
 		data.append('upload_preset', 'ishop_profiles')
 		setloader(true)
@@ -81,7 +94,7 @@ const Editprofile = () => {
 			}
 		)
 		const file = await res.json()
-		console.log(file.secure_url, "url")
+		// console.log(file.secure_url, "url")
 		setPhoto1(file.secure_url);
 		setloader(false);
 	}
@@ -95,8 +108,15 @@ const Editprofile = () => {
 					const res = await axios.get(`${baseUrl}/article/${path}`, { headers: authHeader() })
 					seteditablePost(res.data);
 					setCategories(res.data.categories);
-					console.log(editablePost.photo1)
-					setPhoto1(editablePost.photo1)
+					setTitle(res.data.title)
+					setDescription(res.data.decription);
+					
+					console.log(res.data)
+					setPhoto1(res.data.photo1);
+					setUserName(res.data.username);
+					setUserId(res.data.userId)
+					setProfilepic(res.data.authorphoto)
+
 					setLoading(false);
 				} catch (error) {
 					alert(error.response.data.message)
@@ -131,7 +151,7 @@ const Editprofile = () => {
 				<div contentEditable='true' className="inPutTab" placeholder="Enter your descrpition..." onInput={(e) => setDescription(e.target.textContent)}>{editablePost.decription}</div>
 
 				<label ><strong>Select Categories</strong></label>
-				<select value={editablePost.categories ? categories : "Select category here"} className="inPutTab" onChange={(e) => setCategories(e.target.value)} >
+				<select value={categories} className="inPutTab" onChange={(e) => setCategories(e.target.value)} >
 					<option value="bollywood">Bollywood</option>
 					<option value="hollywood">Hollywood</option>
 					<option value="technology">Technology</option>
@@ -159,11 +179,12 @@ const Editprofile = () => {
 					) : (
 						<img src={photo1} style={{ width: '300px' }} alt="Choose Image to View Preview" />
 					)}
+					{console.log(loader)}
 				{
 					(path === "addpost") ?
-						<button className="loginButton" onClick={addPostHandler}>Add Post</button>
+						<button disabled={loader} className="loginButton" onClick={addPostHandler} >Add Post</button>
 						:
-						<button className="loginButton" onClick={editPostHandler}>Edit Post</button>
+						<button disabled={loader} className="loginButton" onClick={editPostHandler} >Edit Post</button>
 				}
 			</form>
 		</div>)

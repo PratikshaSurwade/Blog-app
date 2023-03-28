@@ -1,6 +1,6 @@
-import React, { useEffect, useState  } from "react";
-import { BrowserRouter ,NavLink} from "react-router-dom";
-import { Route,Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, NavLink } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import baseUrl from "./utils/baseUrl.js";
 import authHeader from "./utils/Authheader.js";
@@ -18,11 +18,11 @@ import Footer from "./component/Footer.js";
 // import { Jwt } from "jsonwebtoken";
 // import jwt from "jsonwebtoken";
 
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-function App (){  
-        
-            //loading effect
+function App() {
+
+    //loading effect
     const [loading, setLoading] = useState(false);
     const [checkprofile, setCheckProfile] = useState(false)
 
@@ -45,44 +45,44 @@ function App (){
                     console.log("trur")
                     // console.log({...data,accessToken:authHeader().token})
                     setGetUser(data);
-                    console.log(getUser,"inuseee")
+                    console.log(getUser, "inuseee")
                     setLoading(false)
                 }
             }
         };
 
         getprofileDetails();
-        
+
     }, [])
-        return(
-                <>
+    return (
+        <>
             <BrowserRouter>
                 <Navbar />
                 <ScrollToTop />
-                    <Routes>
-                            <Route path="/" element={<Home />} exact />
+                <Routes>
+                    <Route path="/" element={<Home />} exact />
 
 
 
-                            <Route path="/article/:id" element={<Articlebyid />} exact />
-                            <Route path="/login" element={<Login />} exact />
-                            <Route path="/register" element={<Register />} exact />
-{console.log(getUser)}
+                    <Route path="/article/:id" element={<Articlebyid />} exact />
+                    <Route path="/login" element={<Login />} exact />
+                    <Route path="/register" element={<Register />} exact />
+                    {console.log(getUser)}
 
-<Route path="/:category" element={<Categorypage />} exact />
- 
-                            <Route path="/profile/:id" element={<Profile getUser={getUser} />} exact /> 
-                            <Route path="/addpost" element={<Editprofile />} exact />   
-  
-                            <Route path="/editpost/:postid" element={<Editprofile getUser={getUser}/>} exact />   
+                    <Route path="/:category" element={<Categorypage />} exact />
 
-                    </Routes>
-                    
+                    <Route path="/profile/:id" element={<Profile getUser={getUser} />} exact />
+                    <Route path="/addpost" element={<Editprofile />} exact />
+
+                    <Route path="/editpost/:postid" element={<Editprofile getUser={getUser} />} exact />
+
+                </Routes>
+
             </BrowserRouter>
             <Footer />
-            
-            </>
-            
-         );
+
+        </>
+
+    );
 }
 export default App;

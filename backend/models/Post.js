@@ -21,10 +21,12 @@ const PostSchema = new mongoose.Schema({
     photo1:{
         type:String,
         required: false,
+        default:"https://res.cloudinary.com/dn9hxyxud/image/upload/v1678788600/l8eld3iqo27fbw8ghzdd.png",
     },
     photo2:{
         type:String,
         required: false,
+        default:"https://res.cloudinary.com/dn9hxyxud/image/upload/v1678788600/l8eld3iqo27fbw8ghzdd.png",
     },
     username:{
         type:String,
@@ -32,7 +34,8 @@ const PostSchema = new mongoose.Schema({
     },
     categories:{
         type:Array,
-        required: false,
+        required: true,
+        default: undefined
     },
     claps:{
         type:String,

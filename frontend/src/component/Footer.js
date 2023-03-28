@@ -2,9 +2,9 @@ import React from 'react'
 
 function Footer() {
     return (
-        <h6 className="copyrightfooter">
+        <div className="copyrightfooter">
             Blog Website Developed by © Pratiksha Surwade
-        </h6>
+        </div>
     )
 }
 
