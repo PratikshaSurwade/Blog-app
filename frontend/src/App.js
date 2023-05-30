@@ -34,6 +34,7 @@ function App() {
         console.log("unse")
 
         const user = JSON.parse(localStorage.getItem("blogUser")) ? JSON.parse(localStorage.getItem("blogUser")) : null;
+        console.log(user)
         const getprofileDetails = async () => {
             if (user) {
                 const { data } = await axios.get(`${baseUrl}/user/${user._id}`, { headers: authHeader() })
@@ -60,7 +61,7 @@ function App() {
                 <Navbar />
                 <ScrollToTop />
                 <Routes>
-                    <Route path="/" element={<Home />} exact />
+                    <Route path="/" element={<Home getUser />} exact />
 
 
 

@@ -9,7 +9,7 @@ function Homeimage(props) {
 			<div className="MainImg1">
 				<img className="img1" src={props.homeimagedata.photo1} alt="Imageshow" />
 				<div className="textContaint1">
-					<NavLink className="MainTitle" to={`/article/${props.homeimagedata._id}`}>
+					<NavLink className="MainTitle" to={`/article/${props.homeimagedata._id}`} target="_top">
 						<h1>{props.homeimagedata.title}</h1>
 					</NavLink>
 					<span className="postThumbnail1">{props.homeimagedata.categories[0].charAt(0).toUpperCase() + props.homeimagedata.categories[0].slice(1)}</span>

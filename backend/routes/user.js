@@ -14,6 +14,8 @@ const verifyToken = (req ,res,next ) => {
           if (err && err.name !=="TokenExpiredError") return res.status(403).json({success:false ,message:"Your Token is Not valid !"});
           req.user = user;
           next();
+          console.log("pass token")
+
       });
   } else {
       return res.status(401).json({success:false ,message:"You are not authenticated!"});
@@ -25,8 +27,9 @@ const verifyTokenAndAuthorization = (req, res, next) => {
     verifyToken(req, res, () => {
       if (req.user.id === req.params.id) {
         next();
+        console.log("pass token")
       } else {
-        res.status(403).json("You are not alowed to do that!");
+        res.status(403).json("You are not allowed to do that!");
       }
     });
   };

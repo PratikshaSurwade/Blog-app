@@ -14,12 +14,13 @@ import Posts from "../page2/page2sub2/Postscomponent.js";
 
 import authHeader from "../../utils/Authheader.js";
 import profile from "../../images/profile_icon.svg";
-
+import Getuser from "../../utils/Getuser.js";
 import "./../../component/page2/page2sub2/subpoststyle.css";
 import "./../../Styles/mainhomestyle.css";
 import "./../../Styles/homepageimg.css";
 
 function Home() {
+    // console.log("props",this.props)
     const [mainheadings, setMainheadings] = useState([]);
 
     const [latestdata, setLatestdata] = useState([]);
@@ -39,6 +40,8 @@ function Home() {
 
     //Extend profile div
     const [isOpened, setIsOpened] = useState(false);
+
+    // console.log(Getuser(),"getUser")
     function toggle() {
         setIsOpened(wasOpened => !wasOpened);
       }
@@ -177,6 +180,8 @@ function Home() {
                     </>
                 }
             </div>
+
+            {/* <Getuser /> */}
             <div className="grid-container">
                 {loading ? (
                     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
