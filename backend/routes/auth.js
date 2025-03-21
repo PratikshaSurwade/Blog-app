@@ -60,7 +60,8 @@ router.post("/login", async (req, res) => {
             username: user.username,
         },
         process.env.JWT_SEC,
-        { expiresIn: '20s' }
+        // { expiresIn: '20s' }
+        { expiresIn: '2d' }
         );
     //   to hide password in login check
       const { password, ...others } = user._doc;
