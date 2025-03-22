@@ -120,12 +120,14 @@ const Profile = () => {
                                 <>
                                     {post.map((item) =>
                                         <>
-                                            <tr>
+                                            <tr className='post-card'>
                                                 <td><NavLink className="MainImgLink2" to={`/article/${item._id}`}>{item.title}</NavLink></td>
                                                 <td>
                                                     <span className="extendProfile">
-                                                        <NavLink to={`/editpost/${item._id}`} style={{ textDecoration: "none", color: "black", border: "none" }}><button className="viewprofile">Edit Post</button></NavLink>
-                                                        <button className="logout" onClick={() => deletePost(item._id)}>Delete</button>
+                                                        <NavLink to={`/editpost/${item._id}`} style={{ textDecoration: "none", color: "black", border: "none" }}><button class="edit-button" title='Edit Post'>
+                                                        <i style={{ color: "green", marginRight: "2px" }} className="fas fa-pencil-alt d-block" ></i></button></NavLink>
+                                                        <button className="logout delete-button" title='Delete Post' onClick={() => deletePost(item._id)}><i style={{ color: "red", cursor: "pointer" }} className="fas fa-trash-alt d-block"></i>
+                                                        </button>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -162,7 +164,6 @@ const Profile = () => {
                                                 <p class="post-meta">by {item.username} • {item.date}</p>
                                             </div>
                                         </div>
-                                        <div class="post-content">{item.decription}</div>
                                         <div class="post-actions">
                                             <button class="edit-button" title='Edit Post'>
                                                 <i style={{ color: "green", marginRight: "2px" }} className="fas fa-pencil-alt d-block" ></i>                                            </button>
