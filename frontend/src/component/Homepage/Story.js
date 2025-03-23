@@ -2,13 +2,13 @@ import "./../../Styles/mainhomestyle.css";
 import "./../../Styles/homestyle.css";
 import { NavLink } from "react-router-dom";
 
-function Homestory(props){
-    return(
-        <> 
+function Homestory(props) {
+    return (
+        <>
             <div className="storyInfo">
-            <NavLink className="cardLink" to={`/article/${props.storyinfo._id}`}>
+                <NavLink className="cardLink" to={`/article/${props.storyinfo._id}`}>
 
-                <h3>{props.storyinfo.title}</h3>
+                    <h3>{props.storyinfo.title}</h3>
                 </NavLink>
 
                 <p className="description">{props.storyinfo.decription}</p>
@@ -17,7 +17,7 @@ function Homestory(props){
                     <code>   </code>/<code>   </code>{props.storyinfo.date}
                 </span>
             </div>
-         
+
             {/* <hr className="hrMargin"></hr> */}
         </>
     )

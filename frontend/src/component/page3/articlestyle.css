@@ -1,80 +1,96 @@
-.Article{
+.Article {
     width: 45rem;
     height: fit-content;
 
     margin: auto;
 }
-.topBar{
+
+.topBar {
     display: flex;
 }
-.topLeft{
+
+.topLeft {
     flex: 20%;
 }
-.profileImage{
+
+.profileImage {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     object-fit: contain;
 }
-.topCenter{
+
+.topCenter {
     flex: 70%;
     margin: auto;
 
 }
+
 .topIcon {
     font-size: 2rem;
     margin: 2px;
     color: #d3d3d3;
 }
-.profileInfo{
+
+.profileInfo {
     color: #d3d3d3;
     margin: 1px 2px;
 }
-.topRight1{
+
+.topRight1 {
     margin: 0.6rem;
     font-size: 3rem;
 
 }
-.topRight{
-    flex :30%;
+
+.topRight {
+    flex: 30%;
     margin: auto;
-    
+
 }
-.articleImg1{
+
+.articleImg1 {
     margin: 1rem 3rem;
 
 }
-.articleInfo{
+
+.articleInfo {
     margin: 1rem 3rem;
 }
-.tag{
-    
-    margin-left:3rem;
+
+.tag {
+
+    margin-left: 3rem;
 }
-.Tagbtn{
+
+.Tagbtn {
     background-color: #e2e2e2;
     padding: 0.5rem;
     border: none;
     margin-right: 1rem;
 
 }
-.articleImg3{
+
+.articleImg3 {
     color: #d3d3d3;
     font-size: 1.5rem;
-    margin :1rem 3rem;
+    margin: 1rem 3rem;
 
 }
-.articleImg2{
+
+.articleImg2 {
     color: #d3d3d3;
     transform: scaleX(-1);
     /* Filter: flipH; */
     font-size: 2rem;
-    margin :1rem 3rem;
+    margin: 1rem 3rem;
 }
-.articlePart2{
+
+.articlePart2 {
     color: #d3d3d3;
 }
-.profileImage1{
+
+.profileImage1 {
     width: 5rem;
     height: 5rem;
     margin: 1rem 3rem;
@@ -83,25 +99,28 @@
 }
 
 /*====Footer=====*/
-.footer{
+.footer {
     width: 100%;
     background-color: rgba(250, 250, 250, 0.932);
-    padding :2rem 2rem;
+    padding: 2rem 2rem;
     z-index: 1;
     overflow: visible;
 }
-.contaiNer{
-    display: flex;  
-   
-    justify-content: space-between; 
-    
+
+.contaiNer {
+    display: flex;
+
+    justify-content: space-between;
+
 }
-.container2{
-    display: flex;  
+
+.container2 {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-.cards{
+
+.cards {
     margin: auto;
     width: 20rem;
     display: flex;
@@ -109,28 +128,33 @@
     align-content: center;
     align-items: flex-start;
 }
-.cardImg{
-    width:18rem ;
-    height:12rem;
+
+.cardImg {
+    width: 18rem;
+    height: 12rem;
 }
-.profileImage2{
+
+.profileImage2 {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     object-fit: fill;
 }
-.topCenter1{
+
+.topCenter1 {
     flex: 70%;
     margin: auto;
     font-size: 0.7rem;
 
 }
-.subcards{
+
+.subcards {
     display: flex;
     margin: 5px;
 
 }
-.subpartInfo{
+
+.subpartInfo {
     flex: 6;
     margin: 5px;
     display: flex;
@@ -139,130 +163,158 @@
     justify-content: center;
 
 }
-.subpartImg{
+
+.subpartImg {
     flex: 4;
 }
-.cardImg{
+
+.cardImg {
     object-fit: fill;
 
 }
-.page{
+
+.page {
     background-color: white;
     position: fixed;
     left: 10;
     margin-top: 15rem;
     z-index: -1;
     display: none;
-   
+
     /* overflow: auto; */
 }
-img.cardImg1{
+
+img.cardImg1 {
     margin: auto;
 }
 
-@media only screen and (min-width :100px) and (max-width :300px){
-    .contaiNer{
-        display: none;
-        }
-        .topRight{
-            display: none;
-        }
-        .cards{
-            display: none;
-        }
-        .footer.html{
-            font-size: 25%;
-        }
-        .Article{
-            width: 90%;
-        }
-        img.articleImg1{
-            width: 75%;
-        }
-    
-}
-
-
-
-@media only screen and (min-width :300px) and (max-width :500px){
-    .contaiNer{
-        display: none;
-        }
-        .cards{
-            display: none;
-        }
-        .topRight{
-            display: none;
-        }
-        .footer.html{
-            font-size: 35%;
-        }
-        .Article{
-            width: 95%;
-        }
-        img.articleImg1{
-            width: 80%;
-        }
-}
-
-
-
-@media only screen and (min-width :500px) and (max-width :750px){
-    .contaiNer{
-        display: none;
-        }
-        .topRight{
-            display: none;
-        }
-        .cards{
-            display: none;
-        }
-        .footer.html{
-            font-size: 45%;
-        }
-        img.articleImg1{
-            width: 85%;
-        }
-    
-
-}
-
-@media only screen and (min-width :700px) and (max-width :900px){
-
-    .contaiNer{
-        display: none;
-        }
-        .topRight{
-            display: none;
-        }
-    .cards{
+@media only screen and (min-width :100px) and (max-width :300px) {
+    .contaiNer {
         display: none;
     }
-    .footer.html{
+
+    .topRight {
+        display: none;
+    }
+
+    .cards {
+        display: none;
+    }
+
+    .footer.html {
+        font-size: 25%;
+    }
+
+    .Article {
+        width: 90%;
+    }
+
+    img.articleImg1 {
+        width: 75%;
+    }
+
+}
+
+
+
+@media only screen and (min-width :300px) and (max-width :500px) {
+    .contaiNer {
+        display: none;
+    }
+
+    .cards {
+        display: none;
+    }
+
+    .topRight {
+        display: none;
+    }
+
+    .footer.html {
+        font-size: 35%;
+    }
+
+    .Article {
+        width: 95%;
+    }
+
+    img.articleImg1 {
+        width: 80%;
+    }
+}
+
+
+
+@media only screen and (min-width :500px) and (max-width :750px) {
+    .contaiNer {
+        display: none;
+    }
+
+    .topRight {
+        display: none;
+    }
+
+    .cards {
+        display: none;
+    }
+
+    .footer.html {
+        font-size: 45%;
+    }
+
+    img.articleImg1 {
+        width: 85%;
+    }
+
+
+}
+
+@media only screen and (min-width :700px) and (max-width :900px) {
+
+    .contaiNer {
+        display: none;
+    }
+
+    .topRight {
+        display: none;
+    }
+
+    .cards {
+        display: none;
+    }
+
+    .footer.html {
         font-size: 55%;
     }
-    .topRight{
+
+    .topRight {
         flex: none;
     }
-    img.articleImg1{
+
+    img.articleImg1 {
         width: 85%;
     }
-    
+
 }
-@media only screen and (min-width :900px){
-    .container2{
+
+@media only screen and (min-width :900px) {
+    .container2 {
         display: none;
     }
-    .subcards,.topRight1{
+
+    .subcards,
+    .topRight1 {
         display: none;
     }
-    img.articleImg1{
+
+    img.articleImg1 {
         width: 85%;
     }
-    
+
 }
-@media only screen and (min-width :1300px){
-    .page{
+
+@media only screen and (min-width :1300px) {
+    .page {
         display: block;
     }
 }

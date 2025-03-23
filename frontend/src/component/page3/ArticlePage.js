@@ -7,7 +7,7 @@ import Footer from "./Footerside.js";
 
 import axios from 'axios';
 import Loader from '../Loader/Loading';
-import { useLocation ,Link,useNavigate } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import baseUrl from '../../utils/baseUrl.js';
 
 import authHeader from '../../utils/Authheader';
@@ -18,7 +18,7 @@ function Articlefun() {
     const location = useLocation()
     const [post, setPost] = useState({});
     const path = location.pathname.split("/")[2];
-	let navigate = useNavigate();
+    let navigate = useNavigate();
 
     const [infoCard1, setinfoCard1] = useState([]);
     const [infoCard, setinfoCard] = useState([]);
@@ -28,7 +28,7 @@ function Articlefun() {
     const [loading1, setLoading1] = useState(false);
 
     //Error
-    const [error,setError] = useState(null)
+    const [error, setError] = useState(null)
 
 
     useEffect(() => {
@@ -36,7 +36,7 @@ function Articlefun() {
 
         const getPost = async () => {
             try {
-                const res = await axios.get(`${baseUrl}/article/`+ path,{ headers: authHeader() });
+                const res = await axios.get(`${baseUrl}/article/` + path, { headers: authHeader() });
                 setPost(res.data);
                 setLoading(false);
             } catch (error) {
@@ -82,12 +82,12 @@ function Articlefun() {
 
     return (
         <>
-        {error && 
-            <div class="alert alert-danger" style={{margin:"1.5rem"}}>
-                {error}
-                <strong>Kindly <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>Login</Link> Here</strong>
-            </div>
-        }
+            {error &&
+                <div class="alert alert-danger" style={{ margin: "1.5rem" }}>
+                    {error}
+                    <strong>Kindly <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>Login</Link> Here</strong>
+                </div>
+            }
             {loading ? (
                 <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                     <h2 style={{ textAlign: "center" }}>Loading...</h2>
@@ -153,13 +153,13 @@ function Articlefun() {
                         <hr></hr>
                     </div>
                     {loading1 ? (
-                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-                    <h2 style={{ textAlign: "center" }}>Loading...</h2>
-                    <Loader />
-                </div>
-            ) : (
-                    <Footer cardInfo1={infoCard1} cardInfo2={infoCard} />
-            )}
+                        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                            <h2 style={{ textAlign: "center" }}>Loading...</h2>
+                            <Loader />
+                        </div>
+                    ) : (
+                        <Footer cardInfo1={infoCard1} cardInfo2={infoCard} />
+                    )}
 
                 </>
             )}

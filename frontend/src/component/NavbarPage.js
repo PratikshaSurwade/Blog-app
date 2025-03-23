@@ -14,7 +14,7 @@ function Navbar() {
 						<span className="headstyle1">The</span>
 						<span className="headstyle2"> Siren</span>
 					</h1>
-					
+
 					<div className="Navbarstyle" id="Navbarstyle2">
 						<NavLink className="Linkitems" to="/">Home</NavLink>
 						<NavLink className="Linkitems" to="/bollywood">Bollywood</NavLink>
@@ -24,7 +24,7 @@ function Navbar() {
 						<NavLink className="Linkitems" to="/food">Food</NavLink>
 					</div>
 					<hr style={{ marginLeft: "10%", marginRight: "10%" }}></hr>
-					
+
 				</div>
 
 				<div className="headingTwo">

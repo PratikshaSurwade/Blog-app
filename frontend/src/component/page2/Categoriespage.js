@@ -42,22 +42,22 @@ function Categorypage() {
         }
     };
 
-//loading effect
-const [checkprofile, setCheckProfile] = useState(false)
+    //loading effect
+    const [checkprofile, setCheckProfile] = useState(false)
 
-//Getting user datails for profile
-const [getUser, setGetUser] = useState(null);
+    //Getting user datails for profile
+    const [getUser, setGetUser] = useState(null);
 
-//Extend profile div
-const [isOpened, setIsOpened] = useState(false);
-function toggle() {
-    setIsOpened(wasOpened => !wasOpened);
-  }
+    //Extend profile div
+    const [isOpened, setIsOpened] = useState(false);
+    function toggle() {
+        setIsOpened(wasOpened => !wasOpened);
+    }
 
-const logoutHandler = () => {
-    localStorage.removeItem("blogUser")
-    setGetUser(null);
-}
+    const logoutHandler = () => {
+        localStorage.removeItem("blogUser")
+        setGetUser(null);
+    }
 
 
     useEffect(() => {
@@ -155,14 +155,14 @@ const logoutHandler = () => {
                         </> :
                         <>
                             <div className='topbarProfile'>
-                                <span onClick={toggle} style={{cursor:"pointer"}}><img className="profilePic" src={getUser.profilepic} alt="" /><span style={{marginLeft:"3px"}}>{getUser.username}<i class="fa fa-caret-down" style={{marginLeft:"3px"}}></i></span></span>
-                                
+                                <span onClick={toggle} style={{ cursor: "pointer" }}><img className="profilePic" src={getUser.profilepic} alt="" /><span style={{ marginLeft: "3px" }}>{getUser.username}<i class="fa fa-caret-down" style={{ marginLeft: "3px" }}></i></span></span>
+
                                 {/* {userInfo?`${profile}`:`${userInfo.profile}`} */}
                                 {isOpened && (
-                                <span className="extendProfile">
-                                    <NavLink to={`/profile/${getUser._id}`} style={{ textDecoration: "none", color: "black", border: "none" }}><button className="viewprofile">View Profile</button></NavLink>
-                                    <button className="logout" onClick={logoutHandler}>LOGOUT</button>
-                                </span>
+                                    <span className="extendProfile">
+                                        <NavLink to={`/profile/${getUser._id}`} style={{ textDecoration: "none", color: "black", border: "none" }}><button className="viewprofile">View Profile</button></NavLink>
+                                        <button className="logout" onClick={logoutHandler}>LOGOUT</button>
+                                    </span>
                                 )}
                             </div>
                         </>}
