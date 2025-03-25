@@ -17,13 +17,13 @@ const PORT = process.env.PORT || 7001;
 
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.MONGO_URL,{
-  useNewUrlParser:true,
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
   // useCreateIndex:true, 
-  useUnifiedTopology:true
-}).then( () => {
+  useUnifiedTopology: true
+}).then(() => {
   console.log("Conection is successful");
-}).catch( (e) => {
+}).catch((e) => {
   console.log("No Connection");
 });
 
@@ -49,6 +49,6 @@ app.use("/user", userRoute);
 // }
 // ------------------------Deployment------------------------
 
-app.listen(PORT, () => { 
+app.listen(PORT, () => {
   console.log(`Server started at ${PORT}`);
 })
