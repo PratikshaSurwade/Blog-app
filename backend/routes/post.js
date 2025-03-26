@@ -64,9 +64,9 @@ router.post("/article", verifyToken, async (req, res) => {
     console.log(e);
     if (e.name === 'ValidationError') return err = handleValidationError(e, res);
     // res.status(400).send(e);
-
   }
 })
+
 //Get all Posts
 router.get("/article", async (req, res) => {
   try {
@@ -138,7 +138,6 @@ router.get("/user/:id/posts", verifyToken, async (req, res) => {
     res.status(500).json(error);
   }
 })
-
 
 //Delete Post
 

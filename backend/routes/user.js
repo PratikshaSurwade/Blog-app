@@ -1,7 +1,5 @@
 const router = require("express").Router();
-
 const User = require("../models/User");
-
 const jwt = require("jsonwebtoken");
 
 const verifyToken = (req, res, next) => {
@@ -33,13 +31,13 @@ const verifyTokenAndAuthorization = (req, res, next) => {
     }
   });
 };
+
 //Get User
 
 router.get("/:id", verifyToken, async (req, res) => {
   try {
     const userDetails = await User.findById(req.params.id);
     res.status(200).json(userDetails);
-
     // const accessToken = req.headers.token;
     // const { password, ...others } = userDetails._doc;
     // console.log({...others,accessToken})
@@ -49,7 +47,6 @@ router.get("/:id", verifyToken, async (req, res) => {
     res.status(500).json(error);
   }
 })
-
 
 //Delete User
 
