@@ -19,9 +19,9 @@ function Mainpost(props) {
 
         const getmainPost = async () => {
             const res = await axios.get(`${baseUrl}/api/mainpost`);
-            setMainpost(res.data);        
+            setMainpost(res.data);
             setLoading(false);
-            
+
         };
 
         getmainPost();
@@ -42,10 +42,10 @@ function Mainpost(props) {
                         <div className="mainpostImg"><img src={props.postDetails.photo1} alt="Imageshow" /></div>
                         <NavLink className="MainImgLink2" to={`/article/${props.postDetails._id}`}>
 
-                            <h5 className="postHeading">{props.postDetails.title }</h5>
+                            <h5 className="postHeading">{props.postDetails.title}</h5>
                         </NavLink>
-                        <span className="postThumbnail">{ props.postDetails.categories[0].charAt(0).toUpperCase() + props.postDetails.categories[0].slice(1)}</span>
-                        <span className="date"><code>   </code>/<code>   </code>{props.postDetails.date }</span>
+                        <span className="postThumbnail">{props.postDetails.categories[0].charAt(0).toUpperCase() + props.postDetails.categories[0].slice(1)}</span>
+                        <span className="date"><code>   </code>/<code>   </code>{props.postDetails.date}</span>
                         <hr></hr>
                     </div></>
             )}
