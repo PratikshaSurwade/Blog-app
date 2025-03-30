@@ -15,9 +15,6 @@ import Profile from "./component/Profile/Profile.js";
 import Editprofile from "./component/Profile/Editprofile.js";
 import Footer from "./component/Footer.js";
 
-// import { Jwt } from "jsonwebtoken";
-// import jwt from "jsonwebtoken";
-
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 function App() {
@@ -31,8 +28,6 @@ function App() {
 
     useEffect(() => {
         setLoading(true);
-        console.log("unse")
-
         const user = JSON.parse(localStorage.getItem("blogUser")) ? JSON.parse(localStorage.getItem("blogUser")) : null;
         console.log(user)
         const getprofileDetails = async () => {
@@ -51,7 +46,6 @@ function App() {
                 }
             }
         };
-
         getprofileDetails();
 
     }, [])
@@ -62,13 +56,9 @@ function App() {
                 <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<Home getUser />} exact />
-
-
-
                     <Route path="/article/:id" element={<Articlebyid />} exact />
                     <Route path="/login" element={<Login />} exact />
                     <Route path="/register" element={<Register />} exact />
-                    {console.log(getUser)}
 
                     <Route path="/:category" element={<Categorypage />} exact />
 
@@ -76,14 +66,10 @@ function App() {
                     <Route path="/addpost" element={<Editprofile />} exact />
 
                     <Route path="/editpost/:postid" element={<Editprofile getUser={getUser} />} exact />
-
                 </Routes>
-
             </BrowserRouter>
             <Footer />
-
         </>
-
     );
 }
 export default App;

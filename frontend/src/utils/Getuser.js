@@ -80,7 +80,6 @@ const Getuser = async () => {
                 }
             }
         };
-        // getprofileDetails();
     }, [])
     
   return getUser
@@ -88,31 +87,3 @@ const Getuser = async () => {
 
 export default Getuser
 
-
-{/* <div className="TopBar">
-                {checkprofile ?
-                    <>
-                        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
-                            <div className="profileloaderhomepage"></div>
-                        </div>
-                    </> :
-                    <>{(!getUser) ?
-                        <>
-                            <NavLink className="mainPageButtons" to="/login">Login</NavLink>|
-                            <NavLink className="mainPageButtons" to="/register">Register</NavLink>
-                        </> :
-                        <>
-                            <div className='topbarProfile'>
-                                <span onClick={toggle} style={{cursor:"pointer"}}><img className="profilePic" src={getUser.profilepic} alt="" /><span style={{marginLeft:"3px"}}>{getUser.username}<i class="fa fa-caret-down" style={{marginLeft:"3px"}}></i></span></span>
-                                
-                                {isOpened && (
-                                <span className="extendProfile">
-                                    <NavLink to={`/profile/${getUser._id}`} style={{ textDecoration: "none", color: "black", border: "none" }}><button className="viewprofile">View Profile</button></NavLink>
-                                    <button className="logout" onClick={logoutHandler}>LOGOUT</button>
-                                </span>
-                                )}
-                            </div>
-                        </>}
-                    </>
-                }
-            </div> */}
