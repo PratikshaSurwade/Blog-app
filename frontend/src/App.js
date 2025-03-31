@@ -38,7 +38,7 @@ function App() {
                     console.log("false")
                 }
                 else {
-                    console.log("trur")
+                    console.log("true")
                     // console.log({...data,accessToken:authHeader().token})
                     setGetUser(data);
                     console.log(getUser, "inuseee")

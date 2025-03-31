@@ -121,16 +121,7 @@ const Editprofile = () => {
 				try {
 					const res = await axios.get(`${baseUrl}/article/${path}`, { headers: authHeader() })
 					seteditablePost(res.data);
-					setCategories(res.data.categories);
-					setTitle(res.data.title)
-					setDescription(res.data.decription);
-					setTag1(res.data.tag1);
-					console.log(res.data)
-					setPhoto1(res.data.photo1);
-					setPhoto2(res.data.photo2);
-					setUserName(res.data.username);
-					setUserId(res.data.userId)
-					setProfilepic(res.data.authorphoto)
+					
 
 					setLoading(false);
 				} catch (error) {
