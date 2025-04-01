@@ -83,18 +83,6 @@ function Categorypage() {
                 setGetUser(null);
                 setCheckProfile(false)
             }
-            // try {
-            //     const res = await axios.get(`${baseUrl}/user/${user._id}`, { headers: authHeader() })
-            //     setGetUser(res.data);
-            //     setCheckProfile(false);
-            // } catch (error) {
-            //     console.log(error.response.data.message)
-            // alert(error.response.data.message)
-            //     setGetUser(null);
-            //     setCheckProfile(false);
-            // localStorage.removeItem("blogUser")
-
-            // }
         };
 
         getprofileDetails();

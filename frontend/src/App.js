@@ -28,6 +28,8 @@ function App() {
 
     useEffect(() => {
         setLoading(true);
+        console.log("unse")
+
         const user = JSON.parse(localStorage.getItem("blogUser")) ? JSON.parse(localStorage.getItem("blogUser")) : null;
         console.log(user)
         const getprofileDetails = async () => {
@@ -38,7 +40,7 @@ function App() {
                     console.log("false")
                 }
                 else {
-                    console.log("true")
+                    console.log("trur")
                     // console.log({...data,accessToken:authHeader().token})
                     setGetUser(data);
                     console.log(getUser, "inuseee")
@@ -46,6 +48,7 @@ function App() {
                 }
             }
         };
+
         getprofileDetails();
 
     }, [])
@@ -56,9 +59,13 @@ function App() {
                 <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<Home getUser />} exact />
+
+
+
                     <Route path="/article/:id" element={<Articlebyid />} exact />
                     <Route path="/login" element={<Login />} exact />
                     <Route path="/register" element={<Register />} exact />
+                    {console.log(getUser)}
 
                     <Route path="/:category" element={<Categorypage />} exact />
 
@@ -66,10 +73,14 @@ function App() {
                     <Route path="/addpost" element={<Editprofile />} exact />
 
                     <Route path="/editpost/:postid" element={<Editprofile getUser={getUser} />} exact />
+
                 </Routes>
+
             </BrowserRouter>
             <Footer />
+
         </>
+
     );
 }
 export default App;
