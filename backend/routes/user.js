@@ -59,7 +59,5 @@ router.get("/:id", verifyToken, async (req, res) => {
 //     }
 // })
 
-
-
 //Update User
 module.exports = router;

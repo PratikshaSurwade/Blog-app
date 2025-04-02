@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const app = express();
 
 const dotenv = require("dotenv");
@@ -11,7 +10,6 @@ const postRoute = require("./routes/post")
 const authRoute = require("./routes/auth");
 
 const userRoute = require("./routes/user");
-
 
 const PORT = process.env.PORT || 7001;
 
@@ -34,8 +32,6 @@ app.use(express.json());
 app.use("/", postRoute);
 app.use("/auth", authRoute);
 app.use("/user", userRoute);
-
-
 
 // ------------------------Deployment------------------------
 

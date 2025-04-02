@@ -17,7 +17,6 @@ const Profile = () => {
     //Getting user datails for profile
     const [user, setUser] = useState({});
     const [post, setPost] = useState([]);
-    const [count, setCount] = useState(1);
 
     let navigate = useNavigate();
 

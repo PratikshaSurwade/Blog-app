@@ -24,7 +24,7 @@ const Editprofile = () => {
 	const [photo1, setPhoto1] = useState(null);
 	const [photo2, setPhoto2] = useState(null);
 
-	console.log(JSON.parse(localStorage.getItem("blogUser")).username,"getttttttttttttt")
+	console.log(JSON.parse(localStorage.getItem("blogUser")).username, "getttttttttttttt")
 	const [userName, setUserName] = useState(path ? JSON.parse(localStorage.getItem("blogUser")).username : null);
 	const [profilepic, setProfilepic] = useState(path ? JSON.parse(localStorage.getItem("blogUser")).profilepic : null);
 
@@ -45,19 +45,21 @@ const Editprofile = () => {
 
 	const addPostHandler = async (e) => {
 		e.preventDefault();
-		console.log(photo1,categories,"cate , phtoo1111")
-		const post = 
-		{ "title": title, 
-		"decription": description, 
-		"username": userName, 
-		"userId": userId, 
-		"categories": categories, 
-		"authorphoto": profilepic,
-		"tag1": tag1, 
-		"tag2": "India",
-		"tag3": categories, 
-		"photo1": photo1, 
-		"photo2": photo1 };
+		console.log(photo1, categories, "cate , phtoo1111")
+		const post =
+		{
+			"title": title,
+			"decription": description,
+			"username": userName,
+			"userId": userId,
+			"categories": categories,
+			"authorphoto": profilepic,
+			"tag1": tag1,
+			"tag2": "India",
+			"tag3": categories,
+			"photo1": photo1,
+			"photo2": photo1
+		};
 		console.log(post, "add post to server")
 		try {
 			const { data } = await axios.post(`${baseUrl}/article`, post, { headers: authHeader() });
@@ -71,18 +73,20 @@ const Editprofile = () => {
 
 	const editPostHandler = async (e) => {
 		e.preventDefault();
-		console.log(photo1,categories,"cate , phtoo1111")
-		const post = 
-		{ "title": title, 
-		"decription": description, 
-		"username": userName, 
-		"userId": userId, 
-		"categories": categories, 
-		"tag1": tag1, 
-		"tag2": "India", 
-		"tag3": categories[0],
-		"photo1": photo1, 
-		"photo2": photo1 };
+		console.log(photo1, categories, "cate , phtoo1111")
+		const post =
+		{
+			"title": title,
+			"decription": description,
+			"username": userName,
+			"userId": userId,
+			"categories": categories,
+			"tag1": tag1,
+			"tag2": "India",
+			"tag3": categories[0],
+			"photo1": photo1,
+			"photo2": photo1
+		};
 		console.log(post, "edit post to server")
 		try {
 			const { data } = await axios.put(`${baseUrl}/article/${path}`, post, { headers: authHeader() });
@@ -160,10 +164,10 @@ const Editprofile = () => {
 			<form className="loginForm">
 				<label ><strong>Title</strong></label>
 				<div contentEditable='true' className="inPutTab" placeholder="Enter your post title..." onInput={(e) => setTitle(e.target.textContent)}>{editablePost.title}</div>
-			
 
 
-<label ><strong>Description</strong></label>
+
+				<label ><strong>Description</strong></label>
 				<div contentEditable='true' className="inPutTab" placeholder="Enter your descrpition..." onInput={(e) => setDescription(e.target.textContent)}>{editablePost.decription}</div>
 
 				<label ><strong>Select Categories</strong></label>
@@ -174,7 +178,7 @@ const Editprofile = () => {
 					<option value="food">Food</option>
 					<option value="fitness">Fitness</option>
 				</select>
-				
+
 				{/* <input type="radio" value="MALE" name="gender"/> Male
         <input type="radio" value="FEMALE" name="gender"/> Female */}
 
@@ -187,48 +191,48 @@ const Editprofile = () => {
 
 				{
 					(photo1 && photo2) ?
-					(
-						<div className='imageGrid'>
-							<div>
-							<input type="file"
-					name="file"
-					placeholder="Upload an image"
-					onChange={handleSubmission}></input>
-							<img src={photo1} syle={{ width: '300px' }} alt="Choose Image to View Preview" />
+						(
+							<div className='imageGrid'>
+								<div>
+									<input type="file"
+										name="file"
+										placeholder="Upload an image"
+										onChange={handleSubmission}></input>
+									<img src={photo1} syle={{ width: '300px' }} alt="Choose Image to View Preview" />
 
-							</div>
-							<div>
-							<input type="file"
-					name="file"
-					placeholder="Upload an image"
-					onChange={handleSubmission}></input>
-							<img src={photo2} style={{ width: '300px' }} alt="Choose Image to View Preview" />
+								</div>
+								<div>
+									<input type="file"
+										name="file"
+										placeholder="Upload an image"
+										onChange={handleSubmission}></input>
+									<img src={photo2} style={{ width: '300px' }} alt="Choose Image to View Preview" />
 
+								</div>
 							</div>
-						</div>
-					) : (
-						<>
-						</>
-					)
+						) : (
+							<>
+							</>
+						)
 				}
 				<input type="file"
 					name="file"
 					placeholder="Upload an image"
 					onChange={handleSubmission}></input>
 
-					{(loader) ? (
-						<>
-							<h3>Loading...</h3>
-							<h6>Kindly wait for Preview...</h6>
-						</>
+				{(loader) ? (
+					<>
+						<h3>Loading...</h3>
+						<h6>Kindly wait for Preview...</h6>
+					</>
 
-					) : (
-						(photo1) ?
+				) : (
+					(photo1) ?
 						<img src={photo1} style={{ width: '300px' }} alt="Choose Image to View Preview" />
 						:
 						<div>Choose photo to display</div>
-					)}
-					{console.log(loader)}
+				)}
+				{console.log(loader)}
 				{
 					(path === "addpost") ?
 						<button disabled={loader} className="loginButton" onClick={addPostHandler} >Add Post</button>
