@@ -1,0 +1,123 @@
+.bollyPart {
+    margin: 5px;
+
+}
+
+.imagepart1 {
+    flex: 3;
+    height: 12rem;
+    width: 14rem;
+    margin: 5px;
+}
+
+.bollyhead::after {
+    border-bottom-right-radius: 10px;
+}
+
+.postDescrip2 {
+    line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.postDescrip {
+    line-height: 2rem;
+    line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.contentpart {
+    /* height: 10rem; */
+    flex: 6;
+    margin-left: 1rem;
+    margin-right: 9rem;
+}
+
+.postHeading {
+    margin-bottom: 10px;
+
+
+}
+
+.postThumbnail {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.date {
+    color: #808080;
+    font-size: 0.9rem;
+}
+
+hr {
+
+    color: #808080;
+    font-weight: 400;
+    margin-right: 4rem;
+
+}
+
+
+@media only screen and (min-width :100px) and (max-width :400px) {
+
+    .contentpart1,
+    .hr {
+        margin-right: 0px;
+    }
+
+    .postDescrip {
+        line-height: 1.5rem;
+    }
+
+    .contentpart {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (min-width :400px) and (max-width :900px) {
+
+    .contentpart1,
+    .hr {
+        margin-right: 0px;
+    }
+
+    .contentpart {
+        margin-right: 0.5rem;
+    }
+}
+
+@media only screen and (min-width :900px) and (max-width :1150px) {
+
+    /* .bollywood{
+        margin-right: 0px;
+    } */
+    .contentpart {
+        margin-right: 1rem;
+    }
+
+    .contentpart1,
+    hr {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (min-width :1150px) and (max-width :1450px) {
+
+    /* .bollywood{
+        margin-right: 0px;
+    } */
+    .contentpart1 {
+        margin-right: 0px;
+    }
+
+    .contentpart {
+        margin-right: 1rem;
+    }
+}

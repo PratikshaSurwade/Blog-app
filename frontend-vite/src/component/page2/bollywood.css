@@ -1,0 +1,124 @@
+.home {
+    display: flex;
+    margin: 1.2rem 2rem;
+}
+
+.bollywood {
+    flex: 7;
+    margin-right: 8rem;
+}
+
+a.bollywood {
+    color: black;
+    text-decoration: none;
+}
+
+a.bollywood:hover {
+    text-decoration: underline black;
+    color: black;
+}
+
+a.posts {
+    color: black;
+    text-decoration: none;
+}
+
+a.posts:hover {
+    text-decoration: underline black;
+    color: black;
+}
+
+.bollyhead {
+    font-weight: "800";
+    /* border-bottom:double ;
+    border-image: linear-gradient(to right,#ffa500 50%, #FFF 50%)  100% 5; */
+    border-bottom: double #ffa500 5px;
+    border-end-end-radius: 20px;
+    margin-bottom: 2rem;
+    margin-left: 5px;
+}
+
+.posthead {
+    font-weight: "800";
+    border-bottom: double #fab534 5px;
+    border-end-end-radius: 20px;
+    margin-bottom: 2rem;
+    margin-left: 5px;
+}
+
+.loadmore {
+    color: #d3d3d3;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.arrow {
+    color: #ffa500;
+    margin: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+@media only screen and (min-width :100px) and (max-width :350px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0px;
+
+    }
+
+    .bollywood,
+    .posts {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (min-width :350px) and (max-width :500px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0px;
+
+    }
+
+    .bollywood,
+    .posts {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (min-width :500px) and (max-width :700px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+
+    .bollywood,
+    .posts {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (min-width :700px) and (max-width :1000px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .bollywood,
+    .posts {
+        margin-right: 0px;
+    }
+
+}
+
+/* @media only screen and (min-width :1000px) and (max-width :1200px){
+    .bollywood,.posts{
+        margin-right: 0px;
+    }
+    
+} */

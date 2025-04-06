@@ -1,0 +1,88 @@
+.subpost {
+    display: flex;
+
+}
+
+.imagepart {
+    flex: 3;
+    height: 6rem;
+    margin: 5px;
+}
+
+.mainpostImg {
+    margin-bottom: 1rem;
+}
+
+.contentpart1 {
+    flex: 5;
+
+    margin: 7px 5px;
+}
+
+.postThumbnail {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.date {
+    color: #d3d3d3;
+    font-size: 0.9rem;
+}
+
+hr {
+    color: #d3d3d3;
+}
+
+.postHeading:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.MainImgLink2 {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (min-width :100px) and (max-width :300px) {
+    .mainPost {
+
+        margin: 2.5rem;
+    }
+
+    .subpost {
+        margin: 0px;
+    }
+
+    div.imagepart {
+        width: 8rem;
+        height: 7rem;
+    }
+
+    .postThumbnail {
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .date {
+        margin: 15%;
+    }
+
+
+}
+
+@media only screen and (min-width :300px) and (max-width :1000px) {
+    .mainPost {
+
+        margin: 3rem;
+    }
+
+    div.imagepart {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .subpost {
+        margin: 5px;
+    }
+
+}

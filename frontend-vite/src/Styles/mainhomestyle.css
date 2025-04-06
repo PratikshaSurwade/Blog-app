@@ -1,0 +1,405 @@
+.homePage {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.textContaint {
+    position: absolute;
+    align-items: center;
+    bottom: 2rem;
+    font-weight: bolder;
+}
+
+.latestHead {
+    font-weight: "800";
+    border-bottom: double #fab534 5px;
+    border-end-end-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    z-index: 8;
+
+}
+
+.latestHead1 {
+    font-weight: "800";
+    z-index: 10;
+    border-bottom: double #fab534 5px;
+    border-end-end-radius: 20px;
+    padding-top: 2rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.cardContainer {
+    display: flex;
+    margin: 1rem 5rem;
+}
+
+.articlePage {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.articles {
+    flex: 9;
+    margin-left: 5rem;
+    margin-right: 2rem;
+}
+
+a.articles {
+    color: black;
+    text-decoration: none;
+}
+
+a.articles:hover {
+    color: black;
+    text-decoration: underline black;
+}
+
+.sidebarContainer {
+    flex: 3;
+}
+
+.sidebar {
+
+    margin: 1rem;
+    /* margin-right: 6rem; */
+}
+
+a.sidebar {
+    color: black;
+    text-decoration: none;
+}
+
+a.sidebar:hover {
+    color: black;
+    text-decoration: underline black;
+}
+
+.homeAdvertise {
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 35rem;
+    align-items: center;
+    justify-content: center;
+}
+
+a.story {
+    color: black;
+    text-decoration: none;
+
+}
+
+a.story:hover {
+    color: black;
+    text-decoration: none;
+
+}
+
+.viewmore {
+    color: #d3d3d3;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}
+
+.arrow2 {
+    color: #ffa500;
+    /* margin: 2.5rem; */
+    margin-left: 0.5rem;
+}
+
+.storyshow {
+    display: flex;
+    flex-direction: row;
+}
+
+/*======homeigame==========*/
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.homeItem {
+    width: 80%;
+
+    height: 25rem;
+    object-fit: fill;
+}
+
+/* Footer */
+.copyrightfooter {
+    /* position:fixed; */
+    bottom: 0;
+    left: 0;
+    /* left: 0;
+  bottom: 0; */
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-top: solid #f9da9f 2.5px;
+    border-bottom: solid #f9da9f 2.5px;
+}
+
+/* ========= Login Button Top Bar styling ======== */
+
+.TopBar {
+    position: absolute;
+    top: 1rem;
+    right: 3.5rem;
+    z-index: 20;
+    font-size: smaller;
+}
+
+.topbarProfile {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePic {
+    height: 2rem;
+    width: 2rem;
+}
+
+.profileloaderhomepage {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid;
+    border-radius: 50%;
+    margin-top: 25%;
+    margin: auto;
+    width: 1rem;
+    height: 1rem;
+    animation: spin 1s linear infinite;
+}
+
+.logout {
+    border: none;
+    color: red;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.viewprofile {
+    border: none;
+    color: green;
+    margin-right: 5px;
+    margin-top: 5px;
+
+}
+
+.mainPageButtons {
+    text-decoration: none;
+    border: none;
+    color: #000000;
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 5px;
+    font-weight: 600;
+
+}
+
+.mainPageButtons:hover {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 0.3rem;
+    font-weight: 700;
+}
+
+@media only screen and (min-width :100px) and (max-width :300px) {
+    .articlePage {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: scale-down;
+        margin: 1rem 0.5rem;
+    }
+
+    .homeAdvertise {
+        display: none;
+        margin: 1rem 0.5rem;
+
+    }
+
+    .storyshow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homeImage {
+        width: 90%;
+    }
+
+    .story {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: scale-down;
+        margin: 1rem 2rem;
+
+    }
+
+    .sidebar {
+
+        margin-left: 5rem;
+        margin-right: 2rem;
+    }
+
+    .subpost {
+
+        margin: 1rem;
+    }
+}
+
+@media only screen and (min-width :300px) and (max-width :500px) {
+    .articlePage {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin: 1rem 0.5rem;
+    }
+
+    .homeAdvertise {
+        display: none;
+        margin: 1rem 0.5rem;
+
+    }
+
+    .storyshow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .story {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: scale-down;
+        margin: 2rem 2rem;
+
+    }
+
+    .homeImage {
+        width: 100%;
+    }
+
+    .sidebar {
+        margin-left: 5rem;
+        margin-right: 2rem;
+    }
+
+    .subpost {
+
+        margin: 1rem;
+    }
+
+}
+
+@media only screen and (min-width :500px) and (max-width :700px) {
+
+
+    .homeAdvertise {
+        display: none;
+        margin: 1rem 0.5rem;
+    }
+
+    .sidebar {
+
+        margin-left: 5rem;
+        margin-right: 2rem;
+    }
+
+    .storyshow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .story {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin: 2rem 3rem;
+    }
+
+    .articlePage {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin: 1rem 0.5rem;
+    }
+
+    .homeImage {
+        width: 100%;
+    }
+
+    .subpost {
+
+        margin: 1rem;
+    }
+}
+
+@media only screen and (min-width :700px) and (max-width :1100px) {
+    .articlePage {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin: 1rem 0.5rem;
+    }
+
+    .story {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: fill;
+        margin: 2rem 5rem;
+
+    }
+
+    .sidebar {
+
+        margin-left: 5rem;
+        margin-right: 2rem;
+    }
+
+    .homeAdvertise {
+        display: none;
+        margin: 1rem 0.5rem;
+    }
+
+    .homeImage {
+        width: 100%;
+    }
+
+    .gridItem {
+        display: none;
+    }
+
+
+}
