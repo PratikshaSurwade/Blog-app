@@ -3,15 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
-import authHeader from '../../utils/Authheader';
+import authHeader from '../../utils/Authheader.js';
 
 import "./bollywood.css";
 import "./page2sub1/bollysub1style.css"
 
 //Json importing
-import Bollysub from "./page2sub1/Sidebarfirst.js";
-import Posts from "./page2sub2/Postscomponent.js";
-import Loader from '../Loader/Loading';
+import Bollysub from "./page2sub1/Sidebarfirst.jsx";
+import Posts from "./page2sub2/Postscomponent.jsx";
+import Loader from '../Loader/Loading.jsx';
 import baseUrl from '../../utils/baseUrl.js';
 
 function Categorypage() {

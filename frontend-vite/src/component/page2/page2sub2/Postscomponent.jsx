@@ -1,7 +1,7 @@
 import React from "react";
 import "./postsstyle.css"
-import Subpost from "./Subpost.js";
-import Mainpost from "./Toppost.js"
+import Subpost from "./Subpost.jsx";
+import Mainpost from "./Toppost.jsx"
 
 
 function Posts(props) {

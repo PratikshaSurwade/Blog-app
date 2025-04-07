@@ -3,14 +3,14 @@ import React, { Component, useEffect, useState } from 'react';
 import "./articlestyle.css";
 import profile from "./../../images/profilepic.png";
 
-import Footer from "./Footerside.js";
+import Footer from "./Footerside.jsx";
 
 import axios from 'axios';
-import Loader from '../Loader/Loading';
+import Loader from '../Loader/Loading.jsx';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import baseUrl from '../../utils/baseUrl.js';
 
-import authHeader from '../../utils/Authheader';
+import authHeader from '../../utils/Authheader.js';
 
 
 function Articlefun() {

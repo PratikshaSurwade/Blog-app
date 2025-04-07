@@ -1,6 +1,7 @@
 const baseUrl =
-  process.env.NODE_ENV !== "production"
+  import.meta.env.MODE !== "production"
     ? "http://localhost:7001"
     : "https://blogapp-backend-zwng.onrender.com";
 
-module.exports = baseUrl;
+export default baseUrl;
+
