@@ -163,7 +163,8 @@
   gap: 10px;
 }
 
-.edit-button, .delete-button {
+.edit-button,
+.delete-button {
   border: none;
   background: none;
   cursor: pointer;
@@ -190,7 +191,8 @@
   color: #dc3545;
 }
 
-.edit-icon, .delete-icon {
+.edit-icon,
+.delete-icon {
   width: 20px;
   height: 20px;
 }

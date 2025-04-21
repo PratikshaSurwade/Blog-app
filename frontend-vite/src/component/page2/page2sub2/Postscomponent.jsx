@@ -3,7 +3,6 @@ import "./postsstyle.css"
 import Subpost from "./Subpost.jsx";
 import Mainpost from "./Toppost.jsx"
 
-
 function Posts(props) {
     return (
         <>

@@ -124,7 +124,7 @@ const Profile = () => {
                                                 <td>
                                                     <span className="extendProfile">
                                                         <NavLink to={`/editpost/${item._id}`} style={{ textDecoration: "none", color: "black", border: "none" }}><button class="edit-button" title='Edit Post'>
-                                                        <i style={{ color: "green", marginRight: "2px" }} className="fas fa-pencil-alt d-block" ></i></button></NavLink>
+                                                            <i style={{ color: "green", marginRight: "2px" }} className="fas fa-pencil-alt d-block" ></i></button></NavLink>
                                                         <button className="logout delete-button" title='Delete Post' onClick={() => deletePost(item._id)}><i style={{ color: "red", cursor: "pointer" }} className="fas fa-trash-alt d-block"></i>
                                                         </button>
                                                     </span>

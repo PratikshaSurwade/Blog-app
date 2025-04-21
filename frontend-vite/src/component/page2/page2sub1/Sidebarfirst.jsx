@@ -1,8 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
 import "./bollysub1style.css";
-
 
 function Bollysub(props) {
     return (

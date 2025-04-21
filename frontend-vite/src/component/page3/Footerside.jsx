@@ -2,13 +2,9 @@ import React from "react";
 import "./articlestyle.css";
 import { NavLink } from "react-router-dom";
 
-import imaGe from "./../../images/blogimg1.png";
-import profile from "./../../images/profilepic.png";
 class Footer extends React.Component {
     constructor(props) {
         super(props);
-        // console.log(props);
-
     }
     render() {
         return (

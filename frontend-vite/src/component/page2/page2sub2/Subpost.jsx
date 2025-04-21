@@ -1,6 +1,5 @@
 import React from "react";
 import "./subpoststyle.css";
-import subpostimage from "./../../../images/blogimg4.png"
 import { NavLink } from "react-router-dom";
 
 class Subpost extends React.Component {

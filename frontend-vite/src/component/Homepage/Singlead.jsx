@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-//CSS Style
 import "./../../Styles/homepageimg.css";
 
 function Homeimage(props) {
