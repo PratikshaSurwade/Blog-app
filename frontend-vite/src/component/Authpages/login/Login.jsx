@@ -12,21 +12,20 @@ export default function Login() {
     const [authorname, setAuthorname] = useState("");
     const [password, setPassword] = useState("");
 
-    const [error,setError] = useState(null)
+    const [error, setError] = useState(null)
 
-	let navigate = useNavigate();
+    let navigate = useNavigate();
 
     const submitHandler = async (e) => {
         e.preventDefault();
         try {
-            var user = { "username":authorname,"password": password }
-            const {data} = await axios.post(`${baseUrl}/auth/login`, user );
+            var user = { "username": authorname, "password": password }
+            const { data } = await axios.post(`${baseUrl}/auth/login`, user);
             console.log(!data.accessToken);
-            if(!data.accessToken)
-            {
+            if (!data.accessToken) {
                 console.log("Please try again later");
             }
-            else{
+            else {
                 localStorage.setItem("blogUser", JSON.stringify(data));
                 navigate("/");
             }
@@ -39,24 +38,24 @@ export default function Login() {
 
     return (
         <>
-        
-        <div className="login">
-            
-            <span className="loginTitle">Login</span>
-            {error && 
-            <div class="alert alert-danger" style={{margin:"1.5rem"}}>
-                {error}
+
+            <div className="login">
+
+                <span className="loginTitle">Login</span>
+                {error &&
+                    <div class="alert alert-danger" style={{ margin: "1.5rem" }}>
+                        {error}
+                    </div>
+                }
+                <form className="loginForm">
+                    <label >Username</label>
+                    <input type="text" className="loginInput" placeholder="Enter your username..." onChange={(e) => setAuthorname(e.target.value)}></input>
+                    <label >Password</label>
+                    <input type="password" className="loginInput" placeholder="Enter your password..." onChange={(e) => setPassword(e.target.value)}></input>
+                    <button className="loginButton" onClick={submitHandler}>Login</button>
+                </form>
+                <button className="RegisterButton"><Link to="/register" style={{ textDecoration: "none", color: "inherit" }}>Register</Link></button>
             </div>
-        }
-            <form className="loginForm">
-                <label >Username</label>
-                <input type="text" className="loginInput" placeholder="Enter your username..." onChange={(e) => setAuthorname(e.target.value)}></input>
-                <label >Password</label>
-                <input type="password" className="loginInput" placeholder="Enter your password..." onChange={(e) => setPassword(e.target.value)}></input>
-                <button className="loginButton" onClick={submitHandler}>Login</button>
-            </form>
-            <button className="RegisterButton"><Link to="/register" style={{ textDecoration: "none", color: "inherit" }}>Register</Link></button>
-        </div>
         </>
     )
 }
