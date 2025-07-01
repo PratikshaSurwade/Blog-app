@@ -16,16 +16,10 @@ import Editprofile from "./component/Profile/Editprofile.jsx";
 import Footer from "./component/Footer.jsx";
 
 function App() {
-  //loading effect
-  const [loading, setLoading] = useState(false);
-  const [checkprofile, setCheckProfile] = useState(false);
-
   //Getting user datails for profile
   const [getUser, setGetUser] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
-    console.log("unse");
 
     const user = JSON.parse(localStorage.getItem("blogUser"))
       ? JSON.parse(localStorage.getItem("blogUser"))
@@ -38,13 +32,8 @@ function App() {
         });
         if (data.success === false) {
           localStorage.removeItem("blogUser");
-          console.log("false");
         } else {
-          console.log("trur");
-          // console.log({...data,accessToken:authHeader().token})
           setGetUser(data);
-          console.log(getUser, "inuseee");
-          setLoading(false);
         }
       }
     };
